@@ -1,5 +1,15 @@
-# Vue 3 + Vite
+# Meu Portfolio Vue.js
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Este é o meu portfolio pessoal feito em Vue.js, onde mostro meus projetos e um bocado sobre mim!
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Tecnologias
+
+- Vue 3 (Composition API)
+- Tailwind CSS para estilos
+
+## Funcionalidades
+
+- Seção "Who I Am?" com texto sobre mim, skills e graus acadêmicos
+- Seção de projetos com cards clicáveis
+- Download do currículo em PDF
+- Layout responsivo

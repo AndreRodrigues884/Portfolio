@@ -2,36 +2,28 @@
   <div class="h-screen flex flex-col bg-white">
     <div class="flex flex-col md:flex-row items-center justify-between max-w-8xl mx-auto px-6 py-12 gap-32">
       <div class="flex-1 max-w-4xl">
-        <h2 class="text-2xl font-semibold mb-4">Who I Am?</h2>
+        <h2 class="text-2xl font-semibold mb-4">{{ content.about.title }}</h2>
         <p class="mb-8 text-gray-700">
-          I’m currently in my third year of a <strong>Bachelor's Degree in Technologies and Information Systems for the
-            Web.</strong>
-          <br>Throughout my studies, I’ve worked on <strong>design and web development projects</strong> in small teams,
-          learning to
-          manage
-          tight deadlines and deliver clear results.</br>
-          <br>I’m now looking for an <strong>internship or junior role</strong> where I can apply my programming and UI
-          design skills,
-          contribute to a company’s growth, and continue developing professionally and personally.</br>
+          <p v-html="content.about.description"></p>
         </p>
 
         <div class="flex gap-12">
           <div class="flex-1">
-            <h3 class="text-xl font-medium mb-2">Skills</h3>
+            <h3 class="text-xl font-medium mb-2">{{ content.skills.title }}</h3>
             <ul class="text-gray-700 list-disc list-inside space-y-1">
-              <li><strong>UI/UX Design:</strong> Experienced with Figma and Miro</li>
-              <li><strong>3D & Prototyping:</strong> Worked with Blender and ProtoPie</li>
-              <li><strong>Project Management:</strong> Familiar with Trello and Notion</li>
-              <li><strong>Backend Development:</strong> Node.js, Express.js, MongoDB</li>
-              <li><strong>Frontend Development:</strong> Vue.js, Vite</li>
-              <li><strong>Styling:</strong> Tailwind CSS & Bootstrap</li>
+              <li v-html="content.skills.first_skill"></li>
+              <li v-html="content.skills.second_skill"></li>
+              <li v-html="content.skills.third_skill"></li>
+              <li v-html="content.skills.fourth_skill"></li>
+              <li v-html="content.skills.fifth_skill"></li>
+              <li v-html="content.skills.sixth_skill"></li>
             </ul>
           </div>
           <div class="flex-1">
-            <h3 class="text-xl font-medium mb-2">Degrees</h3>
+            <h3 class="text-xl font-medium mb-2">{{ content.degrees.title }}</h3>
             <ul class="text-gray-700 list-disc list-inside">
-              <li>Higher Technical Professional Course in Design and Technologies for Mobile Applications (CTeSP)</li>
-              <li>3º Bachelor's Degree in Technologies and Information Systems for the Web</li>
+              <li v-html="content.degrees.first_degree"></li>
+              <li v-html="content.degrees.seconde_degree"></li>
             </ul>
           </div>
         </div>
@@ -58,7 +50,7 @@
 
     <!-- Seção de Projects -->
     <section class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6 text-center">My Projects</h2> <!-- Título adicionado -->
+      <h2 class="text-3xl font-bold mb-6 text-center">{{ content.projects.title }}</h2> <!-- Título adicionado -->
       <div class="flex justify-center gap-8 overflow-x-auto scrollbar-hide">
         <ProjectCard v-for="project in projects" :key="project.id" :title="project.title" :link="project.link"
           :image="project.image" />
@@ -72,6 +64,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import content from '../data/content.json'
 import ProjectCard from '../components/ProjectCard.vue'
 import Footer from '../components/Footer.vue'
 

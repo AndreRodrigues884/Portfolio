@@ -1,0 +1,28 @@
+{
+  "about": {
+    "title": "Who I Am?",
+    "description": "Hello, my name is André Rodrigues, I’m 21 years old.<br>I’m currently in my third year of a <strong>Bachelor's Degree in Technologies and Information Systems for the Web.</strong><br>Throughout my studies, I’ve worked on <strong>design and web development projects</strong> in small teams, learning to manage tight deadlines and deliver clear results.<br>I’m now looking for an <strong>internship or junior role</strong> where I can apply my programming and UI design skills, contribute to a company’s growth, and continue developing professionally and personally."
+  },
+  "skills": {
+    "title":"Skills",
+    "first_skill": "<strong>UI/UX Design:</strong> Experienced with Figma and Miro",
+    "second_skill": "<strong>3D & Prototyping:</strong> Worked with Blender and ProtoPie",
+    "third_skill": "<strong>Project Management:</strong> Familiar with Trello and Notion",
+    "fourth_skill": "<strong>Backend Development:</strong> Node.js, Express.js, MongoDB",
+    "fifth_skill": "<strong>Frontend Development:</strong> Vue.js, Vite",
+    "sixth_skill": "<strong>Styling:</strong> Tailwind CSS & Bootstrap"
+  },
+  "degrees": {
+    "title": "Degrees",
+    "first_degree": "Higher Technical Professional Course in Design and Technologies for Mobile Applications (CTeSP)",
+    "seconde_degree":"3º Bachelor's Degree in Technologies and Information Systems for the Web"
+  },
+  "projects": {
+    "title": "My Projects"
+    
+  },
+  "contact": {
+    "email": "andreprodrigues0512@gmail.com",
+    "phone": "+351 913 531 636"
+  }
+}

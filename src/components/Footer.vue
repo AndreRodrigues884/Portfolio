@@ -8,8 +8,8 @@
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.5a2.25 2.25 0 01-2.36 0l-7.5-4.5A2.25 2.25 0 012.25 6.993V6.75" />
           </svg>
-          <a href="mailto:andreprodrigues0512@gmail.com" class="hover:underline">
-            andreprodrigues0512@gmail.com
+          <a href="" class="hover:underline">
+            {{ content.contact.email }}
           </a>
         </div>
         <div class="flex items-center space-x-2">
@@ -18,8 +18,8 @@
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M2.25 6.75c0-1.242 1.008-2.25 2.25-2.25h2.1a1.125 1.125 0 011.068.793l1.2 3.6a1.125 1.125 0 01-.258 1.177l-1.35 1.35a11.25 11.25 0 005.586 5.586l1.35-1.35a1.125 1.125 0 011.177-.258l3.6 1.2a1.125 1.125 0 01.793 1.068v2.1c0 1.242-1.008 2.25-2.25 2.25h-.75C8.36 21 3 15.64 3 9V8.25c0-1.242 1.008-2.25 2.25-2.25h.75z" />
           </svg>
-          <a href="tel:+351912345678" class="hover:underline">
-            +351 913 531 636
+          <a href="" class="hover:underline">
+            {{ content.contact.phone }}
           </a>
         </div>
       </div>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-// Nenhuma lógica necessária por enquanto
+import content from '../data/content.json'
 </script>
 
 <style scoped>

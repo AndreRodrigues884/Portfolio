@@ -1,13 +1,14 @@
 <template>
   <a
     :href="link"
-    class="w-60 flex flex-col items-center space-y-3 cursor-pointer transform hover:scale-105 transition"
+    class="w-60 flex flex-col pb-12 items-center space-y-3 cursor-pointer"
   >
     <div
-      class="w-full h-40 bg-gray-300 rounded-lg shadow-md flex items-center justify-center text-gray-600 font-semibold text-xl"
+      class="w-full h-40 rounded-lg shadow-md flex items-center justify-center text-gray-600 font-semibold text-xl"
+      :style="{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
     >
-      <!-- Aqui podes trocar pelo screenshot ou imagem do projeto -->
-      Imagem Projeto
+      <!-- Se a imagem não carregar, pode ter um texto alternativo -->
+      <span v-if="!image">Imagem Projeto</span>
     </div>
     <h3 class="text-lg font-medium text-gray-800 text-center">{{ title }}</h3>
   </a>
@@ -17,5 +18,6 @@
 defineProps({
   title: String,
   link: String,
+  image: String,
 })
 </script>

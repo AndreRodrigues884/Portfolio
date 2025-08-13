@@ -4,7 +4,7 @@
       <div class="flex-1 max-w-4xl">
         <h2 class="text-2xl font-semibold mb-4">{{ content.about.title }}</h2>
         <p class="mb-8 text-gray-700">
-          <p v-html="content.about.description"></p>
+        <p v-html="content.about.description"></p>
         </p>
 
         <div class="flex gap-12">
@@ -52,8 +52,8 @@
     <section class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-6 text-center">{{ content.projects.title }}</h2> <!-- Título adicionado -->
       <div class="flex justify-center gap-8 overflow-x-auto scrollbar-hide">
-        <ProjectCard v-for="project in projects" :key="project.id" :title="project.title" :link="project.link"
-          :image="project.image" />
+        <ProjectCard v-for="project in projects" :key="project.id" :id="project.id" :title="project.title"
+          :link="project.link" :background_image="project.background_image" />
       </div>
     </section>
 
@@ -65,15 +65,9 @@
 <script setup>
 import { ref } from 'vue'
 import content from '../data/content.json'
+import { projects } from '../data/projects.js' // <-- Importa o array
 import ProjectCard from '../components/ProjectCard.vue'
 import Footer from '../components/Footer.vue'
-
-// Dados dos projetos - podes depois substituir por API ou store
-const projects = ref([
-  { id: 1, title: 'Bitesy', link: '/projects/projeto1', image: '../src/assets/img/project1.png' },
-  { id: 2, title: 'HabTracker', link: '/projects/projeto2', image: '../src/assets/img/project1.png' },
-  { id: 3, title: 'Projeto 3', link: '/projects/projeto3', image: '../src/assets/img/project1.png' },
-])
 
 const icons = [
   { src: '../src/assets/img/vue.png', alt: 'Vue Icon' },
@@ -89,7 +83,7 @@ const icons = [
 // Função para o botão descarregar currículo
 function downloadCV() {
   // Aqui podes colocar o caminho para o teu CV pdf, por exemplo em /public/cv.pdf
-  window.open('/cv.pdf', '_blank')
+  window.open('/CV.pdf', '_blank')
 }
 </script>
 

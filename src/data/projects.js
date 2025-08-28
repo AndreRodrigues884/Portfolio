@@ -4,6 +4,7 @@ import project2Img from '../assets/img/project1.png'
 import project3Img from '../assets/img/project1.png'
 
 import background_project1 from '../assets/img/project1.png'
+import background_project2 from '../assets/img/project2.png'
 
 import figmaIcon from '../assets/img/figma.png'
 import miroIcon from '../assets/img/miro.png'
@@ -11,6 +12,10 @@ import protopieIcon from '../assets/img/protopie.png'
 import illustratorIcon from '../assets/img/illustrator.png'
 import premiereIcon from '../assets/img/premiere.png'
 import afterEffectsIcon from '../assets/img/aftereffects.jpg'
+import reactNativeIcon from '../assets/img/react.png'
+import expressIcon from '../assets/img/express.png'
+import nodeIcon from '../assets/img/node.jpg'
+import mongoIcon from '../assets/img/mongo.png'
 
 export const projects = [
   {
@@ -44,16 +49,37 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'HabTracker',
+    title: 'HabTracker - Full-Stack Development & UI/UX Design Project',
     link: '/projects/2',
-    image: project2Img,
-    background_image: background_project1,
-    description: 'Website pessoal para apresentar trabalhos e competências, com design responsivo e animações suaves.',
-    technologies: ['Vue.js', 'Tailwind CSS']
+    image: background_project2,
+    background_image: background_project2,
+    description: `
+  <p><strong>HabTracker</strong> is a mobile application designed to help users build and maintain consistent habits through gamification. Users can create recurring habits, mark them as completed, and track their progress over time.</p>
+  <br>
+  <p>The app offers features such as:</p>
+  <ul>
+    <li> - <strong>Habit creation</strong> with customizable frequency (daily, weekly, etc.) and optional end dates.</li>
+    <li> - <strong>Streak tracking</strong> to visualize consistency for each habit.</li>
+    <li> - <strong>Experience points (XP)</strong> and level system to reward progress and motivate users.</li>
+    <li> - <strong>Achievements and badges unlocked</strong> when specific milestones are reached (e.g., completing a habit 3 days in a row).</li>
+    <li> - <strong>User profile with statistics</strong>, achievements overview, and XP/level display.</li>
+    <li> - <strong>Calendar view</strong>to monitor habits over time and plan ahead.</li>
+    <li> - <strong>Notifications and visual feedback</strong> for completed habits, level-ups, and unlocked achievements.</li>
+  </ul>
+  <br>
+`,
+
+    technologies: [
+      { name: 'Figma', icon: figmaIcon },
+      { name: 'React', icon: reactNativeIcon },
+      { name: 'Express', icon: expressIcon },
+      { name: 'Node', icon: nodeIcon },
+      { name: 'Mongo', icon: mongoIcon },
+    ]
   },
   {
     id: 3,
-    title: 'Task Manager App',
+    title: 'In Progress...',
     link: '/projects/3',
     image: project3Img,
     background_image: background_project1,

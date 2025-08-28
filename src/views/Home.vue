@@ -50,7 +50,7 @@
 
     <!-- Seção de Projects -->
     <section class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6 text-center">{{ content.projects.title }}</h2> <!-- Título adicionado -->
+      <h2 class="text-3xl font-medium mb-6 text-center">{{ content.projects.title }}</h2> <!-- Título adicionado -->
       <div class="flex justify-center gap-8 overflow-x-auto scrollbar-hide">
         <ProjectCard v-for="project in projects" :key="project.id" :id="project.id" :title="project.title"
           :link="project.link" :background_image="project.background_image" />
@@ -78,6 +78,7 @@ const icons = [
   { src: '../src/assets/img/mongo.png', alt: 'Mongo Icon' },
   { src: '../src/assets/img/blender.png', alt: 'Blender Icon' },
   { src: '../src/assets/img/notion.png', alt: 'Notion Icon' },
+  { src: '../src/assets/img/react.png', alt: 'React Native' },
 ]
 
 // Função para o botão descarregar currículo

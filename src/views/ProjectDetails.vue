@@ -21,10 +21,10 @@
 
     <!-- Coluna esquerda -->
     <div class="flex-1 pr-6">
-      <h1 class="text-3xl font-bold mb-6">{{ project.title }}</h1>
+      <h1 class="text-3xl font-medium mb-6">{{ project.title }}</h1>
       <div class="text-gray-700 mb-4" v-html="project.description"></div>
 
-      <h2 class="text-xl font-semibold mb-2">Technologies:</h2>
+      <h2 class="text-xl font-medium mb-2">Technologies:</h2>
       <div class="flex gap-4 flex-wrap mb-4">
         <img v-for="tech in project.technologies" :key="tech.name" :src="tech.icon" :alt="tech.name"
           class="w-12 h-12 object-contain" />

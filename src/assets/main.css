@@ -3,6 +3,8 @@
 
 body {
   font-family: 'Instrument Sans';
+  @apply flex flex-col justify-start bg-[#f8f8f8] pt-[64px] pb-[128px] min-h-screen;
+  @apply px-4 md:px-[256px] lg:px-[350px]; /* padding horizontal responsivo */
 }
 
 /* animations */

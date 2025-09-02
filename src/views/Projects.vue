@@ -186,6 +186,6 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 function goBack() {
-    router.back()
+    router.push("/") // fallback para home
 }
 </script>

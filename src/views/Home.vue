@@ -138,7 +138,7 @@
       <div class="flex flex-col gap-4 w-full">
         <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
           <div class="text-[20px] font-medium text-[#434343]">André Rodrigues</div>
-          <div class="text-[16px] font-medium text-[#434343]">Web Developer & UX/UI Designer</div>
+          <div class="text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
         </div>
 
         <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
@@ -154,7 +154,7 @@
 
         <div class="w-full flex justify-end">
           <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
-            <div class="mr-2 font-regular text-[12px]">More About Me</div>
+            <router-link to="/aboutme" class="mr-2 font-regular text-[12px]">More About Me</router-link>
             <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
           </button>
         </div>

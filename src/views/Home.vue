@@ -5,7 +5,7 @@
       <div class="flex flex-col items-center gap-5">
         <div class="flex flex-col items-center gap-2.5">
           <img src="../assets/img/foto.png" alt="Exemplo" class="w-40 h-auto rounded-lg" />
-          <div class="text-center text-[24px] font-medium text-[#002473]">
+          <div class="text-center text-[24px] font-medium text-[#676767]">
             Web Developer<br>
             & UX/UI Designer
           </div>
@@ -23,47 +23,51 @@
       &lt;Projects&gt;
     </div>
     <!--  1º Project -->
-    <div
-      class="flex flex-col lg:flex-row items-center gap-8 px-10 py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED] cursor-pointer">
+  <div
+  class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 px-4 lg:px-10 py-8 lg:py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED]">
 
-      <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
-      <div class="w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
-        <img src="../assets/img/project1.png" alt="Exemplo" class="w-full h-full object-cover" />
+  <!-- Imagem (100% no mobile + iPad, fixa no desktop) -->
+  <div class="w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
+    <img src="../assets/img/project1.png" alt="Exemplo" class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="flex flex-col gap-4 lg:gap-6 w-full lg:w-auto">
+    <div class="flex flex-col gap-3">
+      <div class="text-[20px] sm:text-[22px] lg:text-[24px] font-semibold text-[#434343]">
+        Bitesy - UI/UX Design Project
       </div>
-
-      <!-- Conteúdo -->
-      <div class="flex flex-col gap-6 w-full lg:w-auto">
-        <div class="flex flex-col gap-3">
-          <div class="text-[24px] font-semibold text-[#434343]">Bitesy - UI/UX Design Project</div>
-          <div class="text-[12px] font-medium text-[#676067]">
-            Bitesy is an application designed to help users
-            discover and follow personalized diets tailored to their health goals, preferences, and lifestyle.
-            Through an initial questionnaire, it recommends meal plans, suggests the ideal duration for each diet,
-            and highlights their main benefits.
+      <div class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#676067] leading-relaxed">
+        Bitesy is an application designed to help users
+        discover and follow personalized diets tailored to their health goals, preferences, and lifestyle.
+        Through an initial questionnaire, it recommends meal plans, suggests the ideal duration for each diet,
+        and highlights their main benefits.
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-row gap-2 sm:gap-4 flex-wrap">
+          <div class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+            Personalized Nutrition
           </div>
-          <div class="flex flex-col gap-2">
-            <div class="flex flex-row gap-4 flex-wrap">
-              <div class="bg-[#002473] text-[#FFFFFF] font-regular text-[10px] px-3 py-2 rounded-full text-center">
-                Personalized Nutrition
-              </div>
-              <div class="bg-[#002473] text-[#FFFFFF] font-regular text-[10px] px-3 py-2 rounded-full text-center">
-                Health Goals
-              </div>
-            </div>
-            <div class="w-24">
-              <div class="bg-[#002473] text-[#FFFFFF] font-regular text-[10px] px-2 py-2 rounded-full text-center">
-                UI/UX Design
-              </div>
-            </div>
+          <div class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+            Health Goals
+          </div>
+        </div>
+        <div class="w-28">
+          <div class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
+            UI/UX Design
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+
 
     <!--  2º Project -->
     <div class="flex flex-col gap-6">
       <div
-        class="flex flex-col lg:flex-row items-center gap-8 px-10 py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED] cursor-pointer">
+        class="flex flex-col lg:flex-row items-center gap-8 px-10 py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED]">
 
         <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
         <div class="w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
@@ -83,15 +87,15 @@
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex flex-row gap-4 flex-wrap">
-                <div class="bg-[#002473] text-[#FFFFFF] font-regular text-[10px] px-3 py-2 rounded-full text-center">
+                <div class=" text-[#676767] font-regular text-[10px] px-3 py-2 border border-[#676767] rounded-full text-center">
                   Habit Tracking
                 </div>
-                <div class="bg-[#002473] text-[#FFFFFF] font-regular text-[10px] px-3 py-2 rounded-full text-center">
+                <div class=" text-[#676767] font-regular text-[10px] px-3 py-2 border border-[#676767] rounded-full text-center">
                   Gamification
                 </div>
               </div>
               <div class="w-28">
-                <div class="bg-[#002473] text-[#FFFFFF] font-regular text-[10px] px-2 py-2 rounded-full text-center">
+                <div class=" text-[#676767] font-regular text-[10px] px-2 py-2 border border-[#676767] rounded-full text-center">
                   Full Stack Project
                 </div>
               </div>
@@ -101,8 +105,8 @@
 
       </div>
       <div class="w-full flex justify-end">
-        <button class="flex items-center px-4 py-3 bg-[#002473] text-white rounded-[50px] cursor-pointer">
-          <div class="mr-2 font-regular text-[12px]">See More Projects</div>
+        <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
+          <router-link to="/projects" class="mr-2 font-regular text-[12px]">See More Projects</router-link>
           <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
         </button>
       </div>
@@ -149,7 +153,7 @@
         </div>
 
         <div class="w-full flex justify-end">
-          <button class="flex items-center px-4 py-3 bg-[#002473] text-white rounded-[50px] cursor-pointer">
+          <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
             <div class="mr-2 font-regular text-[12px]">More About Me</div>
             <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
           </button>
@@ -172,16 +176,26 @@
 import Footer from '../components/Footer.vue'
 import Header from '../components/Header.vue'
 
+import vueIcon from '../assets/img/vue.png'
+import figmaIcon from '../assets/img/figma.png'
+import nodeIcon from '../assets/img/node.jpg'
+import expressIcon from '../assets/img/express.png'
+import tailwindIcon from '../assets/img/tailwind.png'
+import mongoIcon from '../assets/img/mongo.png'
+import blenderIcon from '../assets/img/blender.png'
+import notionIcon from '../assets/img/notion.png'
+import reactIcon from '../assets/img/react.png'
+
 const icons = [
-  { src: '../src/assets/img/vue.png', alt: 'Vue Icon' },
-  { src: '../src/assets/img/figma.png', alt: 'Figma Icon' },
-  { src: '../src/assets/img/node.jpg', alt: 'Node Icon' },
-  { src: '../src/assets/img/express.png', alt: 'Express Icon' },
-  { src: '../src/assets/img/tailwind.png', alt: 'Tailwind Icon' },
-  { src: '../src/assets/img/mongo.png', alt: 'Mongo Icon' },
-  { src: '../src/assets/img/blender.png', alt: 'Blender Icon' },
-  { src: '../src/assets/img/notion.png', alt: 'Notion Icon' },
-  { src: '../src/assets/img/react.png', alt: 'React Native' },
+  { src: vueIcon, alt: 'Vue Icon' },
+  { src: figmaIcon, alt: 'Figma Icon' },
+  { src: nodeIcon, alt: 'Node Icon' },
+  { src: expressIcon, alt: 'Express Icon' },
+  { src: tailwindIcon, alt: 'Tailwind Icon' },
+  { src: mongoIcon, alt: 'Mongo Icon' },
+  { src: blenderIcon, alt: 'Blender Icon' },
+  { src: notionIcon, alt: 'Notion Icon' },
+  { src: reactIcon, alt: 'React Native' },
 ]
 </script>
 

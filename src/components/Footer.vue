@@ -33,7 +33,7 @@
 
 <script setup>
 function downloadCV() {
-  window.open('/CV.pdf', '_blank')
+    window.open('/Portfolio/CV.pdf', '_blank')
 }
 
 const openGitHub = () => {

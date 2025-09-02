@@ -6,7 +6,7 @@
         <div class="flex flex-col items-center gap-2.5">
           <img src="../assets/img/foto.png" alt="Exemplo" class="w-40 h-auto rounded-lg" />
           <div class="text-center text-[24px] font-medium text-[#676767]">
-            Web Developer<br>
+            Full Stack Dev<br>
             & UX/UI Designer
           </div>
           <div class="text-center text-[16px] font-medium text-[#676067]">

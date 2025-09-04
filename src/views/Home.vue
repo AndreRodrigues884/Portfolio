@@ -4,7 +4,7 @@
     <div class="flex flex-col items-center">
       <div class="flex flex-col items-center gap-5">
         <div class="flex flex-col items-center gap-2.5">
-          <img src="../assets/img/foto.png" alt="Exemplo" class="w-40 h-auto rounded-lg" />
+          <img src="../assets/img/cadu.svg" alt="Exemplo" class="w-50 h-auto rounded-lg" />
           <div class="text-center text-[24px] font-medium text-[#676767]">
             Full Stack Dev<br>
             & UX/UI Designer
@@ -124,7 +124,7 @@
     <div class="flex flex-col lg:flex-row gap-8 items-center">
       <!-- Imagem com ícones circulares -->
       <div class="relative flex-shrink-0 w-full lg:w-64 h-64 flex items-center justify-center">
-        <img src="../assets/img/foto.png" alt="Foto de perfil" class="lg:w-full h-full rounded-full object-cover" />
+        <img src="../assets/img/cadu.png" alt="Foto de perfil" class="lg:w-full h-full rounded-full object-cover" />
         <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center animate-spin-slow">
           <div v-for="(icon, index) in icons" :key="icon.src" :style="{
             transform: `rotate(${(360 / icons.length) * index}deg) translate(140px) rotate(-${(360 / icons.length) * index}deg)`

@@ -155,69 +155,6 @@
   </div>
 </div>
 
-<!-- Fun Facts -->
-<div class="text-[#000] text-[16px] pt-20 pb-8 font-medium">
-  &lt;Fun Facts&gt;
-</div>
-
-<div class="flex flex-col gap-4">
-  <!-- Primeira linha -->
-  <div class="flex flex-col sm:flex-row justify-center gap-4">
-    <div class="flex flex-col p-4 items-start gap-4 border border-[#434343] rounded-[12px] w-[50%] sm:w-[220px] mx-auto sm:mx-0">
-      <img class="w-auto h-60" src="../assets/img/fav_movie.svg" alt="">
-      <div class="flex flex-col gap-1">
-        <span class="text-[#000] text-[12px] font-regular">Favorite Movie</span>
-        <span class="text-[#000] text-[16px] font-medium">La La Land</span>
-      </div>
-    </div>
-
-    <div class="flex flex-col p-4 items-start gap-4 border border-[#434343] rounded-[12px] w-[50%] sm:w-[220px] mx-auto sm:mx-0">
-      <img class="w-auto h-60" src="../assets/img/fav-tvshow.svg" alt="">
-      <div class="flex flex-col gap-1">
-        <span class="text-[#000] text-[12px] font-regular">Favorite TV Show</span>
-        <span class="text-[#000] text-[16px] font-medium">Friends</span>
-      </div>
-    </div>
-
-    <div class="flex flex-col p-4 items-start gap-4 border border-[#434343] rounded-[12px] w-[50%] sm:w-[220px] mx-auto sm:mx-0">
-      <img class="w-auto h-60" src="../assets/img/fav-band.svg" alt="">
-      <div class="flex flex-col gap-1">
-        <span class="text-[#000] text-[12px] font-regular">Favorite Band</span>
-        <span class="text-[#000] text-[16px] font-medium">Arctic Monkeys</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Segunda linha -->
-  <div class="flex flex-col sm:flex-row justify-center gap-4">
-    <div class="flex flex-col p-4 items-start gap-4 border border-[#434343] rounded-[12px] w-[50%] sm:w-[220px] mx-auto sm:mx-0">
-      <img class="w-auto h-60" src="../assets/img/place.svg" alt="">
-      <div class="flex flex-col gap-1">
-        <span class="text-[#000] text-[16px] font-medium">I love traveling and<br>discovering new places</span>
-      </div>
-    </div>
-
-    <div class="flex flex-col p-4 items-start gap-4 border border-[#434343] rounded-[12px] w-[50%] sm:w-[220px] mx-auto sm:mx-0">
-      <img class="w-auto h-60" src="../assets/img/sport.svg" alt="">
-      <div class="flex flex-col gap-1">
-        <span class="text-[#000] text-[16px] font-medium">I’m passionate<br> about sports</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="w-full flex justify-end pt-8">
-  <div class="text-[#000] text-[16px] font-medium">
-    &lt;/Fun Facts&gt;
-  </div>
-</div>
-
-
-
-
-
-
-
     <Footer></Footer>
 </template>
 

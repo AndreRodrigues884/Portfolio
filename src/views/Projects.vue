@@ -56,7 +56,10 @@
             </div>
             <div class="w-full flex justify-end">
                 <div class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
-                    <router-link to="/" class="mr-2 font-regular text-[12px]">See Full Project</router-link>
+                    <a href="https://www.behance.net/gallery/217586327/Bitesy-Dieting-App" target="_blank"
+                        rel="noopener noreferrer" class="mr-2 font-regular text-[12px]">
+                        Full Project on Behance
+                    </a>
                     <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
                 </div>
             </div>
@@ -109,9 +112,19 @@
                 </div>
 
             </div>
-            <div class="w-full flex justify-end">
+            <div class="w-full flex justify-end gap-4">
                 <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
-                    <router-link to="/projects" class="mr-2 font-regular text-[12px]">See Full Project</router-link>
+                     <a href="https://github.com/AndreRodrigues884/habtracker-frontend" target="_blank"
+                        rel="noopener noreferrer" class="mr-2 font-regular text-[12px]">
+                        Front-End Code on GitHub
+                    </a>
+                    <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
+                </button>
+                <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
+                     <a href="https://github.com/AndreRodrigues884/habtracker" target="_blank"
+                        rel="noopener noreferrer" class="mr-2 font-regular text-[12px]">
+                        Back-End Code on GitHub
+                    </a>
                     <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
                 </button>
             </div>
@@ -167,7 +180,10 @@
             </div>
             <div class="w-full flex justify-end">
                 <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
-                    <router-link to="/projects" class="mr-2 font-regular text-[12px]">See Full Project</router-link>
+                    <a href="https://www.behance.net/gallery/173602993/EcoGuide(EcoApp-UIUX-Concept)" target="_blank"
+                        rel="noopener noreferrer" class="mr-2 font-regular text-[12px]">
+                        Full Project on Behance
+                    </a>
                     <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
                 </button>
             </div>

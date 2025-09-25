@@ -112,18 +112,21 @@
                 </div>
 
             </div>
-            <div class="w-full flex justify-end gap-4">
-                <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
-                     <a href="https://github.com/AndreRodrigues884/habtracker-frontend" target="_blank"
-                        rel="noopener noreferrer" class="mr-2 font-regular text-[12px]">
-                        Front-End Code on GitHub
+            <div class="w-full flex flex-row sm:flex-row justify-center sm:justify-end gap-3 sm:gap-4">
+                <button
+                    class="flex items-center justify-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer w-full sm:w-auto">
+                    <a href="https://github.com/AndreRodrigues884/habtracker-frontend" target="_blank"
+                        rel="noopener noreferrer" class="mr-2 font-regular text-[12px] sm:text-[14px]">
+                        Front-End Code
                     </a>
                     <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
                 </button>
-                <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
-                     <a href="https://github.com/AndreRodrigues884/habtracker" target="_blank"
-                        rel="noopener noreferrer" class="mr-2 font-regular text-[12px]">
-                        Back-End Code on GitHub
+
+                <button
+                    class="flex items-center justify-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer w-full sm:w-auto">
+                    <a href="https://github.com/AndreRodrigues884/habtracker" target="_blank" rel="noopener noreferrer"
+                        class="mr-2 font-regular text-[12px] sm:text-[14px]">
+                        Back-End Code
                     </a>
                     <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
                 </button>

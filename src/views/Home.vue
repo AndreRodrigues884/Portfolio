@@ -4,12 +4,12 @@
     <div class="flex flex-col items-center">
       <div class="flex flex-col items-center gap-5">
         <div class="flex flex-col items-center gap-2.5">
-          <img src="../assets/img/cadu.svg" alt="Exemplo" class="w-50 h-auto rounded-lg" />
-          <div class="text-center text-[24px] font-medium text-[#676767]">
+          <img src="../assets/img/cadu.svg" alt="Exemplo" class="w-40 sm:w-50 h-auto rounded-lg animate-float" />
+          <div class="text-center text-[20px] sm:text-[24px] font-medium text-[#676767] animate-fade-in-up stagger-1">
             Full Stack Dev<br>
             & UX/UI Designer
           </div>
-          <div class="text-center text-[16px] font-medium text-[#676067]">
+          <div class="text-center text-[14px] sm:text-[16px] font-medium text-[#676067] px-4 animate-fade-in-up stagger-2">
             Transforming ideas into intuitive <span class="font-bold">digital</span> experiences
           </div>
 
@@ -19,12 +19,12 @@
   </div>
 
   <div class="flex flex-col gap-8">
-     <div class="text-left text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4">
+     <div class="text-left text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-left">
       &lt;Projects&gt;
     </div>
     <!--  1º Project -->
   <div
-  class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 px-4 lg:px-10 py-8 lg:py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED]">
+  class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 px-4 lg:px-10 py-8 lg:py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED] hover-lift smooth-transition">
 
   <!-- Imagem (100% no mobile + iPad, fixa no desktop) -->
   <div class="w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
@@ -34,7 +34,7 @@
   <!-- Conteúdo -->
   <div class="flex flex-col gap-4 lg:gap-6 w-full lg:w-auto">
     <div class="flex flex-col gap-3">
-      <div class="text-[20px] sm:text-[22px] lg:text-[24px] font-semibold text-[#434343]">
+      <div class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#434343]">
         Bitesy - UI/UX Design Project
       </div>
       <div class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#676067] leading-relaxed">
@@ -66,8 +66,8 @@
 
     <!--  2º Project -->
     <div class="flex flex-col gap-6">
-      <div
-        class="flex flex-col lg:flex-row items-center gap-8 px-10 py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED]">
+        <div
+        class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 px-4 lg:px-10 py-8 lg:py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED] hover-lift smooth-transition">
 
         <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
         <div class="w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
@@ -75,28 +75,28 @@
         </div>
 
         <!-- Conteúdo -->
-        <div class="flex flex-col gap-6 w-full lg:w-auto">
+        <div class="flex flex-col gap-4 lg:gap-6 w-full lg:w-auto">
           <div class="flex flex-col gap-3">
-            <div class="text-[24px] font-semibold text-[#434343]">
+            <div class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#434343]">
               HabTracker - Full-Stack Development & UI/UX Design Project
             </div>
-            <div class="text-[12px] font-medium text-[#676067]">
+            <div class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#676067] leading-relaxed">
               HabTracker is a mobile application designed to help users build and maintain consistent habits through
               gamification. Users can create recurring habits, mark them as completed, and track their progress over
               time.
             </div>
             <div class="flex flex-col gap-2">
-              <div class="flex flex-row gap-4 flex-wrap">
-                <div class=" text-[#676767] font-regular text-[10px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                  Habit Tracking
+              <div class="flex flex-row gap-2 sm:gap-4 flex-wrap">
+                <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                  React Native
                 </div>
-                <div class=" text-[#676767] font-regular text-[10px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                  Gamification
+                <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                  Node.js
                 </div>
               </div>
               <div class="w-28">
-                <div class=" text-[#676767] font-regular text-[10px] px-2 py-2 border border-[#676767] rounded-full text-center">
-                  Full Stack Project
+                <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
+                  MongoDB
                 </div>
               </div>
             </div>
@@ -105,23 +105,23 @@
 
       </div>
       <div class="w-full flex justify-end">
-        <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
+        <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer hover-scale hover-glow smooth-transition">
           <router-link to="/projects" class="mr-2 font-regular text-[12px]">See More Projects</router-link>
           <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
         </button>
       </div>
 
 
-       <div class="text-right text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4">
+       <div class="text-right text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-right">
         &lt;/Projects&gt;
       </div>
     </div>
 
-     <div class="text-left text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4">
+     <div class="text-left text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-left">
       &lt;About Me&gt;
     </div>
 
-    <div class="flex flex-col lg:flex-row gap-8 items-center">
+    <div class="flex flex-col lg:flex-row gap-8 items-center px-4">
       <!-- Imagem com ícones circulares -->
       <div class="relative flex-shrink-0 w-full lg:w-64 h-64 flex items-center justify-center">
         <img src="../assets/img/cadu.png" alt="Foto de perfil" class="lg:w-full h-full rounded-full object-cover" />
@@ -137,23 +137,23 @@
       <!-- Conteúdo -->
       <div class="flex flex-col gap-4 w-full">
         <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
-          <div class="text-[20px] font-medium text-[#434343]">André Rodrigues</div>
-          <div class="text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
+          <div class="text-[18px] sm:text-[20px] font-medium text-[#434343]">André Rodrigues</div>
+          <div class="text-[14px] sm:text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
         </div>
 
         <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
-          <div class="text-[14px] font-medium text-[#434343]">
-            Hi, my name is André Rodrigues, I’m 21 years old. I’m currently in my third year of a Bachelor's Degree in
-            Technologies and Information Systems for the Web. Throughout my studies, I’ve worked on design and web
-            development projects in small teams, learning to manage tight deadlines and deliver clear results. I’m now
+          <div class="text-[12px] sm:text-[14px] font-medium text-[#434343] leading-relaxed">
+            Hi, my name is André Rodrigues, I'm 21 years old. I'm currently in my third year of a Bachelor's Degree in
+            Technologies and Information Systems for the Web. Throughout my studies, I've worked on design and web
+            development projects in small teams, learning to manage tight deadlines and deliver clear results. I'm now
             looking for an internship or junior role where I can apply my programming and UI design skills, contribute
             to a
-            company’s growth, and continue developing professionally and personally.
+            company's growth, and continue developing professionally and personally.
           </div>
         </div>
 
         <div class="w-full flex justify-end">
-          <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer">
+          <button class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer hover-scale hover-glow smooth-transition">
             <router-link to="/aboutme" class="mr-2 font-regular text-[12px]">More About Me</router-link>
             <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
           </button>
@@ -161,7 +161,7 @@
       </div>
     </div>
 
-    <div class="text-right text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4">
+    <div class="text-right text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-right">
       &lt;/About Me&gt;
     </div>
   </div>

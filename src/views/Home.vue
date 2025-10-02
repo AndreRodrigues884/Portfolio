@@ -94,9 +94,15 @@
                   Node.js
                 </div>
               </div>
-              <div class="w-28">
+              <div class="w-28 flex flex-row gap-2">
                 <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
                   MongoDB
+                </div>
+                <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
+                  TypeScript
+                </div>
+                <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
+                  JavaScript
                 </div>
               </div>
             </div>
@@ -185,6 +191,8 @@ import mongoIcon from '../assets/img/mongo.png'
 import blenderIcon from '../assets/img/blender.png'
 import notionIcon from '../assets/img/notion.png'
 import reactIcon from '../assets/img/react.png'
+import typescriptIcon from '../assets/img/typescript.svg'
+import javascriptIcon from '../assets/img/js.svg'
 
 const icons = [
   { src: vueIcon, alt: 'Vue Icon' },
@@ -193,8 +201,8 @@ const icons = [
   { src: expressIcon, alt: 'Express Icon' },
   { src: tailwindIcon, alt: 'Tailwind Icon' },
   { src: mongoIcon, alt: 'Mongo Icon' },
-  { src: blenderIcon, alt: 'Blender Icon' },
-  { src: notionIcon, alt: 'Notion Icon' },
+  { src: javascriptIcon, alt: 'JavaScript Icon' },
+  { src: typescriptIcon, alt: 'TypeScript Icon' },
   { src: reactIcon, alt: 'React Native' },
 ]
 </script>

@@ -16,6 +16,8 @@ import reactNativeIcon from '../assets/img/react.png'
 import expressIcon from '../assets/img/express.png'
 import nodeIcon from '../assets/img/node.jpg'
 import mongoIcon from '../assets/img/mongo.png'
+import typescriptIcon from '../assets/img/typescript.svg'
+import javascriptIcon from '../assets/img/js.svg'
 
 export const projects = [
   {
@@ -68,13 +70,77 @@ export const projects = [
   </ul>
   <br>
 `,
+    longDescription: `
+      <h2>🧠 HabTracker</h2>
+      <p><strong>Transform your life, one habit at a time.</strong></p>
+      <p>HabTracker is a modern habit tracking application designed to help you build better habits and achieve your goals. Track your daily progress, earn XP, unlock achievements, and watch your personal growth unfold through an engaging gamified experience.</p>
+      <br>
+      <h3>✨ What Makes HabTracker Special</h3>
+      <h4>🎯 Smart Habit Management</h4>
+      <ul>
+        <li>Create custom habits across categories (Health, Productivity, Learning, Social, Creativity, Lifestyle)</li>
+        <li>Flexible scheduling: daily, weekly, bi-weekly, or custom frequencies</li>
+        <li>Visual progress tracking with streaks and completion history</li>
+      </ul>
+      <h4>🏆 Gamified Experience</h4>
+      <ul>
+        <li><strong>XP System</strong>: Earn points for completing habits and daily logins</li>
+        <li><strong>Leveling Up</strong>: Progress through levels as you build consistency</li>
+        <li><strong>Achievements</strong>: Unlock badges for milestones and streaks</li>
+        <li><strong>Visual Rewards</strong>: Beautiful icons and animations</li>
+      </ul>
+      <h4>📱 Mobile-First Design</h4>
+      <ul>
+        <li>React Native + Expo</li>
+        <li>Intuitive, clean interface optimized for daily use</li>
+        <li>Offline-capable with smart data synchronization</li>
+        <li>Cross-platform support (iOS, Android, Web)</li>
+      </ul>
+      <h4>🔐 Secure & Private</h4>
+      <ul>
+        <li>JWT-based authentication with refresh tokens</li>
+        <li>Secure user data storage and avatar uploads</li>
+        <li>Rate limiting and account protection</li>
+        <li>Privacy-focused design</li>
+      </ul>
+      <h3>🛠️ Built With Modern Technology</h3>
+      <p><strong>Backend Infrastructure</strong>: Node.js & Express, MongoDB, JWT, Multer, Rate Limiting</p>
+      <p><strong>Mobile Application</strong>: React Native, Expo, TypeScript, React Navigation, AsyncStorage</p>
+      <h3>Key Features</h3>
+      <ul>
+        <li>Real-time habit completion tracking</li>
+        <li>Automatic XP and achievement calculations</li>
+        <li>User profile management with avatar uploads</li>
+        <li>Responsive design for all screen sizes</li>
+        <li>Comprehensive error handling and validation</li>
+      </ul>
+      <h3>🎨 App Categories</h3>
+      <p>🏥 Health • ⚡ Productivity • 📚 Learning • 👥 Social • 🎨 Creativity • 🏠 Lifestyle</p>
+      <h3>🚀 Getting Started</h3>
+      <p>The app consists of two main components: <strong>Backend API</strong> and <strong>Mobile App</strong> working together seamlessly.</p>
+      <h3>📊 User Experience</h3>
+      <ul>
+        <li>Onboarding, Habit Creation, Daily Tracking</li>
+        <li>Progress Visualization and Achievement System</li>
+        <li>Profile Management with avatars and settings</li>
+      </ul>
+      <h3>🔮 Future Vision</h3>
+      <ul>
+        <li>Social features and community challenges</li>
+        <li>Advanced analytics and insights</li>
+        <li>Integration with health apps and wearables</li>
+        <li>Custom habit templates and sharing</li>
+        <li>Advanced achievement systems</li>
+      </ul>
+    `,
 
     technologies: [
-      { name: 'Figma', icon: figmaIcon },
       { name: 'React', icon: reactNativeIcon },
       { name: 'Express', icon: expressIcon },
       { name: 'Node', icon: nodeIcon },
       { name: 'Mongo', icon: mongoIcon },
+      { name: 'TypeScript', icon: typescriptIcon },
+      { name: 'JavaScript', icon: javascriptIcon },
     ]
   },
   {

@@ -9,7 +9,6 @@
         <div class="text-[#000] text-[16px] font-medium">&lt;Projects&gt;</div>
     </div>
 
-    <!-- 1º Project -->
     <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-6">
             <div
@@ -101,12 +100,17 @@
                                     Node.js
                                 </div>
                             </div>
-                            <div class="w-28">
-                                <div
-                                    class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
-                                    MongoDB
-                                </div>
-                            </div>
+                            <div class="w-28 flex flex-row gap-2">
+                <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
+                  MongoDB
+                </div>
+                <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
+                  TypeScript
+                </div>
+                <div class=" text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
+                  JavaScript
+                </div>
+              </div>
                         </div>
                     </div>
                 </div>
@@ -120,6 +124,11 @@
                         See code on Git Hub
                     </a>
                     <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
+                </button>
+                <button @click="goToDetails('habtracker')"
+                    class="flex items-center justify-center px-4 py-3 bg-[#434343] text-white rounded-[50px] cursor-pointer w-full sm:w-auto hover-scale hover-glow smooth-transition">
+                    <span class="mr-2 font-regular text-[12px] sm:text-[14px]">View Project Details</span>
+                    <img src="../assets/img/arrow.svg" alt="Open" class="h-4 w-4" />
                 </button>
             </div>
         </div>
@@ -197,5 +206,9 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 function goBack() {
     router.push("/") // fallback para home
+}
+
+function goToDetails(slug) {
+    router.push({ name: 'ProjectDetails', params: { slug } })
 }
 </script>

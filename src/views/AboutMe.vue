@@ -1,161 +1,175 @@
 <template>
-    <Header></Header>
+  <Header></Header>
 
-    <div class="flex flex-row justify-between items-center pt-[80px] pb-[64px] px-4">
-        <button @click="goBack" class="cursor-pointer flex items-center text-[#434343] hover:text-[#000] font-medium">
-            <img src="../assets/img/arrow-left.svg" alt="Back" class="w-4 h-4 mr-1" />
-            Back
-        </button>
-        <div class="text-[#000] text-[16px] font-medium">&lt;About Me&gt;</div>
-    </div>
+  <div class="flex flex-row justify-between items-center pt-[80px] pb-[64px] px-4">
+    <button @click="goBack" class="cursor-pointer flex items-center text-[#434343] hover:text-[#000] font-medium">
+      <img src="../assets/img/arrow-left.svg" alt="Back" class="w-4 h-4 mr-1" />
+      Back
+    </button>
+    <div class="text-[#000] text-[16px] font-medium">&lt;About Me&gt;</div>
+  </div>
 
-    <!-- About me -->
-    <div class="flex flex-col gap-10">
-        <div class="flex flex-col lg:flex-row gap-8 items-center px-4">
-            <!-- Imagem com ícones circulares -->
-            <div class="relative flex-shrink-0 w-full lg:w-64 h-64 flex items-center justify-center">
-                <img src="../assets/img/cadu.png" alt="Foto de perfil"
-                    class="lg:w-full h-full rounded-full object-cover animate-float" />
-            </div>
+  <!-- About me -->
+  <div class="flex flex-col gap-10">
+    <div class="flex flex-col lg:flex-row gap-8 items-center px-4">
+      <!-- Imagem com ícones circulares -->
+      <div class="relative flex-shrink-0 w-full lg:w-64 h-64 flex items-center justify-center">
+        <img src="../assets/img/cadu.png" alt="Foto de perfil"
+          class="lg:w-full h-full rounded-full object-cover animate-float" />
+      </div>
 
-            <!-- Conteúdo -->
-            <div class="flex flex-col gap-4 w-full">
-                <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
-                    <div class="text-[18px] sm:text-[20px] font-medium text-[#434343]">André Rodrigues</div>
-                    <div class="text-[14px] sm:text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
-                </div>
-
-                <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
-                    <div class="text-[12px] sm:text-[14px] font-medium text-[#434343] leading-relaxed">
-                        Hi, my name is André Rodrigues, I'm 21 years old. I'm currently in my third year of a Bachelor's
-                        Degree in
-                        Technologies and Information Systems for the Web. Throughout my studies, I've worked on design
-                        and
-                        web
-                        development projects in small teams, learning to manage tight deadlines and deliver clear
-                        results.
-                        I'm now
-                        looking for an internship or junior role where I can apply my programming and UI design skills,
-                        contribute
-                        to a
-                        company's growth, and continue developing professionally and personally.
-                    </div>
-                </div>
-            </div>
+      <!-- Conteúdo -->
+      <div class="flex flex-col gap-4 w-full">
+        <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
+          <div class="text-[18px] sm:text-[20px] font-medium text-[#434343]">André Rodrigues</div>
+          <div class="text-[14px] sm:text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
         </div>
-    </div>
 
-    <!-- What I studied -->
-    <div class="text-[#000] text-[16px] pt-20 pb-4 font-medium px-4 animate-fade-in-left">
-        &lt;What I Studied&gt;
-    </div>
-    <div class="flex flex-row items-start px-4">
-        <div class="flex-1 flex flex-col gap-4">
-            <div class="flex-1 flex flex-col gap-4 border-1 border-[#434343] rounded-[12px] p-4">
-                <div class="flex flex-row items-start">
-                    <span class="text-[#434343] text-[12px] font-regular">out 2021 - jul 2023</span>
-                </div>
-                <div class="flex flex-col gap-1">
-                    <span class="text-[#000000] text-[14px] sm:text-[16px] font-bold">Higher Technical Course in Design and
-                        Technologies for Mobile Applications</span>
-                    <span class="text-[#434343] text-[12px] sm:text-[14px] font-normal">ESMAD - Superior School of Media Arts and
-                        Design</span>
-                </div>
-            </div>
-            <div class="flex-1 flex flex-col gap-4 border-1 border-[#434343] rounded-[12px] p-4">
-                <div class="flex flex-row items-start">
-                    <span class="text-[#434343] text-[12px] font-regular">set 2023 - jul 2026</span>
-                </div>
-                <div class="flex flex-col gap-1">
-                    <span class="text-[#000000] text-[14px] sm:text-[16px] font-bold">Bachelor's Degree in Web Information Systems and
-                        Technologies</span>
-                    <span class="text-[#434343] text-[12px] sm:text-[14px] font-normal">ESMAD - Superior School of Media Arts and
-                        Design</span>
-                </div>
-            </div>
-
+        <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
+          <div class="text-[12px] sm:text-[14px] font-medium text-[#434343] leading-relaxed">
+            Hi, my name is André Rodrigues, I'm 21 years old. I'm currently in my third year of a Bachelor's
+            Degree in
+            Technologies and Information Systems for the Web. Throughout my studies, I've worked on design
+            and
+            web
+            development projects in small teams, learning to manage tight deadlines and deliver clear
+            results.
+            I'm now
+            looking for an internship or junior role where I can apply my programming and UI design skills,
+            contribute
+            to a
+            company's growth, and continue developing professionally and personally.
+          </div>
         </div>
-    </div>
-    <div class="w-full flex justify-end pt-4">
-        <div class="text-[#000] text-[16px] font-medium">
-            &lt;/What I Studied&gt;
-        </div>
-    </div>
-
-    <!-- Skills -->
-<div class="text-[#000] text-[16px] pt-20 pb-8 font-medium px-4 animate-fade-in-left">
-  &lt;Tech Skills&gt;
-</div>
-
-<div class="w-full flex flex-col gap-4 px-4">
-  <!-- Linha 1 -->
-  <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/react.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">React</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/vue.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Vue JS</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/express.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Express JS</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/node.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Node JS</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/mongo.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Mongo DB</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/typescript.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Typescript</span>
+      </div>
     </div>
   </div>
 
-  <!-- Linha 2 -->
-  <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/tailwind.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Tailwind</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/vite.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Vite</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/js.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Javascript</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/figma.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Figma</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/notion.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Notion</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/trello.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Trello</span>
-    </div>
-    <div class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
-      <img src="../assets/img/blender.svg" class="w-8 h-8" alt="">
-      <span class="text-[12px] sm:text-[14px]">Blender</span>
+  <!-- What I studied -->
+  <div class="text-[#000] text-[16px] pt-20 pb-4 font-medium px-4 animate-fade-in-left">
+    &lt;What I Studied&gt;
+  </div>
+  <div class="flex flex-row items-start px-4">
+    <div class="flex-1 flex flex-col gap-4">
+      <div class="flex-1 flex flex-col gap-4 border-1 border-[#434343] rounded-[12px] p-4">
+        <div class="flex flex-row items-start">
+          <span class="text-[#434343] text-[12px] font-regular">out 2021 - jul 2023</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <span class="text-[#000000] text-[14px] sm:text-[16px] font-bold">Higher Technical Course in Design and
+            Technologies for Mobile Applications</span>
+          <span class="text-[#434343] text-[12px] sm:text-[14px] font-normal">ESMAD - Superior School of Media Arts and
+            Design</span>
+        </div>
+      </div>
+      <div class="flex-1 flex flex-col gap-4 border-1 border-[#434343] rounded-[12px] p-4">
+        <div class="flex flex-row items-start">
+          <span class="text-[#434343] text-[12px] font-regular">set 2023 - jul 2026</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <span class="text-[#000000] text-[14px] sm:text-[16px] font-bold">Bachelor's Degree in Web Information Systems
+            and
+            Technologies</span>
+          <span class="text-[#434343] text-[12px] sm:text-[14px] font-normal">ESMAD - Superior School of Media Arts and
+            Design</span>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-
-<div class="w-full flex justify-end pt-8">
-  <div class="text-[#000] text-[16px] font-medium">
-    &lt;/Tech Skills&gt;
+  <div class="w-full flex justify-end pt-4">
+    <div class="text-[#000] text-[16px] font-medium">
+      &lt;/What I Studied&gt;
+    </div>
   </div>
-</div>
 
-    <Footer></Footer>
+  <!-- Skills -->
+  <div class="text-[#000] text-[16px] pt-20 pb-8 font-medium px-4 animate-fade-in-left">
+    &lt;Tech Skills&gt;
+  </div>
+
+  <div class="w-full flex flex-col gap-4 px-4">
+    <!-- Linha 1 -->
+    <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/react.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">React</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/vue.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Vue JS</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/express.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Express JS</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/node.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Node JS</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/mongo.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Mongo DB</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/typescript.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Typescript</span>
+      </div>
+    </div>
+
+    <!-- Linha 2 -->
+    <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/postgre.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Postgre SQL</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/prisma.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Prisma</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/fast.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Fast API</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/js.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Javascript</span>
+      </div>
+       <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/python.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Python</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/docker.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Docker</span>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        <img src="../assets/img/figma.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Figma</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full flex justify-end pt-8">
+    <div class="text-[#000] text-[16px] font-medium">
+      &lt;/Tech Skills&gt;
+    </div>
+  </div>
+
+  <Footer></Footer>
 </template>
 
 <script setup>
@@ -166,10 +180,10 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 function goBack() {
-    if (window.history.length > 1) {
-        router.back()
-    } else {
-        router.push("/") // fallback para home
-    }
+  if (window.history.length > 1) {
+    router.back()
+  } else {
+    router.push("/") // fallback para home
+  }
 }
 </script>

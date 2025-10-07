@@ -18,6 +18,14 @@ import nodeIcon from '../assets/img/node.jpg'
 import mongoIcon from '../assets/img/mongo.png'
 import typescriptIcon from '../assets/img/typescript.svg'
 import javascriptIcon from '../assets/img/js.svg'
+import vueIcon from '../assets/img/vue.svg'
+import postgreIcon from '../assets/img/postgre.svg'
+import pythonIcon from '../assets/img/python.svg'
+import fastIcon from '../assets/img/fast.svg'
+import TensorFlowIcon from '../assets/img/tensorflow.svg'
+import dockerIcon from '../assets/img/docker.svg'
+import prismaIcon from '../assets/img/prisma.svg'
+import openaiIcon from '../assets/img/openai.svg'
 
 export const projects = [
   {
@@ -70,69 +78,6 @@ export const projects = [
   </ul>
   <br>
 `,
-    longDescription: `
-      <h2>🧠 HabTracker</h2>
-      <p><strong>Transform your life, one habit at a time.</strong></p>
-      <p>HabTracker is a modern habit tracking application designed to help you build better habits and achieve your goals. Track your daily progress, earn XP, unlock achievements, and watch your personal growth unfold through an engaging gamified experience.</p>
-      <br>
-      <h3>✨ What Makes HabTracker Special</h3>
-      <h4>🎯 Smart Habit Management</h4>
-      <ul>
-        <li>Create custom habits across categories (Health, Productivity, Learning, Social, Creativity, Lifestyle)</li>
-        <li>Flexible scheduling: daily, weekly, bi-weekly, or custom frequencies</li>
-        <li>Visual progress tracking with streaks and completion history</li>
-      </ul>
-      <h4>🏆 Gamified Experience</h4>
-      <ul>
-        <li><strong>XP System</strong>: Earn points for completing habits and daily logins</li>
-        <li><strong>Leveling Up</strong>: Progress through levels as you build consistency</li>
-        <li><strong>Achievements</strong>: Unlock badges for milestones and streaks</li>
-        <li><strong>Visual Rewards</strong>: Beautiful icons and animations</li>
-      </ul>
-      <h4>📱 Mobile-First Design</h4>
-      <ul>
-        <li>React Native + Expo</li>
-        <li>Intuitive, clean interface optimized for daily use</li>
-        <li>Offline-capable with smart data synchronization</li>
-        <li>Cross-platform support (iOS, Android, Web)</li>
-      </ul>
-      <h4>🔐 Secure & Private</h4>
-      <ul>
-        <li>JWT-based authentication with refresh tokens</li>
-        <li>Secure user data storage and avatar uploads</li>
-        <li>Rate limiting and account protection</li>
-        <li>Privacy-focused design</li>
-      </ul>
-      <h3>🛠️ Built With Modern Technology</h3>
-      <p><strong>Backend Infrastructure</strong>: Node.js & Express, MongoDB, JWT, Multer, Rate Limiting</p>
-      <p><strong>Mobile Application</strong>: React Native, Expo, TypeScript, React Navigation, AsyncStorage</p>
-      <h3>Key Features</h3>
-      <ul>
-        <li>Real-time habit completion tracking</li>
-        <li>Automatic XP and achievement calculations</li>
-        <li>User profile management with avatar uploads</li>
-        <li>Responsive design for all screen sizes</li>
-        <li>Comprehensive error handling and validation</li>
-      </ul>
-      <h3>🎨 App Categories</h3>
-      <p>🏥 Health • ⚡ Productivity • 📚 Learning • 👥 Social • 🎨 Creativity • 🏠 Lifestyle</p>
-      <h3>🚀 Getting Started</h3>
-      <p>The app consists of two main components: <strong>Backend API</strong> and <strong>Mobile App</strong> working together seamlessly.</p>
-      <h3>📊 User Experience</h3>
-      <ul>
-        <li>Onboarding, Habit Creation, Daily Tracking</li>
-        <li>Progress Visualization and Achievement System</li>
-        <li>Profile Management with avatars and settings</li>
-      </ul>
-      <h3>🔮 Future Vision</h3>
-      <ul>
-        <li>Social features and community challenges</li>
-        <li>Advanced analytics and insights</li>
-        <li>Integration with health apps and wearables</li>
-        <li>Custom habit templates and sharing</li>
-        <li>Advanced achievement systems</li>
-      </ul>
-    `,
 
     technologies: [
       { name: 'React', icon: reactNativeIcon },
@@ -145,11 +90,84 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'In Progress...',
+    title: 'BullEye - Stock Market ML Prediction',
     link: '/projects/3',
     image: project3Img,
     background_image: background_project1,
-    description: 'Aplicação de gestão de tarefas com autenticação e sincronização em tempo real.',
-    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS']
+    description: `
+  <p><strong>BullEye</strong> is a complete stock market prediction system powered by Machine Learning. It combines a modern web interface, robust backend, and intelligent data models to forecast stock price trends with high accuracy.</p>
+  <br>
+  <p>The system integrates multiple technologies across different layers:</p>
+  <ul>
+    <li> - <strong>Frontend:</strong> Built with Vue.js 3, Vuetify, and Chart.js for interactive data visualization.</li>
+    <li> - <strong>Backend:</strong> Developed with Node.js, Express, PostgreSQL, and Redis for caching and high performance.</li>
+    <li> - <strong>Machine Learning Service:</strong> Implemented in Python using TensorFlow and FastAPI to serve real-time predictions.</li>
+    <li> - <strong>DevOps & Deployment:</strong> Fully containerized with Docker and orchestrated using Docker Compose, with CI/CD via GitHub Actions.</li>
+  </ul>
+  <br>
+  <p><strong>Main features include:</strong></p>
+  <ul>
+    <li> - Automated financial data collection and preprocessing.</li>
+    <li> - Real-time prediction API powered by trained ML models.</li>
+    <li> - Interactive dashboard displaying price forecasts and performance metrics.</li>
+    <li> - Authentication and user management system with JWT.</li>
+    <li> - Monitoring, logs, and error tracking for all services.</li>
+  </ul>
+  <br>
+  <p>The goal of BullEye is to provide traders and analysts with actionable insights and predictive analytics through an elegant and data-driven interface.</p>
+  <br>
+`,
+
+    technologies: [
+      { name: 'Vue Js', icon: vueIcon },
+      { name: 'Express Js', icon: expressIcon },
+      { name: 'Node Js', icon: nodeIcon },
+      { name: 'Postgre SQL', icon: postgreIcon },
+      { name: 'Python', icon: pythonIcon },
+      { name: 'FastAPI', icon: fastIcon },
+      { name: 'TensorFlow', icon: TensorFlowIcon },
+      { name: 'Docker', icon: dockerIcon },
+    ]
+  },
+  {
+    id: 4,
+    title: 'CV Builder – AI-Powered Resume Generator',
+    link: '/projects/4',
+    image: project3Img,
+    background_image: background_project1,
+    description: `
+  <p><strong>CV Builder</strong> is a full-stack web application designed to help users create and customize professional resumes effortlessly. With a modern UI and AI-powered assistance, it generates resumes optimized for Applicant Tracking Systems (ATS) and tailored to specific job descriptions.</p>
+  <br>
+  <p>The system integrates several key technologies across the stack:</p>
+  <ul>
+    <li> - <strong>Frontend:</strong> Developed with Vue 3 and Pinia, offering a responsive and intuitive resume editing experience.</li>
+    <li> - <strong>Backend:</strong> Built using Node.js, Express, and Prisma ORM for efficient data management and scalability.</li>
+    <li> - <strong>AI Integration:</strong> Enhances job descriptions and professional summaries using intelligent text generation.</li>
+  </ul>
+  <br>
+  <p><strong>Main features include:</strong></p>
+  <ul>
+    <li> - <strong>Resume Creation:</strong> Clean and intuitive interface for building and editing resumes.</li>
+    <li> - <strong>ATS Optimization:</strong> Automatically formats resumes to be compatible with Applicant Tracking Systems.</li>
+    <li> - <strong>Description Enhancement:</strong> Uses AI to improve professional experience sections.</li>
+    <li> - <strong>Skill Suggestions:</strong> Recommends relevant skills based on desired job positions.</li>
+    <li> - <strong>Personalized Summary:</strong> Generates unique professional summaries tailored to each user.</li>
+  </ul>
+  <br>
+  <p>The goal of CV Builder is to streamline the resume creation process and empower users to present their skills and experience effectively through a smart, elegant, and data-driven platform.</p>
+  <br>
+`,
+
+
+    technologies: [
+      { name: 'Vue Js', icon: vueIcon },
+      { name: 'TypeScript', icon: typescriptIcon },
+      { name: 'Express Js', icon: expressIcon },
+      { name: 'Node Js', icon: nodeIcon },
+      { name: 'Postgre SQL', icon: postgreIcon },
+      { name: 'Prisma', icon: prismaIcon },
+      { name: 'Open AI API', icon: openaiIcon },
+      { name: 'Docker', icon: dockerIcon },
+    ]
   }
 ]

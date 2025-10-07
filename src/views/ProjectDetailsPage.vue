@@ -27,7 +27,8 @@ const router = useRouter()
 const slugToId = {
   bitesy: 1,
   habtracker: 2,
-  ecoguide: 3,
+  bulleye: 3,
+  cv_builder: 4
 }
 
 const projectId = computed(() => slugToId[String(route.params.slug || '').toLowerCase()])
@@ -43,7 +44,10 @@ const links = computed(() => {
     list.push({ label: 'Full Project on Behance', href: 'https://www.behance.net/gallery/217586327/Bitesy-Dieting-App' })
   }
   if (project.value.id === 3) {
-    list.push({ label: 'EcoGuide on Behance', href: 'https://www.behance.net/gallery/173602993/EcoGuide(EcoApp-UIUX-Concept)' })
+    list.push({ label: 'See code on GitHub', href: 'https://github.com/AndreRodrigues884/BullEye' })
+  }
+  if (project.value.id === 3) {
+    list.push({ label: 'See code on GitHub', href: 'https://github.com/AndreRodrigues884/cv_builder' })
   }
   return list
 })

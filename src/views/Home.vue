@@ -19,6 +19,9 @@
     </div>
   </div>
 
+  <ChatBot />
+
+
   <div class="flex flex-col gap-8">
     <div class="text-left text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-left">
       &lt;Projects&gt;
@@ -192,6 +195,7 @@
 <script setup>
 import Footer from '../components/Footer.vue'
 import Header from '../components/Header.vue'
+import ChatBot from '../components/ChatBot.vue'
 
 import figmaIcon from '../assets/img/figma.png'
 import reactNativeIcon from '../assets/img/react.png'

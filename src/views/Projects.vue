@@ -91,7 +91,7 @@
 
                 <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
                 <div class="flex flex-col w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
-                    <img src="../assets/img/project1.png" alt="BullEye Project Preview"
+                    <img src="../assets/img/bulleye.png" alt="BullEye Project Preview"
                         class="w-full h-full object-contain" />
 
                     <!-- Caption -->
@@ -146,9 +146,9 @@
             </div>
 
             <!-- Botões -->
-            <div class="w-full flex justify-end flex-wrap gap-3 sm:gap-4">
+            <div class="w-full flex flex-row sm:flex-row justify-center sm:justify-end gap-3 sm:gap-4">
                 <button
-                    class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer hover-scale hover-glow smooth-transition">
+                    class="flex items-center justify-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer w-full sm:w-auto hover-scale hover-glow smooth-transition">
                     <a href="https://github.com/AndreRodrigues884/BullEye" target="_blank" rel="noopener noreferrer"
                         class="mr-2 font-regular text-[12px] sm:text-[14px]">
                         See code on GitHub
@@ -228,9 +228,9 @@
             </div>
 
             <!-- Botões -->
-            <div class="w-full flex justify-end flex-wrap gap-3 sm:gap-4">
+            <div class="w-full flex flex-row sm:flex-row justify-center sm:justify-end gap-3 sm:gap-4">
                 <button
-                    class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer hover-scale hover-glow smooth-transition">
+                    class="flex items-center justify-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer w-full sm:w-auto hover-scale hover-glow smooth-transition">
                     <a href="https://github.com/AndreRodrigues884/cv_builder" target="_blank" rel="noopener noreferrer"
                         class="mr-2 font-regular text-[12px] sm:text-[14px]">
                         See code on GitHub

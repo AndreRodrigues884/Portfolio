@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "dev:backend": ".\\backend\\venv\\Scripts\\uvicorn.exe backend.server:app --reload --host 127.0.0.1 --port 8000",
-    "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev\""
+    "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev\"",
+    "build": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",

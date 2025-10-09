@@ -6,6 +6,7 @@ import project3Img from '../assets/img/project1.png'
 import background_project1 from '../assets/img/project1.png'
 import background_project2 from '../assets/img/project2.png'
 import habtrackerVideo from '../assets/video/Habtracker.mp4'
+import bulleye_project from '../assets/img/bulleye.png'
 
 import figmaIcon from '../assets/img/figma.png'
 import miroIcon from '../assets/img/miro.png'
@@ -94,7 +95,7 @@ export const projects = [
     title: 'BullEye - Stock Market ML Prediction',
     link: '/projects/3',
     image: project3Img,
-    background_image: background_project1,
+    background_image: bulleye_project,
     description: `
   <p><strong>BullEye</strong> is a complete stock market prediction system powered by Machine Learning. It combines a modern web interface, robust backend, and intelligent data models to forecast stock price trends with high accuracy.</p>
   <br>

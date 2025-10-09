@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import os
 
 # ======== Load personal data ========
-csv_path = os.path.join(os.path.dirname(__file__), "backend/personal_data.csv")
+csv_path = os.path.join(os.path.dirname(__file__), "..", "personal_data.csv")
 data = pd.read_csv(csv_path)
 personal_info = dict(zip(data['topic'], data['content']))
 

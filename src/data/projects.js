@@ -5,6 +5,7 @@ import project3Img from '../assets/img/project1.png'
 
 import background_project1 from '../assets/img/project1.png'
 import background_project2 from '../assets/img/project2.png'
+import habtrackerVideo from '../assets/video/Habtracker.mp4'
 
 import figmaIcon from '../assets/img/figma.png'
 import miroIcon from '../assets/img/miro.png'
@@ -59,10 +60,10 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'HabTracker - Full-Stack Development & UI/UX Design Project',
+    title: 'HabTracker – Gamified Habit Tracking App',
     link: '/projects/2',
     image: background_project2,
-    background_image: background_project2,
+    background_image: habtrackerVideo,
     description: `
   <p><strong>HabTracker</strong> is a mobile application designed to help users build and maintain consistent habits through gamification. Users can create recurring habits, mark them as completed, and track their progress over time.</p>
   <br>

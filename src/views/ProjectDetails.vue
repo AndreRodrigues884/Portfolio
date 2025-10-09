@@ -5,8 +5,21 @@
     </div>
 
     <div class="flex flex-col gap-6 px-4 pb-10">
-      <div class="w-full h-86 md:h-86 rounded-[24px] border border-[#434343] overflow-hidden bg-[#EDEDED]"
-           :style="coverStyle"></div>
+      <div class="w-full h-86 md:h-86 rounded-[24px] border border-[#434343] overflow-hidden bg-[#EDEDED] flex items-center justify-center">
+        <template v-if="isVideo">
+          <video
+            :src="project.background_image"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="max-w-full max-h-full object-contain"
+          ></video>
+        </template>
+        <template v-else>
+          <div class="w-full h-full" :style="coverStyle"></div>
+        </template>
+      </div>
 
       <div class="flex flex-col gap-4">
         <h1 class="text-[22px] sm:text-[28px] font-semibold text-[#111]">{{ project.title }}</h1>
@@ -56,6 +69,11 @@ const coverStyle = computed(() => ({
 }))
 
 const projectLinks = computed(() => props.links || [])
+
+const isVideo = computed(() => {
+  const src = props.project?.background_image || ''
+  return typeof src === 'string' && src.toLowerCase().endsWith('.mp4')
+})
 </script>
 
 <style scoped>

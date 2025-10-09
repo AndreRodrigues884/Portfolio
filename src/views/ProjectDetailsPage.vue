@@ -46,7 +46,7 @@ const links = computed(() => {
   if (project.value.id === 3) {
     list.push({ label: 'See code on GitHub', href: 'https://github.com/AndreRodrigues884/BullEye' })
   }
-  if (project.value.id === 3) {
+  if (project.value.id === 4) {
     list.push({ label: 'See code on GitHub', href: 'https://github.com/AndreRodrigues884/cv_builder' })
   }
   return list

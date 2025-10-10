@@ -172,7 +172,7 @@
 
                 <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
                  <div class="flex flex-col w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
-                    <img src="../assets/img/project1.png" alt="CV BUILDER Project Preview"
+                    <img src="../assets/img/cvbuilder.png" alt="CV BUILDER Project Preview"
                         class="w-full h-full object-contain" />
 
                     <!-- Caption -->

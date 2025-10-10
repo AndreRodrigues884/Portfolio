@@ -26,50 +26,6 @@
     <div class="text-left text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-left">
       &lt;Projects&gt;
     </div>
-    <!--  1º Project -->
-    <div
-      class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 px-4 lg:px-10 py-8 lg:py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED] hover-lift smooth-transition">
-
-      <!-- Imagem (100% no mobile + iPad, fixa no desktop) -->
-      <div class="w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
-        <img src="../assets/img/project1.png" alt="Exemplo" class="w-full h-full object-cover" />
-      </div>
-
-      <!-- Conteúdo -->
-      <div class="flex flex-col gap-4 lg:gap-6 w-full lg:w-auto">
-        <div class="flex flex-col gap-3">
-          <div class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#434343]">
-            Bitesy - UI/UX Design Project
-          </div>
-          <div class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#676067] leading-relaxed">
-            Bitesy is an application designed to help users
-            discover and follow personalized diets tailored to their health goals, preferences, and lifestyle.
-            Through an initial questionnaire, it recommends meal plans, suggests the ideal duration for each diet,
-            and highlights their main benefits.
-          </div>
-          <div class="flex flex-col gap-2">
-            <div class="flex flex-row gap-2 sm:gap-4 flex-wrap">
-              <div
-                class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                Personalized Nutrition
-              </div>
-              <div
-                class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                Health Goals
-              </div>
-            </div>
-            <div class="w-28">
-              <div
-                class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-2 py-2 border border-[#676767] rounded-full text-center">
-                UI/UX Design
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
 
     <!--  2º Project -->
     <div class="flex flex-col gap-6">
@@ -122,19 +78,89 @@
         </div>
 
       </div>
-      <div class="w-full flex justify-end">
-        <button
-          class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer hover-scale hover-glow smooth-transition">
-          <router-link to="/projects" class="mr-2 font-regular text-[12px]">See More Projects</router-link>
-          <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
-        </button>
-      </div>
 
 
-      <div class="text-right text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-right">
-        &lt;/Projects&gt;
-      </div>
+
     </div>
+
+
+
+    <!-- Bulleye Project -->
+        <div class="flex flex-col gap-6">
+            <div
+                class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 px-4 lg:px-10 py-8 lg:py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED] cursor-pointer hover-lift smooth-transition">
+
+                <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
+                <div class="flex flex-col w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
+                    <img src="../assets/img/bulleye.png" alt="BullEye Project Preview"
+                        class="w-full h-full object-contain" />
+
+                    <!-- Caption -->
+                    <div class=" text-center uppercase bg-[#676767]/80 text-white text-[12px] px-2 py-1 ">
+                        in development
+                    </div>
+                </div>
+
+                <!-- Conteúdo -->
+                <div class="flex flex-col gap-4 lg:gap-6 w-full lg:w-auto">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#434343]">
+                            BullEye - Stock Market ML Prediction
+                        </div>
+
+                        <div
+                            class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#676067] leading-relaxed">
+                            BullEye is a complete stock market prediction system powered by Machine Learning.
+                            It features a modern web interface, automated data collection, and deep learning models
+                            to forecast stock price trends with accuracy and reliability.
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex flex-row gap-2 sm:gap-4 flex-wrap">
+                                <div
+                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                                    Machine Learning
+                                </div>
+                                <div
+                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                                    Vue Js
+                                </div>
+                                <div
+                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                                    Node.js + Express + PostgreSQL
+                                </div>
+                            </div>
+                            <div class="flex flex-row flex-wrap gap-2 sm:gap-4">
+                                <div
+                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                                    Python + TensorFlow + FastAPI
+                                </div>
+                                <div
+                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                                    Docker + GitHub Actions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /Bulleye Project -->
+
+    <div class="w-full flex justify-end">
+      <button
+        class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer hover-scale hover-glow smooth-transition">
+        <router-link to="/projects" class="mr-2 font-regular text-[12px]">See More Projects</router-link>
+        <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
+      </button>
+    </div>
+    <div class="text-right text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-right">
+      &lt;/Projects&gt;
+    </div>
+
+
+
 
     <div class="text-left text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-left">
       &lt;About Me&gt;

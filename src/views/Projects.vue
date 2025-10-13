@@ -18,7 +18,7 @@
 
                 <!-- GitHub Icon (top-right corner) -->
                 <a href="https://github.com/AndreRodrigues884/Habtracker" target="_blank" rel="noopener noreferrer"
-                    class="absolute top-5 left-5 text-gray-500 hover:text-gray-800 transition-colors duration-300">
+                    class="absolute bottom-5 right-5 text-gray-500 hover:text-gray-800 transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path
                             d="M12 .5C5.37.5 0 5.87 0 12.52c0 5.3 3.438 9.795 8.205 11.385.6.11.82-.26.82-.58v-2.17c-3.338.73-4.03-1.61-4.03-1.61-.55-1.42-1.34-1.8-1.34-1.8-1.09-.76.08-.75.08-.75 1.2.09 1.83 1.24 1.83 1.24 1.07 1.86 2.8 1.32 3.49 1.01.11-.79.42-1.32.76-1.63-2.67-.31-5.48-1.37-5.48-6.08 0-1.34.47-2.44 1.24-3.3-.12-.31-.54-1.56.12-3.25 0 0 1.01-.33 3.3 1.25.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.58 3.3-1.25 3.3-1.25.66 1.69.24 2.94.12 3.25.77.86 1.24 1.96 1.24 3.3 0 4.73-2.82 5.76-5.5 6.07.43.37.82 1.1.82 2.23v3.3c0 .32.22.7.83.58C20.56 22.31 24 17.81 24 12.52 24 5.87 18.63.5 12 .5z" />
@@ -88,7 +88,7 @@
 
                 <!-- GitHub Icon (top-right corner) -->
                 <a href="https://github.com/AndreRodrigues884/BullEye" target="_blank" rel="noopener noreferrer"
-                    class="absolute top-5 left-5 text-gray-500 hover:text-gray-800 transition-colors duration-300">
+                    class="absolute bottom-5 right-5 text-gray-500 hover:text-gray-800 transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path
                             d="M12 .5C5.37.5 0 5.87 0 12.52c0 5.3 3.438 9.795 8.205 11.385.6.11.82-.26.82-.58v-2.17c-3.338.73-4.03-1.61-4.03-1.61-.55-1.42-1.34-1.8-1.34-1.8-1.09-.76.08-.75.08-.75 1.2.09 1.83 1.24 1.83 1.24 1.07 1.86 2.8 1.32 3.49 1.01.11-.79.42-1.32.76-1.63-2.67-.31-5.48-1.37-5.48-6.08 0-1.34.47-2.44 1.24-3.3-.12-.31-.54-1.56.12-3.25 0 0 1.01-.33 3.3 1.25.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.58 3.3-1.25 3.3-1.25.66 1.69.24 2.94.12 3.25.77.86 1.24 1.96 1.24 3.3 0 4.73-2.82 5.76-5.5 6.07.43.37.82 1.1.82 2.23v3.3c0 .32.22.7.83.58C20.56 22.31 24 17.81 24 12.52 24 5.87 18.63.5 12 .5z" />
@@ -164,7 +164,7 @@
 
                 <!-- GitHub Icon (top-right corner) -->
                 <a href="https://github.com/AndreRodrigues884/cv_builder" target="_blank" rel="noopener noreferrer"
-                    class="absolute top-5 left-5 text-gray-500 hover:text-gray-800 transition-colors duration-300">
+                    class="absolute bottom-5 right-5 text-gray-500 hover:text-gray-800 transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path
                             d="M12 .5C5.37.5 0 5.87 0 12.52c0 5.3 3.438 9.795 8.205 11.385.6.11.82-.26.82-.58v-2.17c-3.338.73-4.03-1.61-4.03-1.61-.55-1.42-1.34-1.8-1.34-1.8-1.09-.76.08-.75.08-.75 1.2.09 1.83 1.24 1.83 1.24 1.07 1.86 2.8 1.32 3.49 1.01.11-.79.42-1.32.76-1.63-2.67-.31-5.48-1.37-5.48-6.08 0-1.34.47-2.44 1.24-3.3-.12-.31-.54-1.56.12-3.25 0 0 1.01-.33 3.3 1.25.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.58 3.3-1.25 3.3-1.25.66 1.69.24 2.94.12 3.25.77.86 1.24 1.96 1.24 3.3 0 4.73-2.82 5.76-5.5 6.07.43.37.82 1.1.82 2.23v3.3c0 .32.22.7.83.58C20.56 22.31 24 17.81 24 12.52 24 5.87 18.63.5 12 .5z" />
@@ -174,7 +174,7 @@
                 <!-- Image -->
                 <div class="relative w-full lg:w-72 h-48 rounded-2xl overflow-hidden flex-shrink-0">
                     <img src="../assets/img/cvbuilder.png" alt="CV Builder Project Preview"
-                        class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                        class="w-full lg:h-full object-contain group-hover:scale-105 transition-transform duration-500" />
 
                     <!-- Caption -->
                     <div
@@ -242,8 +242,8 @@
                 <!-- Behance Icon (top-right corner) -->
                 <a href="https://www.behance.net/gallery/217586327/Bitesy-Dieting-App" target="_blank"
                     rel="noopener noreferrer"
-                    class="absolute top-5 left-5">
-                    <img class="w-6 h-6" src="../assets/img/be.svg" alt="" srcset="">
+                    class="absolute bottom-5 right-5">
+                    <img class="w-6 h-6 z-50" src="../assets/img/be.svg" alt="" srcset="">
 
 
                 </a>

@@ -17,7 +17,7 @@
           ></video>
         </template>
         <template v-else>
-          <div class="w-full h-full" :style="coverStyle"></div>
+          <div class="w-full h-60 lg:h-full" :style="coverStyle"></div>
         </template>
       </div>
 

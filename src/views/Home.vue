@@ -19,7 +19,7 @@
     </div>
   </div>
 
-  <ChatBot />
+  <!-- <ChatBot /> -->
 
 
   <div class="flex flex-col gap-8">
@@ -27,10 +27,10 @@
       &lt;Projects&gt;
     </div>
 
-    <!--  2º Project -->
-    <div class="flex flex-col gap-6">
+    <!--  Habtracker -->
+    <div class="flex flex-col gap-8 max-w-5xl mx-auto">
       <div
-        class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 px-4 lg:px-10 py-8 lg:py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED] hover-lift smooth-transition">
+        class="group relative flex flex-col lg:flex-row items-center gap-6 lg:gap-10 p-6 lg:p-10 rounded-3xl bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
 
         <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
         <div class="w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
@@ -86,75 +86,75 @@
 
 
     <!-- Bulleye Project -->
-        <div class="flex flex-col gap-6">
-            <div
-                class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 px-4 lg:px-10 py-8 lg:py-10 rounded-[24px] border border-[#434343] bg-[#EDEDED] cursor-pointer hover-lift smooth-transition">
+    <div class="flex flex-col gap-8 max-w-5xl mx-auto">
+      <div
+        class="group relative flex flex-col lg:flex-row items-center gap-6 lg:gap-10 p-6 lg:p-10 rounded-3xl bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
 
-                <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
-                <div class="flex flex-col w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
-                    <img src="../assets/img/bulleye.png" alt="BullEye Project Preview"
-                        class="w-full h-full object-contain" />
+        <!-- Imagem com tamanho fixo em desktop e responsivo em mobile -->
+        <div class="flex flex-col w-full lg:w-64 lg:h-48 rounded-[20px] overflow-hidden flex-shrink-0">
+          <img src="../assets/img/bulleye.png" alt="BullEye Project Preview" class="w-full h-full object-contain" />
 
-                    <!-- Caption -->
-                    <div class=" text-center uppercase bg-[#676767]/80 text-white text-[12px] px-2 py-1 ">
-                        in development
-                    </div>
-                </div>
-
-                <!-- Conteúdo -->
-                <div class="flex flex-col gap-4 lg:gap-6 w-full lg:w-auto">
-                    <div class="flex flex-col gap-3">
-                        <div class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#434343]">
-                            BullEye - Stock Market ML Prediction
-                        </div>
-
-                        <div
-                            class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#676067] leading-relaxed">
-                            BullEye is a complete stock market prediction system powered by Machine Learning.
-                            It features a modern web interface, automated data collection, and deep learning models
-                            to forecast stock price trends with accuracy and reliability.
-                        </div>
-
-                        <div class="flex flex-col gap-2">
-                            <div class="flex flex-row gap-2 sm:gap-4 flex-wrap">
-                                <div
-                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                                    Machine Learning
-                                </div>
-                                <div
-                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                                    Vue Js
-                                </div>
-                                <div
-                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                                    Node.js + Express + PostgreSQL
-                                </div>
-                            </div>
-                            <div class="flex flex-row flex-wrap gap-2 sm:gap-4">
-                                <div
-                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                                    Python + TensorFlow + FastAPI
-                                </div>
-                                <div
-                                    class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
-                                    Docker + GitHub Actions
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+          <!-- Caption -->
+          <div class=" text-center uppercase bg-[#676767]/80 text-white text-[12px] px-2 py-1 ">
+            in development
+          </div>
         </div>
-        <!-- /Bulleye Project -->
+
+        <!-- Conteúdo -->
+        <div class="flex flex-col gap-4 lg:gap-6 w-full lg:w-auto">
+          <div class="flex flex-col gap-3">
+            <div class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#434343]">
+              BullEye - Stock Market ML Prediction
+            </div>
+
+            <div class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#676067] leading-relaxed">
+              BullEye is a complete stock market prediction system powered by Machine Learning.
+              It features a modern web interface, automated data collection, and deep learning models
+              to forecast stock price trends with accuracy and reliability.
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-row gap-2 sm:gap-4 flex-wrap">
+                <div
+                  class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                  Machine Learning
+                </div>
+                <div
+                  class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                  Vue Js
+                </div>
+                <div
+                  class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                  Node.js + Express + PostgreSQL
+                </div>
+              </div>
+              <div class="flex flex-row flex-wrap gap-2 sm:gap-4">
+                <div
+                  class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                  Python + TensorFlow + FastAPI
+                </div>
+                <div
+                  class="text-[#676767] font-regular text-[10px] sm:text-[12px] px-3 py-2 border border-[#676767] rounded-full text-center">
+                  Docker + GitHub Actions
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /Bulleye Project -->
 
     <div class="w-full flex justify-end">
       <button
-        class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer hover-scale hover-glow smooth-transition">
+        class="flex items-center justify-center px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[14px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300">
         <router-link to="/projects" class="mr-2 font-regular text-[12px]">See More Projects</router-link>
         <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
       </button>
     </div>
+
+
     <div class="text-right text-[16px] sm:text-[24px] font-semibold text-[#000000] px-4 animate-fade-in-right">
       &lt;/Projects&gt;
     </div>
@@ -181,12 +181,12 @@
 
       <!-- Conteúdo -->
       <div class="flex flex-col gap-4 w-full">
-        <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
+        <div class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
           <div class="text-[18px] sm:text-[20px] font-medium text-[#434343]">André Rodrigues</div>
           <div class="text-[14px] sm:text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
         </div>
 
-        <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
+        <div class="group relative flex flex-col lg:flex-row items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
           <div class="text-[12px] sm:text-[14px] font-medium text-[#434343] leading-relaxed">
             Hi, my name is André Rodrigues, I'm 21 years old. I'm currently in my third year of a Bachelor's Degree in
             Technologies and Information Systems for the Web. Throughout my studies, I've worked on design and web
@@ -199,7 +199,7 @@
 
         <div class="w-full flex justify-end">
           <button
-            class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer hover-scale hover-glow smooth-transition">
+            class="flex items-center justify-center px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[14px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300">
             <router-link to="/aboutme" class="mr-2 font-regular text-[12px]">More About Me</router-link>
             <img src="../assets/img/arrow.svg" alt="Menu Icon" class="h-4 w-4" />
           </button>
@@ -221,7 +221,7 @@
 <script setup>
 import Footer from '../components/Footer.vue'
 import Header from '../components/Header.vue'
-import ChatBot from '../components/ChatBot.vue'
+/* import ChatBot from '../components/ChatBot.vue' */
 
 import figmaIcon from '../assets/img/figma.png'
 import reactNativeIcon from '../assets/img/react.png'
@@ -250,15 +250,12 @@ const icons = [
 
 
 <style scoped>
-/* Esconde scrollbar horizontal do carrossel no Chrome, Firefox e Edge */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
 .scrollbar-hide {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
 }
 </style>

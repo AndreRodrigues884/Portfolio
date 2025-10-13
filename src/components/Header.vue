@@ -1,6 +1,7 @@
 <template>
   <header
     class="fixed top-0 left-0 w-full flex items-center justify-between px-6 lg:px-12 pt-6 pb-4 bg-[#f8f8f8] z-50">
+    
 
     <!-- Nome + emoji -->
     <div class="flex items-center gap-2 text-[18px] sm:text-[24px] font-medium">
@@ -11,7 +12,7 @@
     <div class="relative">
       <button
         @click="toggleDropdown"
-        class="flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-[#676767] text-white rounded-[50px] cursor-pointer text-[12px] sm:text-[16px] hover-scale hover-glow smooth-transition">
+        class="flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-[50px] cursor-pointer text-[12px] sm:text-[16px]">
         <h3 class="mr-2">Menu</h3>
         <img
           :src="isOpen ? closeIcon : menuIcon"
@@ -23,15 +24,15 @@
       <!-- Dropdown -->
       <div
         v-if="isOpen"
-        class="absolute right-0 mt-2 bg-[#676767] rounded-[20px] flex flex-col overflow-hidden shadow-lg min-w-[120px] sm:min-w-[160px] z-50 animate-scale-in">
+        class="absolute right-0 mt-2 bg-gradient-to-r from-gray-700 to-gray-900 rounded-[20px] flex flex-col overflow-hidden shadow-lg min-w-[120px] sm:min-w-[160px] z-50 animate-scale-in">
         <router-link
           to="/projects"
-          class="px-3 py-2 sm:px-4 sm:py-3 text-white hover:bg-[#555] transition text-[12px] sm:text-[16px] text-center">
+          class="px-3 py-2 sm:px-4 sm:py-3 text-white hover:bg-[#141414] transition text-[12px] sm:text-[16px] text-center">
           Projects
         </router-link>
         <router-link
           to="/aboutme"
-          class="px-3 py-2 sm:px-4 sm:py-3 text-white hover:bg-[#555] transition text-[12px] sm:text-[16px] text-center">
+          class="px-3 py-2 sm:px-4 sm:py-3 text-white hover:bg-[#141414] transition text-[12px] sm:text-[16px] text-center">
           About Me
         </router-link>
       </div>

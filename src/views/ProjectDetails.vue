@@ -39,7 +39,7 @@
 
       <div v-if="projectLinks.length" class="mt-2 flex flex-row flex-wrap gap-3">
         <a v-for="link in projectLinks" :key="link.href" :href="link.href" target="_blank" rel="noopener noreferrer"
-           class="flex items-center px-4 py-3 bg-[#676767] text-white rounded-[50px] hover-scale hover-glow smooth-transition">
+           class="flex items-center justify-center px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[14px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300">
           <span class="mr-2 font-regular text-[12px] sm:text-[14px]">{{ link.label }}</span>
           <img src="../assets/img/arrow.svg" alt="Open" class="h-4 w-4" />
         </a>

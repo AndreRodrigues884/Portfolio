@@ -28,8 +28,16 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(), // ✅ Usar hash history
+  history: createWebHashHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // Se houver posição guardada (ex: voltar no histórico), usa-a
+    if (savedPosition) {
+      return { top: 0 }
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 export default router

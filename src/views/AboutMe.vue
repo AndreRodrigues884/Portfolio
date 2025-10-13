@@ -20,12 +20,12 @@
 
       <!-- Conteúdo -->
       <div class="flex flex-col gap-4 w-full">
-        <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
+        <div class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
           <div class="text-[18px] sm:text-[20px] font-medium text-[#434343]">André Rodrigues</div>
           <div class="text-[14px] sm:text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
         </div>
 
-        <div class="flex flex-col border-2 border-[#434343] bg-[#ffffff] p-4 rounded-[24px] w-full">
+        <div class="group relative flex flex-col lg:flex-row items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
           <div class="text-[12px] sm:text-[14px] font-medium text-[#434343] leading-relaxed">
             Hi, my name is André Rodrigues, I'm 21 years old. I'm currently in my third year of a Bachelor's
             Degree in
@@ -51,7 +51,7 @@
   </div>
   <div class="flex flex-row items-start px-4">
     <div class="flex-1 flex flex-col gap-4">
-      <div class="flex-1 flex flex-col gap-4 border-1 border-[#434343] rounded-[12px] p-4">
+      <div class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
         <div class="flex flex-row items-start">
           <span class="text-[#434343] text-[12px] font-regular">out 2021 - jul 2023</span>
         </div>
@@ -62,7 +62,7 @@
             Design</span>
         </div>
       </div>
-      <div class="flex-1 flex flex-col gap-4 border-1 border-[#434343] rounded-[12px] p-4">
+      <div class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
         <div class="flex flex-row items-start">
           <span class="text-[#434343] text-[12px] font-regular">set 2023 - jul 2026</span>
         </div>
@@ -92,32 +92,32 @@
     <!-- Linha 1 -->
     <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/react.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">React</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/vue.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Vue JS</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/express.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Express JS</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/node.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Node JS</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/mongo.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Mongo DB</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/typescript.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Typescript</span>
       </div>
@@ -126,37 +126,37 @@
     <!-- Linha 2 -->
     <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/postgre.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Postgre SQL</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/prisma.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Prisma</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/fast.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Fast API</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/js.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Javascript</span>
       </div>
        <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/python.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Python</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/docker.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Docker</span>
       </div>
       <div
-        class="flex flex-col items-center gap-4 border border-[#434343] rounded-[12px] p-4 text-center hover-lift smooth-transition">
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-4 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/figma.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Figma</span>
       </div>

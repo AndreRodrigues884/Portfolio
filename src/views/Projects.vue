@@ -173,7 +173,7 @@
 
                 <!-- Image -->
                 <div class="relative w-full lg:w-72 h-48 rounded-2xl overflow-hidden flex-shrink-0">
-                    <img src="../assets/img/cvbuilder.png" alt="CV Builder Project Preview"
+                    <img src="../assets/img/cvbuilder_img.png" alt="CV Builder Project Preview"
                         class="w-full lg:h-full object-contain group-hover:scale-105 transition-transform duration-500" />
 
                     <!-- Caption -->

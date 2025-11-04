@@ -6,8 +6,9 @@ import project3Img from '../assets/img/project1.png'
 import background_project1 from '../assets/img/project1.png'
 import background_project2 from '../assets/img/project2.png'
 import habtrackerVideo from '../assets/video/Habtracker.mp4'
+import cvbuilderVideo from '../assets/video/CVBuilder.mp4'
 import bulleye_project from '../assets/img/bulleye.png'
-import cvbuilder_project from '../assets/img/cvbuilder.png'
+import cvbuilder_img from '../assets/img/cvbuilder_img.png'
 
 import figmaIcon from '../assets/img/figma.png'
 import miroIcon from '../assets/img/miro.png'
@@ -136,8 +137,8 @@ export const projects = [
     id: 4,
     title: 'CV Builder – AI-Powered Resume Generator',
     link: '/projects/4',
-    image: cvbuilder_project,
-    background_image: cvbuilder_project,
+    image: cvbuilder_img,
+    background_image: cvbuilderVideo,
     description: `
   <p><strong>CV Builder</strong> is a full-stack web application designed to help users create and customize professional resumes effortlessly. With a modern UI and AI-powered assistance, it generates resumes optimized for Applicant Tracking Systems (ATS) and tailored to specific job descriptions.</p>
   <br>

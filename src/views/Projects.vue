@@ -81,13 +81,12 @@
 
         <!-- Habtracker Project -->
 
-        <!-- Bulleye Project -->
+        <!-- Ticket-Flow Project -->
         <div class="flex flex-col gap-8 max-w-5xl mx-auto">
             <div
                 class="group relative flex flex-col lg:flex-row items-center gap-6 lg:gap-10 p-6 lg:p-10 rounded-3xl bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
 
-                <!-- GitHub Icon (top-right corner) -->
-                <a href="https://github.com/AndreRodrigues884/BullEye" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/AndreRodrigues884/ticket-flow" target="_blank" rel="noopener noreferrer"
                     class="absolute bottom-5 right-5 text-gray-500 hover:text-gray-800 transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path
@@ -95,53 +94,44 @@
                     </svg>
                 </a>
 
-                <!-- Image -->
-                <div class="relative w-full lg:w-72 h-48 rounded-2xl overflow-hidden flex-shrink-0">
-                    <img src="../assets/img/bulleye.png" alt="BullEye Project Preview"
+                <div class="relative w-full lg:w-72 h-48 rounded-2xl overflow-hidden flex-shrink-0 bg-gray-50">
+                    <img src="../assets/img/ticketflow.png" alt="Ticket Engine Project Preview"
                         class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
-
-                    <!-- Caption -->
-                    <div
-                        class="absolute bottom-0 left-0 w-full text-center uppercase bg-gray-700/80 text-white text-[12px] tracking-wide py-1">
-                        In Development
-                    </div>
                 </div>
 
-                <!-- Content -->
                 <div class="flex flex-col justify-between gap-5 w-full">
                     <div class="flex flex-col gap-3">
                         <h3 class="text-[22px] lg:text-[26px] font-semibold text-gray-800">
-                            BullEye – Stock Market ML Prediction
+                            Ticket Engine – High-Concurrency Ticketing System
                         </h3>
                         <p class="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed">
-                            BullEye is a full-stack stock market prediction system powered by Machine Learning.
-                            It includes a modern web interface, automated data collection pipelines, and deep learning
-                            models
-                            that forecast market trends with precision and reliability.
+                            A robust ticketing platform designed for high-traffic events. It utilizes message queuing to
+                            handle
+                            massive booking spikes, ensuring system resilience and data integrity through a distributed
+                            architecture and containerized services.
                         </p>
                     </div>
 
-                    <!-- Tech stack -->
                     <div class="flex flex-wrap gap-2">
                         <span
                             class="px-3 py-1.5 bg-gray-100 text-gray-700 text-[12px] rounded-full border border-gray-200">
-                            Machine Learning
+                            Vue.js 3
                         </span>
                         <span
                             class="px-3 py-1.5 bg-gray-100 text-gray-700 text-[12px] rounded-full border border-gray-200">
-                            Vue.js
+                            Node.js + Express + TypeScript
+                        </span>
+                        <span
+                            class="px-3 py-1.5 bg-gray-100 text-gray-700 text-[12px] font-medium rounded-full border border-gray-200">
+                            RabbitMQ (Queuing)
                         </span>
                         <span
                             class="px-3 py-1.5 bg-gray-100 text-gray-700 text-[12px] rounded-full border border-gray-200">
-                            Node.js + Express + PostgreSQL
+                            MongoDB
                         </span>
                         <span
                             class="px-3 py-1.5 bg-gray-100 text-gray-700 text-[12px] rounded-full border border-gray-200">
-                            Python + TensorFlow + FastAPI
-                        </span>
-                        <span
-                            class="px-3 py-1.5 bg-gray-100 text-gray-700 text-[12px] rounded-full border border-gray-200">
-                            Docker + GitHub Actions
+                            Docker
                         </span>
                     </div>
                 </div>
@@ -149,13 +139,13 @@
         </div>
         <!-- Button -->
         <div class="flex justify-end mt-3">
-            <button @click="goToDetails('bulleye')"
+            <button @click="goToDetails('ticket_flow')"
                 class="flex items-center justify-center px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[14px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300">
                 <span class="mr-2">View Project Details</span>
             </button>
         </div>
 
-        <!-- /Bulleye Project -->
+        <!-- /Ticket-Flow Project -->
 
         <!-- CV BUILDER Project -->
         <div class="flex flex-col gap-8 max-w-5xl mx-auto">
@@ -241,8 +231,7 @@
 
                 <!-- Behance Icon (top-right corner) -->
                 <a href="https://www.behance.net/gallery/217586327/Bitesy-Dieting-App" target="_blank"
-                    rel="noopener noreferrer"
-                    class="absolute bottom-5 right-5">
+                    rel="noopener noreferrer" class="absolute bottom-5 right-5">
                     <img class="w-6 h-6 z-50" src="../assets/img/be.svg" alt="" srcset="">
 
 

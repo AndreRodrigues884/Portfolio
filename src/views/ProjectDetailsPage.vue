@@ -27,7 +27,7 @@ const router = useRouter()
 const slugToId = {
   bitesy: 1,
   habtracker: 2,
-  bulleye: 3,
+  ticket_flow: 3,
   cv_builder: 4
 }
 
@@ -44,7 +44,7 @@ const links = computed(() => {
     list.push({ label: 'Full Project on Behance', href: 'https://www.behance.net/gallery/217586327/Bitesy-Dieting-App' })
   }
   if (project.value.id === 3) {
-    list.push({ label: 'See code on GitHub', href: 'https://github.com/AndreRodrigues884/BullEye' })
+    list.push({ label: 'See code on GitHub', href: 'https://github.com/AndreRodrigues884/ticket-flow' })
   }
   if (project.value.id === 4) {
     list.push({ label: 'See code on GitHub', href: 'https://github.com/AndreRodrigues884/cv_builder' })

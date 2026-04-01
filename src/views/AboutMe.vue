@@ -121,6 +121,11 @@
         <img src="../assets/img/typescript.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Typescript</span>
       </div>
+      <div
+        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
+        <img src="../assets/img/nuxtIcon.svg" class="w-8 h-8" alt="">
+        <span class="text-[12px] sm:text-[14px]">Nuxt</span>
+      </div>
     </div>
 
     <!-- Linha 2 -->

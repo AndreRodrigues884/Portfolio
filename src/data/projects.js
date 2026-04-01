@@ -2,12 +2,13 @@
 import project1Img from '../assets/img/presentation.png'
 import project2Img from '../assets/img/project1.png'
 import project3Img from '../assets/img/project1.png'
+import ticketflow_project from '../assets/img/ticketflow.png'
+import ticketflowBackground from '../assets/video/ticketflow.mp4'
 
 import background_project1 from '../assets/img/project1.png'
 import background_project2 from '../assets/img/project2.png'
 import habtrackerVideo from '../assets/video/Habtracker.mp4'
 import cvbuilderVideo from '../assets/video/CVBuilder.mp4'
-import bulleye_project from '../assets/img/bulleye.png'
 import cvbuilder_img from '../assets/img/cvbuilder_img.png'
 
 import figmaIcon from '../assets/img/figma.png'
@@ -24,12 +25,10 @@ import typescriptIcon from '../assets/img/typescript.svg'
 import javascriptIcon from '../assets/img/js.svg'
 import vueIcon from '../assets/img/vue.svg'
 import postgreIcon from '../assets/img/postgre.svg'
-import pythonIcon from '../assets/img/python.svg'
-import fastIcon from '../assets/img/fast.svg'
-import TensorFlowIcon from '../assets/img/tensorflow.svg'
 import dockerIcon from '../assets/img/docker.svg'
 import prismaIcon from '../assets/img/prisma.svg'
 import openaiIcon from '../assets/img/openai.svg'
+import rabbitIcon from '../assets/img/rabbitIcon.svg'
 
 export const projects = [
   {
@@ -94,31 +93,32 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'BullEye - Stock Market ML Prediction',
+    title: 'Ticket Engine - High-Concurrency Ticketing System',
     link: '/projects/3',
-    image: project3Img,
-    background_image: bulleye_project,
+    image: ticketflow_project,
+    background_image: ticketflowBackground,
     description: `
-  <p><strong>BullEye</strong> is a complete stock market prediction system powered by Machine Learning. It combines a modern web interface, robust backend, and intelligent data models to forecast stock price trends with high accuracy.</p>
+  <p><strong>Ticket Engine</strong> is a high-performance event ticketing system engineered to handle massive traffic spikes and ensure reliable transaction processing during peak sales periods.</p>
   <br>
-  <p>The system integrates multiple technologies across different layers:</p>
+  <p>The architecture leverages a modern distributed stack to maintain stability under pressure:</p>
   <ul>
-    <li> - <strong>Frontend:</strong> Built with Vue.js 3, Vuetify, and Chart.js for interactive data visualization.</li>
-    <li> - <strong>Backend:</strong> Developed with Node.js, Express, PostgreSQL, and Redis for caching and high performance.</li>
-    <li> - <strong>Machine Learning Service:</strong> Implemented in Python using TensorFlow and FastAPI to serve real-time predictions.</li>
-    <li> - <strong>DevOps & Deployment:</strong> Fully containerized with Docker and orchestrated using Docker Compose, with CI/CD via GitHub Actions.</li>
+    <li> - <strong>Frontend:</strong> Developed with Vue.js 3 for a reactive and seamless user experience.</li>
+    <li> - <strong>Backend:</strong> Built using Node.js and Express with TypeScript, ensuring type safety and robust business logic.</li>
+    <li> - <strong>Messaging & Resilience:</strong> Implementation of RabbitMQ message queues to manage high-concurrency booking requests and prevent system overload.</li>
+    <li> - <strong>Database:</strong> MongoDB for flexible and scalable data storage of events and ticket inventory.</li>
+    <li> - <strong>Infrastructure:</strong> Fully containerized environment using Docker for consistent deployment and scaling.</li>
   </ul>
   <br>
   <p><strong>Main features include:</strong></p>
   <ul>
-    <li> - Automated financial data collection and preprocessing.</li>
-    <li> - Real-time prediction API powered by trained ML models.</li>
-    <li> - Interactive dashboard displaying price forecasts and performance metrics.</li>
-    <li> - Authentication and user management system with JWT.</li>
-    <li> - Monitoring, logs, and error tracking for all services.</li>
+    <li> - Scalable queue-based ticket processing system.</li>
+    <li> - High-concurrency handling for massive event launches.</li>
+    <li> - Real-time inventory management and availability tracking.</li>
+    <li> - Secure authentication and user management.</li>
+    <li> - Resilient architecture designed to recover from service interruptions.</li>
   </ul>
   <br>
-  <p>The goal of BullEye is to provide traders and analysts with actionable insights and predictive analytics through an elegant and data-driven interface.</p>
+  <p>The goal of Ticket Engine is to provide a rock-solid infrastructure for event organizers, ensuring that every user has a fair and smooth experience even during the most demanded "on-sale" moments.</p>
   <br>
 `,
 
@@ -126,10 +126,9 @@ export const projects = [
       { name: 'Vue Js', icon: vueIcon },
       { name: 'Express Js', icon: expressIcon },
       { name: 'Node Js', icon: nodeIcon },
-      { name: 'Postgre SQL', icon: postgreIcon },
-      { name: 'Python', icon: pythonIcon },
-      { name: 'FastAPI', icon: fastIcon },
-      { name: 'TensorFlow', icon: TensorFlowIcon },
+      { name: 'TypeScript', icon: typescriptIcon }, // Adicionado TypeScript
+      { name: 'RabbitMQ', icon: rabbitIcon }, // Adicionado RabbitMQ
+      { name: 'MongoDB', icon: mongoIcon }, // Alterado para MongoDB
       { name: 'Docker', icon: dockerIcon },
     ]
   },

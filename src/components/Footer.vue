@@ -33,7 +33,7 @@
 
 <script setup>
 function downloadCV() {
-    window.open('/Portfolio/CV_André_Rodrigues.pdf', '_blank')
+    window.open('/Portfolio/CV_AndreRodrigues_PT.pdf', '_blank')
 }
 
 const openGitHub = () => {

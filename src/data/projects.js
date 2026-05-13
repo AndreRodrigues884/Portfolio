@@ -1,10 +1,5 @@
-// Importa as imagens para garantir que o Vite/Webpack as processa corretamente
-import project1Img from '../assets/img/presentation.png'
-import project2Img from '../assets/img/project1.png'
-import project3Img from '../assets/img/project1.png'
 import ticketflow_project from '../assets/img/ticketflow.png'
 import ticketflowBackground from '../assets/video/ticketflow.mp4'
-
 import background_project1 from '../assets/img/project1.png'
 import background_project2 from '../assets/img/project2.png'
 import habtrackerVideo from '../assets/video/Habtracker.mp4'
@@ -29,14 +24,26 @@ import dockerIcon from '../assets/img/docker.svg'
 import prismaIcon from '../assets/img/prisma.svg'
 import openaiIcon from '../assets/img/openai.svg'
 import rabbitIcon from '../assets/img/rabbitIcon.svg'
+import nextjsIcon from '../assets/img/nextjsIcon.svg'
+import tailwindIcon from '../assets/img/tailwind.svg'
+import supabaseIcon from '../assets/img/supabaseIcon.svg'
+import vercelIcon from '../assets/img/vercel.svg'
+import groqIcon from '../assets/img/groq.svg'
+import mistralIcon from '../assets/img/mistral.svg'
 
 export const projects = [
   {
     id: 1,
-    title: 'Bitesy - UI/UX Design Project',
+    slug: 'bitesy',
+    title: 'Bitesy',
+    subtitle: 'UI/UX Design Project',
+    summary: 'A nutrition app designed to help users discover and follow personalized diets tailored to their health goals, preferences, and lifestyle.',
+    tags: ['Figma', 'Miro', 'Protopie', 'Adobe Suite'],
+    externalLink: 'https://www.behance.net/gallery/217586327/Bitesy-Dieting-App',
+    externalType: 'behance',
+    image: background_project1,
     background_image: background_project1,
     link: '/projects/1',
-    image: project1Img,
     description: `
       <p><strong>BITESY</strong> is an application designed to help users discover and follow personalized diets tailored to their health goals, preferences, and lifestyle. Through an initial questionnaire, it recommends meal plans, suggests the ideal duration for each diet, and highlights their main benefits.</p>
       <br>
@@ -62,7 +69,13 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'HabTracker – Gamified Habit Tracking App',
+    slug: 'habtracker',
+    title: 'HabTracker',
+    subtitle: 'Gamified Habit Tracking App',
+    summary: 'A mobile app that helps users build and maintain consistent habits through gamification, XP, streaks, and achievement badges.',
+    tags: ['React Native', 'Node.js', 'MongoDB', 'TypeScript'],
+    externalLink: 'https://github.com/AndreRodrigues884/Habtracker',
+    externalType: 'github',
     link: '/projects/2',
     image: background_project2,
     background_image: habtrackerVideo,
@@ -76,12 +89,11 @@ export const projects = [
     <li> - <strong>Experience points (XP)</strong> and level system to reward progress and motivate users.</li>
     <li> - <strong>Achievements and badges unlocked</strong> when specific milestones are reached (e.g., completing a habit 3 days in a row).</li>
     <li> - <strong>User profile with statistics</strong>, achievements overview, and XP/level display.</li>
-    <li> - <strong>Calendar view</strong>to monitor habits over time and plan ahead.</li>
+    <li> - <strong>Calendar view</strong> to monitor habits over time and plan ahead.</li>
     <li> - <strong>Notifications and visual feedback</strong> for completed habits, level-ups, and unlocked achievements.</li>
   </ul>
   <br>
 `,
-
     technologies: [
       { name: 'React', icon: reactNativeIcon },
       { name: 'Express', icon: expressIcon },
@@ -93,7 +105,13 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'Ticket Engine - High-Concurrency Ticketing System',
+    slug: 'ticket_flow',
+    title: 'Ticket Engine',
+    subtitle: 'High-Concurrency Ticketing System',
+    summary: 'A robust ticketing platform for high-traffic events using message queuing to handle massive booking spikes with resilience and data integrity.',
+    tags: ['Vue.js 3', 'Node.js', 'RabbitMQ', 'MongoDB', 'Docker'],
+    externalLink: 'https://github.com/AndreRodrigues884/ticket-flow',
+    externalType: 'github',
     link: '/projects/3',
     image: ticketflow_project,
     background_image: ticketflowBackground,
@@ -121,56 +139,60 @@ export const projects = [
   <p>The goal of Ticket Engine is to provide a rock-solid infrastructure for event organizers, ensuring that every user has a fair and smooth experience even during the most demanded "on-sale" moments.</p>
   <br>
 `,
-
     technologies: [
       { name: 'Vue Js', icon: vueIcon },
       { name: 'Express Js', icon: expressIcon },
       { name: 'Node Js', icon: nodeIcon },
-      { name: 'TypeScript', icon: typescriptIcon }, // Adicionado TypeScript
-      { name: 'RabbitMQ', icon: rabbitIcon }, // Adicionado RabbitMQ
-      { name: 'MongoDB', icon: mongoIcon }, // Alterado para MongoDB
+      { name: 'TypeScript', icon: typescriptIcon },
+      { name: 'RabbitMQ', icon: rabbitIcon },
+      { name: 'MongoDB', icon: mongoIcon },
       { name: 'Docker', icon: dockerIcon },
     ]
   },
   {
     id: 4,
-    title: 'CV Builder – AI-Powered Resume Generator',
+    slug: 'cv_builder',
+    title: 'CV Builder',
+    subtitle: 'AI-Powered Resume Generator',
+    summary: 'A full-stack AI platform that helps users create professional resumes, optimize for ATS, match job descriptions, and prepare for interviews.',
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'Groq API', 'Vercel'],
+    externalLink: 'https://github.com/AndreRodrigues884/cvbuilder',
+    externalType: 'github',
+    demoLink: 'https://cvbuilder-ten-lime.vercel.app/',
     link: '/projects/4',
     image: cvbuilder_img,
     background_image: cvbuilderVideo,
     description: `
-  <p><strong>CV Builder</strong> is a full-stack web application designed to help users create and customize professional resumes effortlessly. With a modern UI and AI-powered assistance, it generates resumes optimized for Applicant Tracking Systems (ATS) and tailored to specific job descriptions.</p>
+  <p><strong>CVBuilder</strong> is a full-stack AI-powered platform designed to help people throughout the entire job search process — from creating and optimizing CVs to preparing for interviews and planning career growth.</p>
   <br>
-  <p>The system integrates several key technologies across the stack:</p>
+  <p>The platform integrates several key technologies across the stack:</p>
   <ul>
-    <li> - <strong>Frontend:</strong> Developed with Vue 3 and Pinia, offering a responsive and intuitive resume editing experience.</li>
-    <li> - <strong>Backend:</strong> Built using Node.js, Express, and Prisma ORM for efficient data management and scalability.</li>
-    <li> - <strong>AI Integration:</strong> Enhances job descriptions and professional summaries using intelligent text generation.</li>
+    <li> - <strong>Frontend:</strong> Built with Next.js 15, TypeScript and Tailwind CSS, offering a responsive and modern experience across desktop and mobile.</li>
+    <li> - <strong>Backend:</strong> Next.js API Routes with Supabase (PostgreSQL) for data management and authentication.</li>
+    <li> - <strong>AI Integration:</strong> Groq API (LLaMA 3.3 70B) for analysis and generation, Mistral OCR for PDF text extraction.</li>
   </ul>
   <br>
   <p><strong>Main features include:</strong></p>
   <ul>
-    <li> - <strong>Resume Creation:</strong> Clean and intuitive interface for building and editing resumes.</li>
-    <li> - <strong>ATS Optimization:</strong> Automatically formats resumes to be compatible with Applicant Tracking Systems.</li>
-    <li> - <strong>Description Enhancement:</strong> Uses AI to improve professional experience sections.</li>
-    <li> - <strong>Skill Suggestions:</strong> Recommends relevant skills based on desired job positions.</li>
-    <li> - <strong>Personalized Summary:</strong> Generates unique professional summaries tailored to each user.</li>
+    <li> - <strong>CV Builder:</strong> Step-by-step wizard to create professional CVs with PDF export.</li>
+    <li> - <strong>AI Review:</strong> Instant ATS score, keyword analysis, strengths, weaknesses and improvement suggestions.</li>
+    <li> - <strong>Job Match:</strong> Adapts the CV to a specific job description using AI — without fabricating information.</li>
+    <li> - <strong>Career Copilot:</strong> Personalized career plan with skills to learn, certifications and action phases.</li>
+    <li> - <strong>Interview Prep:</strong> AI-generated interview questions for specific roles with per-answer feedback and scoring.</li>
+    <li> - <strong>Application Tracker:</strong> Track all job applications and manage their status in one place.</li>
   </ul>
   <br>
-  <p>The goal of CV Builder is to streamline the resume creation process and empower users to present their skills and experience effectively through a smart, elegant, and data-driven platform.</p>
+  <p>The goal of CVBuilder is to be the all-in-one assistant for job seekers — helping them stand out, prepare confidently, and land their next role.</p>
   <br>
 `,
-
-
     technologies: [
-      { name: 'Vue Js', icon: vueIcon },
+      { name: 'Next Js', icon: nextjsIcon },
       { name: 'TypeScript', icon: typescriptIcon },
-      { name: 'Express Js', icon: expressIcon },
-      { name: 'Node Js', icon: nodeIcon },
-      { name: 'Postgre SQL', icon: postgreIcon },
-      { name: 'Prisma', icon: prismaIcon },
-      { name: 'Open AI API', icon: openaiIcon },
-      { name: 'Docker', icon: dockerIcon },
+      { name: 'Tailwind CSS', icon: tailwindIcon },
+      { name: 'Supabase', icon: supabaseIcon },
+      { name: 'Groq API', icon: groqIcon },
+      { name: 'Mistral OCR', icon: mistralIcon },
+      { name: 'Vercel', icon: vercelIcon },
     ]
   }
 ]

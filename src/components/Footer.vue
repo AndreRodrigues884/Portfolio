@@ -33,7 +33,7 @@
 
 <script setup>
 function downloadCV() {
-    window.open('/Portfolio/CV_AndreRodrigues_PT.pdf', '_blank')
+    window.open('/Portfolio/CV_AndreRodrigues_EN.pdf', '_blank')
 }
 
 const openGitHub = () => {
@@ -45,6 +45,6 @@ const openBehance = () => {
 }
 
 const openLinkedin = () => {
-  window.open("https://www.linkedin.com/in/andr%C3%A9-rodrigues-2b526a285/", "_blank")
+  window.open("https://www.linkedin.com/in/andrerodrigues-dev/", "_blank")
 }
 </script>

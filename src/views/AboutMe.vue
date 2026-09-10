@@ -20,25 +20,22 @@
 
       <!-- Conteúdo -->
       <div class="flex flex-col gap-4 w-full">
-        <div class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
+        <div
+          class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
           <div class="text-[18px] sm:text-[20px] font-medium text-[#434343]">André Rodrigues</div>
           <div class="text-[14px] sm:text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
         </div>
 
-        <div class="group relative flex flex-col lg:flex-row items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
+        <div
+          class="group relative flex flex-col lg:flex-row items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
           <div class="text-[12px] sm:text-[14px] font-medium text-[#434343] leading-relaxed">
-            Hi, my name is André Rodrigues, I'm 21 years old. I'm currently in my third year of a Bachelor's
-            Degree in
-            Technologies and Information Systems for the Web. Throughout my studies, I've worked on design
-            and
-            web
-            development projects in small teams, learning to manage tight deadlines and deliver clear
-            results.
-            I'm now
-            looking for an internship or junior role where I can apply my programming and UI design skills,
-            contribute
-            to a
-            company's growth, and continue developing professionally and personally.
+            Hi, my name is André Rodrigues, I'm 22 years old. I recently graduated with a Bachelor's Degree
+            in Technologies and Information Systems for the Web from P.Porto. During my studies and
+            curricular internship, I built full-stack web and mobile projects, including Learnly, an
+            AI-powered micro-learning platform with a complete RAG pipeline and LLM integration.
+            I'm now looking for opportunities as a Software Engineer, where I can go deep on backend
+            and system architecture, keep growing into AI-integrated products, and work alongside
+            people who take their craft seriously.
           </div>
         </div>
       </div>
@@ -51,7 +48,8 @@
   </div>
   <div class="flex flex-row items-start px-4">
     <div class="flex-1 flex flex-col gap-4">
-      <div class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
+      <div
+        class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
         <div class="flex flex-row items-start">
           <span class="text-[#434343] text-[12px] font-regular">out 2021 - jul 2023</span>
         </div>
@@ -62,7 +60,8 @@
             Design</span>
         </div>
       </div>
-      <div class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
+      <div
+        class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
         <div class="flex flex-row items-start">
           <span class="text-[#434343] text-[12px] font-regular">set 2023 - jul 2026</span>
         </div>
@@ -150,7 +149,7 @@
         <img src="../assets/img/js.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Javascript</span>
       </div>
-       <div
+      <div
         class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
         <img src="../assets/img/python.svg" class="w-8 h-8" alt="">
         <span class="text-[12px] sm:text-[14px]">Python</span>

@@ -25,10 +25,8 @@
     </div>
 
     <div class="flex justify-end max-w-5xl mx-auto w-full">
-      <router-link
-        to="/projects"
-        class="flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[13px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300"
-      >
+      <router-link to="/projects"
+        class="flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[13px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300">
         See All Projects
         <img src="../assets/img/arrow.svg" class="h-4 w-4" alt="" />
       </router-link>
@@ -50,12 +48,9 @@
       <div class="relative flex-shrink-0 w-56 h-56 flex items-center justify-center">
         <img src="../assets/img/cadu.png" alt="André Rodrigues" class="w-full h-full rounded-full object-cover" />
         <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center animate-spin-slow">
-          <div
-            v-for="(icon, index) in icons"
-            :key="icon.src"
+          <div v-for="(icon, index) in icons" :key="icon.src"
             :style="{ transform: `rotate(${(360 / icons.length) * index}deg) translate(110px) rotate(-${(360 / icons.length) * index}deg)` }"
-            class="absolute"
-          >
+            class="absolute">
             <img :src="icon.src" :alt="icon.alt" class="w-7 h-7 rounded-md animate-spin-reverse-slow" />
           </div>
         </div>
@@ -65,20 +60,22 @@
       <div class="flex flex-col gap-3 w-full">
         <div class="p-5 rounded-3xl bg-white border border-gray-200 shadow-md">
           <div class="text-[17px] sm:text-[19px] font-semibold text-[#434343]">André Rodrigues</div>
-          <div class="text-[13px] sm:text-[14px] font-medium text-[#676767] mt-0.5">Full Stack Dev & UX/UI Designer</div>
+          <div class="text-[13px] sm:text-[14px] font-medium text-[#676767] mt-0.5">Full Stack Dev & UX/UI Designer
+          </div>
         </div>
         <div class="p-5 rounded-3xl bg-white border border-gray-200 shadow-md">
           <p class="text-[13px] sm:text-[14px] font-medium text-[#434343] leading-relaxed">
-            Hi, I'm André Rodrigues, 21 years old, currently in my third year of a Bachelor's Degree in
-            Web Information Systems and Technologies. I've worked on design and development projects in small teams,
-            and I'm looking for an internship or junior role where I can grow professionally.
+            Hi, my name is André Rodrigues, I'm 22 years old. I recently graduated with a Bachelor's Degree
+            in Technologies and Information Systems for the Web from P.Porto. During my studies and
+            curricular internship, I built full-stack web and mobile projects.
+            I'm now looking for opportunities as a Software Engineer, where I can go deep on backend
+            and system architecture, keep growing into AI-integrated products, and work alongside
+            people who take their craft seriously.
           </p>
         </div>
         <div class="flex justify-end">
-          <router-link
-            to="/aboutme"
-            class="flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[13px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300"
-          >
+          <router-link to="/aboutme"
+            class="flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[13px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300">
             More About Me
             <img src="../assets/img/arrow.svg" class="h-4 w-4" alt="" />
           </router-link>

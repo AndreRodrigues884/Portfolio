@@ -98,29 +98,29 @@ import Footer from '../components/Footer.vue'
 import ProjectCard from '../components/ProjectCard.vue'
 import { projects } from '../data/projects.js'
 
-import figmaIcon from '../assets/img/figma.png'
 import reactNativeIcon from '../assets/img/react.png'
-import expressIcon from '../assets/img/express.png'
 import nodeIcon from '../assets/img/node.jpg'
 import mongoIcon from '../assets/img/mongo.png'
 import typescriptIcon from '../assets/img/typescript.svg'
 import javascriptIcon from '../assets/img/js.svg'
 import vueIcon from '../assets/img/vue.svg'
 import postgreIcon from '../assets/img/postgre.svg'
-import pythonIcon from '../assets/img/python.svg'
+import nextjsIcon from '../assets/img/nextjsIcon.svg'
+import supabaseIcon from '../assets/img/supabaseIcon.svg'
+import dockerIcon from '../assets/img/docker.svg'
 
-const featuredProjects = computed(() => projects.filter(p => p.id === 2 || p.id === 4))
+const featuredProjects = computed(() => projects.filter(p => p.id === 1 || p.id === 4 || p.id === 2))
 
 const icons = [
   { src: vueIcon, alt: 'Vue' },
-  { src: figmaIcon, alt: 'Figma' },
+  { src: dockerIcon, alt: 'Docker' },
   { src: nodeIcon, alt: 'Node' },
-  { src: expressIcon, alt: 'Express' },
+  { src: supabaseIcon, alt: 'Supabase' },
   { src: reactNativeIcon, alt: 'React' },
   { src: mongoIcon, alt: 'Mongo' },
   { src: javascriptIcon, alt: 'JavaScript' },
   { src: typescriptIcon, alt: 'TypeScript' },
   { src: postgreIcon, alt: 'PostgreSQL' },
-  { src: pythonIcon, alt: 'Python' },
+  { src: nextjsIcon, alt: 'Next.js' },
 ]
 </script>

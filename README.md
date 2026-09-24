@@ -4,7 +4,7 @@ Personal portfolio built with Vue 3 and Tailwind CSS, featuring project case stu
 
 **Live site:** https://andrerodrigues884.github.io/Portfolio/
 
-![Portfolio home page](docs/screenshot.png)
+![Portfolio home page](docs/background.png)
 
 ## Features
 

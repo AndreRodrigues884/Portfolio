@@ -1,43 +1,43 @@
 <template>
-  <header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 lg:px-12 py-4 bg-[#f8f8f8] z-50 border-b border-gray-100">
-    <router-link to="/" class="text-[18px] sm:text-[22px] font-medium text-black hover:opacity-70 transition-opacity duration-200">
-      André Rodrigues
+  <header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 lg:px-12 py-5 bg-bg/85 backdrop-blur-md z-50 border-b border-line">
+    <router-link to="/" class="font-mono text-[13px] tracking-[0.08em] text-teal hover:text-teal-hover transition-colors duration-150">
+      A.R.
     </router-link>
 
     <!-- Desktop nav -->
-    <nav class="hidden sm:flex items-center gap-1">
+    <nav class="hidden sm:flex items-center gap-7">
       <router-link
         to="/projects"
-        :class="['px-4 py-2 rounded-full text-[14px] font-medium transition-all duration-200', isProjects ? 'bg-gray-900 text-white' : 'text-[#434343] hover:bg-gray-100']"
+        :class="['text-[14px] transition-colors duration-150', isProjects ? 'text-text' : 'text-dim hover:text-text']"
       >Projects</router-link>
       <router-link
         to="/aboutme"
-        :class="['px-4 py-2 rounded-full text-[14px] font-medium transition-all duration-200', isAbout ? 'bg-gray-900 text-white' : 'text-[#434343] hover:bg-gray-100']"
-      >About Me</router-link>
+        :class="['text-[14px] transition-colors duration-150', isAbout ? 'text-text' : 'text-dim hover:text-text']"
+      >About</router-link>
     </nav>
 
     <!-- Mobile hamburger -->
     <div ref="menuRef" class="relative sm:hidden">
       <button
         @click="isOpen = !isOpen"
-        class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full text-[12px] font-medium cursor-pointer"
+        class="flex items-center gap-2 px-3 py-2 border border-line-strong rounded-[2px] text-text text-[12px] font-mono cursor-pointer"
       >
         Menu
         <img :src="isOpen ? closeIcon : menuIcon" class="h-3.5 w-3.5" alt="" />
       </button>
 
       <Transition name="dropdown">
-        <div v-if="isOpen" class="absolute right-0 mt-2 bg-gray-900 rounded-2xl overflow-hidden shadow-xl min-w-[140px] z-50">
+        <div v-if="isOpen" class="absolute right-0 mt-2 bg-surface border border-line rounded-[2px] overflow-hidden min-w-[140px] z-50">
           <router-link
             to="/projects"
             @click="isOpen = false"
-            class="block px-4 py-3 text-white hover:bg-white/10 text-[14px] text-center transition-colors"
+            class="block px-4 py-3 text-dim hover:text-text hover:bg-raised text-[14px] text-center transition-colors"
           >Projects</router-link>
           <router-link
             to="/aboutme"
             @click="isOpen = false"
-            class="block px-4 py-3 text-white hover:bg-white/10 text-[14px] text-center transition-colors"
-          >About Me</router-link>
+            class="block px-4 py-3 text-dim hover:text-text hover:bg-raised text-[14px] text-center transition-colors"
+          >About</router-link>
         </div>
       </Transition>
     </div>

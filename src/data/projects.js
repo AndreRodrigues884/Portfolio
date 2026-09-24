@@ -89,14 +89,16 @@ export const projects = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     slug: 'cv_builder',
     title: 'CV Builder',
     subtitle: 'AI-Powered Resume Generator',
     summary: 'A full-stack AI platform that helps users create professional resumes, optimize for ATS, match job descriptions, and prepare for interviews.',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'Groq API', 'Vercel'],
+    externalLink: 'https://github.com/AndreRodrigues884/cvbuilder',
+    externalType: 'github',
     demoLink: 'https://cvbuilder-ten-lime.vercel.app/',
-    link: '/projects/4',
+    link: '/projects/3',
     image: cvbuilder_img,
     background_image: cvbuilderVideo,
     description: `

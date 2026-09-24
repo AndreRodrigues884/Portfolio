@@ -1,11 +1,16 @@
 <template>
-  <div class="min-h-screen w-full flex flex-col">
-    <div class="flex flex-row justify-between items-center pt-[20px] pb-[24px] px-4">
-      
-    </div>
+  <div class="w-full flex flex-col">
+    <div class="flex flex-col gap-10 px-4 pb-10 pt-6">
+      <div class="flex flex-col items-start gap-3">
+        <span v-if="project.subtitle" class="font-mono text-[10px] tracking-[0.08em] uppercase text-amber border border-amber/35 px-2 py-[3px]">{{ project.subtitle }}</span>
+        <h1 class="font-display text-[32px] sm:text-[44px] font-bold tracking-[-0.01em] text-text">{{ project.title }}</h1>
+      </div>
 
-    <div class="flex flex-col gap-6 px-4 pb-10">
-      <div class="w-full h-86 md:h-86 rounded-[24px] border border-[#434343] overflow-hidden bg-[#EDEDED] flex items-center justify-center">
+      <div class="relative w-full h-86 border border-line bg-surface p-2 flex items-center justify-center">
+        <span class="corner tl"></span>
+        <span class="corner tr"></span>
+        <span class="corner bl"></span>
+        <span class="corner br"></span>
         <template v-if="isVideo">
           <video
             :src="project.background_image"
@@ -21,28 +26,29 @@
         </template>
       </div>
 
-      <div class="flex flex-col gap-4">
-        <h1 class="text-[22px] sm:text-[28px] font-semibold text-[#111]">{{ project.title }}</h1>
-        <div class="text-[14px] sm:text-[15px] font-medium text-[#676067] leading-relaxed" v-html="project.description"></div>
+      <div v-if="projectLinks.length" class="flex flex-row flex-wrap gap-3">
+        <a v-for="(link, i) in projectLinks" :key="link.href" :href="link.href" target="_blank" rel="noopener noreferrer"
+           :class="['btn', i === 0 ? 'btn-primary' : 'btn-ghost']">
+          {{ link.label }} <span aria-hidden="true">&nearr;</span>
+        </a>
       </div>
 
-      <div class="flex flex-col gap-3">
-        <div class="text-[16px] sm:text-[18px] font-semibold text-[#434343]">Technologies</div>
-        <div class="flex flex-row flex-wrap gap-3">
+      <div class="flex flex-col">
+        <p class="section-label mb-4">// Overview</p>
+        <div class="project-description text-[15px] sm:text-[16px] text-dim leading-relaxed" v-html="project.description"></div>
+      </div>
+
+      <div class="flex flex-col">
+        <p class="section-label mb-4">// Stack</p>
+        <div class="flex flex-row flex-wrap gap-2">
           <div v-for="tech in project.technologies" :key="tech.name"
-               class="flex items-center gap-2 px-3 py-2 border border-[#676767] rounded-full bg-white">
-            <img v-if="tech.icon" :src="tech.icon" :alt="tech.name" class="w-4 h-4" />
-            <span class="text-[12px] sm:text-[13px] text-[#676767]">{{ tech.name }}</span>
+               class="flex items-center gap-2 px-2.5 py-1.5 border border-line bg-raised">
+            <span v-if="tech.icon" class="icon-tile w-5 h-5 p-0.5">
+              <img :src="tech.icon" alt="" class="w-full h-full object-contain" />
+            </span>
+            <span class="font-mono text-[12px] text-dim">{{ tech.name }}</span>
           </div>
         </div>
-      </div>
-
-      <div v-if="projectLinks.length" class="mt-2 flex flex-row flex-wrap gap-3">
-        <a v-for="link in projectLinks" :key="link.href" :href="link.href" target="_blank" rel="noopener noreferrer"
-           class="flex items-center justify-center px-5 py-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white text-[14px] font-medium hover:from-gray-800 hover:to-gray-950 hover:-translate-y-0.5 transition-all duration-300">
-          <span class="mr-2 font-regular text-[12px] sm:text-[14px]">{{ link.label }}</span>
-          <img src="../assets/img/arrow.svg" alt="Open" class="h-4 w-4" />
-        </a>
       </div>
     </div>
   </div>
@@ -77,15 +83,6 @@ const isVideo = computed(() => {
 </script>
 
 <style scoped>
-.hover-scale {
-  transition: transform 150ms ease;
-}
-.hover-scale:hover {
-  transform: translateY(-2px);
-}
-.hover-glow:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
+.project-description :deep(strong) { color: var(--color-text); font-weight: 600; }
+.project-description :deep(ul) { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
 </style>
-
-

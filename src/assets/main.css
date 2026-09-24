@@ -1,10 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Design tokens — exposed as Tailwind utilities (bg-bg, text-dim, border-line, font-mono…) */
+@theme {
+  --color-bg: #0A0E14;
+  --color-surface: #10151F;
+  --color-raised: #141A26;
+  --color-line: rgba(79, 216, 196, 0.16);
+  --color-line-strong: rgba(79, 216, 196, 0.4);
+  --color-text: #EDEFF4;
+  --color-dim: #8B93A7;
+  --color-faint: #545E75;
+  --color-teal: #4FD8C4;
+  --color-teal-hover: #6DE3D1;
+  --color-amber: #E8A33D;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Instrument Sans';
-  @apply flex flex-col justify-start bg-[#f8f8f8] pt-[64px] pb-[200px] min-h-screen;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  @apply flex flex-col justify-start bg-bg text-text pt-[64px] pb-[120px] min-h-screen overflow-x-hidden;
   @apply px-4 sm:px-8 md:px-[128px] lg:px-[256px] xl:px-[350px]; /* padding horizontal responsivo */
+}
+
+::selection { background: rgba(79, 216, 196, 0.3); }
+
+:focus-visible { outline: 2px solid var(--color-teal); outline-offset: 3px; }
+
+/* Faint grid behind the hero, spanning the full viewport width */
+.hero-grid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 60% 70% at 50% 35%, black 30%, transparent 85%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Section label, e.g. "// 01 — Selected work" */
+.section-label {
+  @apply font-mono text-[12px] tracking-[0.08em] text-faint;
+}
+
+/* Corner brackets — add <span class="corner tl|tr|bl|br"> inside a relative parent */
+.corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-teal);
+  pointer-events: none;
+}
+.corner.tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+.corner.tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+.corner.bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+.corner.br { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+/* Smaller brackets that appear on hover of a .card-hover parent */
+.card-hover .corner {
+  width: 12px;
+  height: 12px;
+  border-width: 1.5px;
+  border-color: var(--color-line-strong);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.card-hover:hover .corner { opacity: 1; }
+.card-hover .corner.tl, .card-hover .corner.tr { top: -1px; }
+.card-hover .corner.bl, .card-hover .corner.br { bottom: -1px; }
+.card-hover .corner.tl, .card-hover .corner.bl { left: -1px; }
+.card-hover .corner.tr, .card-hover .corner.br { right: -1px; }
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-[2px] border border-transparent font-body text-[14px] font-semibold transition-all duration-150 cursor-pointer;
+}
+.btn-primary { @apply bg-teal text-[#06110F] hover:bg-teal-hover; }
+.btn-ghost { @apply border-line-strong text-text hover:border-teal hover:text-teal; }
+
+/* Mono link with arrow, e.g. "View details →" */
+.mono-link {
+  @apply inline-flex items-center gap-1.5 font-mono text-[13px] text-teal hover:underline cursor-pointer;
+}
+
+/* Small light tile so dark logos stay visible on the dark background */
+.icon-tile {
+  @apply flex items-center justify-center rounded-[2px] bg-text/90;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
 /* animations */
@@ -118,8 +216,8 @@ body {
 }
 
 .hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  border-color: var(--color-line-strong);
 }
 
 .hover-scale {
@@ -135,7 +233,7 @@ body {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(103, 103, 103, 0.3);
+  box-shadow: 0 0 20px rgba(79, 216, 196, 0.15);
 }
 
 /* Smooth transitions */

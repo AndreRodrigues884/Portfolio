@@ -1,50 +1,28 @@
 <template>
-  <div class="flex flex-col gap-16 w-full h-auto mt-8">
-    <div class="flex flex-col gap-12 w-full h-auto">
-      <div class="flex flex-col gap-2 px-4 py-4">
-        <div class="text-left text-[14px] sm:text-[16px] lg:text-[20px] font-medium text-[#000000]">
-          Let's build something amazing together – get in touch! 👐
-        </div>
-        <div class="flex flex-col gap-1">
-          <div class="flex flex-row gap-1 items-center">
-            <img src="../assets/img/email.svg" alt="Email Icon" class="h-4 w-4 sm:h-5 sm:w-5" />
-            <div class="text-left text-[12px] sm:text-[14px] lg:text-[16px] font-medium text-[#434343]">
-              andreprodrigues0512@gmail.com
-            </div>
-          </div>
-          <div class="flex flex-row gap-1 items-center">
-            <img src="../assets/img/phone.svg" alt="Phone Icon" class="h-4 w-4 sm:h-5 sm:w-5" />
-            <div class="text-left text-[12px] sm:text-[14px] lg:text-[16px] font-medium text-[#434343]">
-              +351 913531636
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row w-full gap-4 sm:justify-between items-left px-4 py-6">
-        <div class="cursor-pointer font-medium text-[#434343] text-[12px] sm:text-[14px] hover-scale smooth-transition" @click="openLinkedin">&lt;Linkedin&gt;</div>
-        <div class="cursor-pointer font-medium text-[#434343] text-[12px] sm:text-[14px] hover-scale smooth-transition" @click="openBehance">&lt;Behance&gt;</div>
-        <div class="cursor-pointer font-medium text-[#434343] text-[12px] sm:text-[14px] hover-scale smooth-transition" @click="openGitHub">&lt;GitHub&gt;</div>
-        <div class="cursor-pointer font-medium text-[#434343] text-[12px] sm:text-[14px] hover-scale smooth-transition" @click="downloadCV">&lt;CV&gt;</div>
-      </div>
-
+  <footer class="flex flex-col w-full mt-24 px-4">
+    <div class="mb-10">
+      <p class="section-label mb-2.5">// Contact</p>
+      <h2 class="font-display text-[28px] sm:text-[36px] font-semibold text-text">Let's build something together</h2>
     </div>
-  </div>
+
+    <div class="flex flex-col">
+      <a v-for="link in links" :key="link.label" :href="link.href" :target="link.external ? '_blank' : null"
+        :rel="link.external ? 'noopener noreferrer' : null"
+        class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-5 border-b border-line text-text hover:text-teal transition-colors duration-150">
+        <span class="font-mono text-[12px] tracking-[0.06em] text-faint">{{ link.label }}</span>
+        <span class="text-[15px] sm:text-[16px] break-all">{{ link.value }}</span>
+      </a>
+    </div>
+  </footer>
 </template>
 
 <script setup>
-function downloadCV() {
-    window.open('/Portfolio/CV_AndreRodrigues_EN.pdf', '_blank')
-}
-
-const openGitHub = () => {
-  window.open("https://github.com/AndreRodrigues884", "_blank")
-}
-
-const openBehance = () => {
-  window.open("https://www.behance.net/ricardorodrigu226/projects", "_blank")
-}
-
-const openLinkedin = () => {
-  window.open("https://www.linkedin.com/in/andrerodrigues-dev/", "_blank")
-}
+const links = [
+  { label: 'Email', value: 'andreprodrigues0512@gmail.com', href: 'mailto:andreprodrigues0512@gmail.com' },
+  { label: 'Phone', value: '+351 913 531 636', href: 'tel:+351913531636' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/andrerodrigues-dev', href: 'https://www.linkedin.com/in/andrerodrigues-dev/', external: true },
+  { label: 'GitHub', value: 'github.com/AndreRodrigues884', href: 'https://github.com/AndreRodrigues884', external: true },
+  { label: 'Behance', value: 'behance.net/ricardorodrigu226', href: 'https://www.behance.net/ricardorodrigu226/projects', external: true },
+  { label: 'CV', value: 'Download PDF →', href: '/Portfolio/CV_AndreRodrigues_EN.pdf', external: true },
+]
 </script>

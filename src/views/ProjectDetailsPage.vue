@@ -1,17 +1,16 @@
 <template>
   <div>
     <Header />
-    <div class="flex items-center pt-24 pb-4 px-4">
+    <div class="flex items-center pt-28 pb-4 px-4">
       <button
         @click="goBack"
-        class="flex items-center gap-1 text-[#434343] hover:text-black font-medium transition-colors text-[14px] cursor-pointer"
+        class="font-mono text-[13px] text-dim hover:text-teal transition-colors cursor-pointer"
       >
-        <img src="../assets/img/arrow-left.svg" class="w-4 h-4" alt="" />
-        Back
+        &larr; Back
       </button>
     </div>
     <ProjectDetails v-if="project" :project="project" :links="links" @back="goBack" />
-    <div v-else class="px-4 pb-8 text-[#434343]">Project not found.</div>
+    <div v-else class="px-4 pb-8 font-mono text-[14px] text-dim">// Project not found.</div>
     <Footer />
   </div>
 </template>

@@ -1,177 +1,77 @@
 <template>
   <Header></Header>
 
-  <div class="flex flex-row justify-between items-center pt-[80px] pb-[64px] px-4">
-    <button @click="goBack" class="cursor-pointer flex items-center text-[#434343] hover:text-[#000] font-medium">
-      <img src="../assets/img/arrow-left.svg" alt="Back" class="w-4 h-4 mr-1" />
-      Back
+  <div class="flex flex-col pt-28 pb-4 px-4">
+    <button @click="goBack" class="self-start font-mono text-[13px] text-dim hover:text-teal transition-colors cursor-pointer mb-10">
+      &larr; Back
     </button>
-    <div class="text-[#000] text-[16px] font-medium">&lt;About Me&gt;</div>
+    <p class="section-label mb-2.5">// Background</p>
+    <h1 class="font-display text-[32px] sm:text-[40px] font-semibold text-text">About</h1>
   </div>
 
   <!-- About me -->
-  <div class="flex flex-col gap-10">
-    <div class="flex flex-col lg:flex-row gap-8 items-center px-4">
-      <!-- Imagem com ícones circulares -->
-      <div class="relative flex-shrink-0 w-full lg:w-64 h-64 flex items-center justify-center">
-        <img src="../assets/img/cadu.png" alt="Foto de perfil"
-          class="lg:w-full h-full rounded-full object-cover animate-float" />
-      </div>
-
-      <!-- Conteúdo -->
-      <div class="flex flex-col gap-4 w-full">
-        <div
-          class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
-          <div class="text-[18px] sm:text-[20px] font-medium text-[#434343]">André Rodrigues</div>
-          <div class="text-[14px] sm:text-[16px] font-medium text-[#434343]">Full Stack Dev & UX/UI Designer</div>
-        </div>
-
-        <div
-          class="group relative flex flex-col lg:flex-row items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
-          <div class="text-[12px] sm:text-[14px] font-medium text-[#434343] leading-relaxed">
-            Hi, my name is André Rodrigues, I'm 22 years old. I recently graduated with a Bachelor's Degree
-            in Technologies and Information Systems for the Web from P.Porto. During my studies and
-            curricular internship, I built full-stack web and mobile projects, including Learnly, an
-            AI-powered micro-learning platform with a complete RAG pipeline and LLM integration.
-            I'm now looking for opportunities as a Software Engineer, where I can go deep on backend
-            and system architecture, keep growing into AI-integrated products, and work alongside
-            people who take their craft seriously.
-          </div>
-        </div>
-      </div>
+  <section class="flex flex-col lg:flex-row gap-12 items-center px-4 py-12">
+    <div class="relative flex-shrink-0 w-56 h-56 lg:w-64 lg:h-64 p-3">
+      <img src="../assets/img/cadu.png" alt="André Rodrigues" class="w-full h-full rounded-full object-cover" />
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
     </div>
-  </div>
+
+    <div class="flex flex-col gap-4 w-full">
+      <div>
+        <h2 class="font-display text-[22px] sm:text-[26px] font-semibold text-text">André Rodrigues</h2>
+        <p class="font-display text-[16px] sm:text-[18px] font-medium text-dim">Software Engineer · Systems &amp; AI Integration</p>
+      </div>
+      <p class="text-[15px] sm:text-[16px] text-dim leading-relaxed">
+        Hi, my name is André Rodrigues, I'm 22 years old. I recently graduated with a Bachelor's Degree
+        in Technologies and Information Systems for the Web from P.Porto. During my studies and
+        curricular internship, I built full-stack web and mobile projects, including Learnly, an
+        AI-powered micro-learning platform with a complete RAG pipeline and LLM integration.
+        I'm now looking for opportunities as a Software Engineer, where I can go deep on backend
+        and system architecture, keep growing into AI-integrated products, and work alongside
+        people who take their craft seriously.
+      </p>
+    </div>
+  </section>
 
   <!-- What I studied -->
-  <div class="text-[#000] text-[16px] pt-20 pb-4 font-medium px-4 animate-fade-in-left">
-    &lt;What I Studied&gt;
-  </div>
-  <div class="flex flex-row items-start px-4">
-    <div class="flex-1 flex flex-col gap-4">
-      <div
-        class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
-        <div class="flex flex-row items-start">
-          <span class="text-[#434343] text-[12px] font-regular">out 2021 - jul 2023</span>
-        </div>
-        <div class="flex flex-col gap-1">
-          <span class="text-[#000000] text-[14px] sm:text-[16px] font-bold">Higher Technical Course in Design and
-            Technologies for Mobile Applications</span>
-          <span class="text-[#434343] text-[12px] sm:text-[14px] font-normal">ESMAD - Superior School of Media Arts and
-            Design</span>
-        </div>
-      </div>
-      <div
-        class="group relative flex flex-col lg:flex-col items-start gap-2 lg:gap-6 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md">
-        <div class="flex flex-row items-start">
-          <span class="text-[#434343] text-[12px] font-regular">set 2023 - jul 2026</span>
-        </div>
-        <div class="flex flex-col gap-1">
-          <span class="text-[#000000] text-[14px] sm:text-[16px] font-bold">Bachelor's Degree in Web Information Systems
-            and
-            Technologies</span>
-          <span class="text-[#434343] text-[12px] sm:text-[14px] font-normal">ESMAD - Superior School of Media Arts and
-            Design</span>
-        </div>
-      </div>
+  <section class="flex flex-col px-4 py-12">
+    <p class="section-label mb-2.5">// 01 — Education</p>
+    <h2 class="font-display text-[26px] sm:text-[32px] font-semibold text-text mb-10">What I studied</h2>
 
+    <div class="flex flex-col gap-4">
+      <div v-for="course in education" :key="course.title"
+        class="card-hover relative flex flex-col gap-3 p-6 bg-surface border border-line hover:border-line-strong transition-colors duration-150">
+        <span class="corner tl"></span>
+        <span class="corner tr"></span>
+        <span class="corner bl"></span>
+        <span class="corner br"></span>
+        <span class="font-mono text-[12px] text-teal">{{ course.period }}</span>
+        <div class="flex flex-col gap-1">
+          <span class="font-display text-[16px] sm:text-[18px] font-semibold text-text">{{ course.title }}</span>
+          <span class="text-[13px] sm:text-[14px] text-dim">{{ course.school }}</span>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="w-full flex justify-end pt-4">
-    <div class="text-[#000] text-[16px] font-medium">
-      &lt;/What I Studied&gt;
-    </div>
-  </div>
+  </section>
 
   <!-- Skills -->
-  <div class="text-[#000] text-[16px] pt-20 pb-8 font-medium px-4 animate-fade-in-left">
-    &lt;Tech Skills&gt;
-  </div>
+  <section class="flex flex-col px-4 py-12">
+    <p class="section-label mb-2.5">// 02 — Toolbox</p>
+    <h2 class="font-display text-[26px] sm:text-[32px] font-semibold text-text mb-10">Tech skills</h2>
 
-  <div class="w-full flex flex-col gap-4 px-4">
-    <!-- Linha 1 -->
-    <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/react.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">React</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/vue.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Vue JS</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/express.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Express JS</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/node.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Node JS</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/mongo.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Mongo DB</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/typescript.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Typescript</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/nuxtIcon.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Nuxt</span>
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+      <div v-for="skill in skills" :key="skill.name"
+        class="flex flex-col items-center gap-3 p-5 bg-surface border border-line hover-lift smooth-transition">
+        <span class="icon-tile w-10 h-10 p-1.5">
+          <img :src="skill.icon" alt="" class="w-full h-full object-contain" />
+        </span>
+        <span class="font-mono text-[12px] text-dim text-center">{{ skill.name }}</span>
       </div>
     </div>
-
-    <!-- Linha 2 -->
-    <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/postgre.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Postgre SQL</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/prisma.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Prisma</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/fast.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Fast API</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/js.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Javascript</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/python.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Python</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-6 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/docker.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Docker</span>
-      </div>
-      <div
-        class="flex flex-col lg:flex-col items-center gap-2 lg:gap-2 p-4 lg:p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover-lift smooth-transition">
-        <img src="../assets/img/figma.svg" class="w-8 h-8" alt="">
-        <span class="text-[12px] sm:text-[14px]">Figma</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full flex justify-end pt-8">
-    <div class="text-[#000] text-[16px] font-medium">
-      &lt;/Tech Skills&gt;
-    </div>
-  </div>
+  </section>
 
   <Footer></Footer>
 </template>
@@ -181,6 +81,47 @@ import Footer from '../components/Footer.vue'
 import Header from '../components/Header.vue'
 
 import { useRouter } from 'vue-router'
+
+import reactSkillIcon from '../assets/img/react.svg'
+import vueSkillIcon from '../assets/img/vue.svg'
+import expressSkillIcon from '../assets/img/express.svg'
+import nodeSkillIcon from '../assets/img/node.svg'
+import mongoSkillIcon from '../assets/img/mongo.svg'
+import typescriptSkillIcon from '../assets/img/typescript.svg'
+import jsSkillIcon from '../assets/img/js.svg'
+import nuxtSkillIcon from '../assets/img/nuxtIcon.svg'
+import postgreSkillIcon from '../assets/img/postgre.svg'
+import dockerSkillIcon from '../assets/img/docker.svg'
+import supabaseSkillIcon from '../assets/img/supabaseIcon.svg'
+import nextjsSkillIcon from '../assets/img/nextjsIcon.svg'
+
+const education = [
+  {
+    period: 'out 2021 - jul 2023',
+    title: 'Higher Technical Course in Design and Technologies for Mobile Applications',
+    school: 'ESMAD - Superior School of Media Arts and Design',
+  },
+  {
+    period: 'set 2023 - jul 2026',
+    title: "Bachelor's Degree in Web Information Systems and Technologies",
+    school: 'ESMAD - Superior School of Media Arts and Design',
+  },
+]
+
+const skills = [
+  { name: 'React', icon: reactSkillIcon },
+  { name: 'Vue JS', icon: vueSkillIcon },
+  { name: 'Express JS', icon: expressSkillIcon },
+  { name: 'Node JS', icon: nodeSkillIcon },
+  { name: 'Mongo DB', icon: mongoSkillIcon },
+  { name: 'Typescript', icon: typescriptSkillIcon },
+  { name: 'Javascript', icon: jsSkillIcon },
+  { name: 'Nuxt', icon: nuxtSkillIcon },
+  { name: 'Postgre SQL', icon: postgreSkillIcon },
+  { name: 'Docker', icon: dockerSkillIcon },
+  { name: 'Supabase', icon: supabaseSkillIcon },
+  { name: 'Next JS', icon: nextjsSkillIcon },
+]
 
 const router = useRouter()
 function goBack() {

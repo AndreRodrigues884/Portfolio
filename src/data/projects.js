@@ -63,6 +63,8 @@ export const projects = [
   </ul>
   <br>
 `,
+    pipelineTitle: 'The RAG pipeline',
+    pipelineIntro: "From an uploaded PDF to a flashcard in a student's review queue.",
     pipeline: [
       {
         title: 'PDF upload',
@@ -176,6 +178,52 @@ export const projects = [
   <p>The goal of CVBuilder is to be the all-in-one assistant for job seekers — helping them stand out, prepare confidently, and land their next role.</p>
   <br>
 `,
+    pipelineTitle: 'How the AI works',
+    pipelineIntro: 'One CV, several AI tools: from an uploaded PDF to a job-ready CV, a career plan and interview practice.',
+    pipeline: [
+      {
+        title: 'Your CV',
+        tech: 'Next.js 15 · step-by-step wizard',
+        detail: 'Users either build a CV from scratch with the step-by-step wizard or upload an existing one as a PDF.',
+        artifact: 'cv.pdf',
+      },
+      {
+        title: 'Text extraction',
+        tech: 'Mistral OCR',
+        detail: 'Uploaded PDFs go through Mistral OCR, which turns the document into text the language model can work with.',
+        artifact: 'cv text',
+      },
+      {
+        title: 'Storage & auth',
+        tech: 'Next.js API Routes · Supabase (PostgreSQL)',
+        detail: 'Next.js API Routes handle every request. Supabase stores the CVs and application data in PostgreSQL and manages authentication.',
+        artifact: 'saved to Supabase',
+      },
+      {
+        title: 'AI Review',
+        tech: 'Groq · LLaMA 3.3 70B',
+        detail: 'The CV is analysed by LLaMA 3.3 70B on Groq, returning an ATS score, a keyword analysis, strengths, weaknesses and concrete improvement suggestions.',
+        artifact: 'ATS score + suggestions',
+      },
+      {
+        title: 'Job Match',
+        tech: 'Groq · LLaMA 3.3 70B',
+        detail: 'Given a job description, the model adapts the CV to that role. It only rewords and reorders what the user actually has, without fabricating experience or skills.',
+        artifact: 'tailored CV',
+      },
+      {
+        title: 'Career Copilot & Interview Prep',
+        tech: 'Groq · LLaMA 3.3 70B',
+        detail: 'The same model generates a personalized career plan (skills to learn, certifications and action phases) and role-specific interview questions, with feedback and a score for each answer.',
+        artifact: 'plan + interview feedback',
+      },
+      {
+        title: 'Export & track',
+        tech: 'PDF export · Application Tracker',
+        detail: 'The final CV is exported as a PDF, and every job application is tracked with its status in one place.',
+        artifact: 'cv-final.pdf',
+      },
+    ],
     technologies: [
       { name: 'Next Js', icon: nextjsIcon },
       { name: 'TypeScript', icon: typescriptIcon },

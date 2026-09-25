@@ -40,9 +40,9 @@
 
       <div v-if="project.pipeline" class="flex flex-col">
         <p class="section-label mb-2.5">// How it works</p>
-        <h2 class="font-display text-[24px] sm:text-[28px] font-semibold text-text mb-2">The RAG pipeline</h2>
+        <h2 class="font-display text-[24px] sm:text-[28px] font-semibold text-text mb-2">{{ project.pipelineTitle }}</h2>
         <p class="text-[14px] sm:text-[15px] text-dim leading-relaxed mb-6">
-          From an uploaded PDF to a flashcard in a student's review queue. Click any step to explore it.
+          {{ project.pipelineIntro }} Click any step to explore it.
         </p>
         <PipelineFlow :steps="project.pipeline" />
       </div>

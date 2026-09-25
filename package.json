@@ -8,6 +8,7 @@
     "dev:backend": ".\\backend\\venv\\Scripts\\uvicorn.exe backend.api.server:app --reload --host 127.0.0.1 --port 8000",
     "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev\"",
     "build": "vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

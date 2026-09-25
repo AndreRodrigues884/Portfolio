@@ -38,6 +38,8 @@ export const projects = [
     subtitle: 'AI Micro-Learning Platform',
     summary: 'An AI micro-learning platform that turns PDFs into flashcards through a RAG pipeline and schedules reviews with spaced repetition (SM-2). Built during my curricular internship at CIP/IPP.',
     tags: ['Nuxt 3', 'TypeScript', 'Directus', 'Qdrant', 'Langflow', 'Groq'],
+    externalLink: 'https://github.com/AndreRodrigues884/Learnly',
+    externalType: 'github',
     link: '/projects/4',
     image: learnly_img,
     imageFit: 'contain',

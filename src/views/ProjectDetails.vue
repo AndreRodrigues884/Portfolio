@@ -38,6 +38,30 @@
         <div class="project-description text-[15px] sm:text-[16px] text-dim leading-relaxed" v-html="project.description"></div>
       </div>
 
+      <div v-if="project.pipeline" class="flex flex-col">
+        <p class="section-label mb-2.5">// How it works</p>
+        <h2 class="font-display text-[24px] sm:text-[28px] font-semibold text-text mb-2">The RAG pipeline</h2>
+        <p class="text-[14px] sm:text-[15px] text-dim leading-relaxed mb-6">
+          From an uploaded PDF to a flashcard in a student's review queue. Click any step to explore it.
+        </p>
+        <PipelineFlow :steps="project.pipeline" />
+      </div>
+
+      <div v-if="project.decisions" class="flex flex-col">
+        <p class="section-label mb-4">// Technical decisions</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div v-for="decision in project.decisions" :key="decision.title"
+            class="card-hover relative flex flex-col gap-2 p-5 bg-surface border border-line hover:border-line-strong transition-colors duration-150">
+            <span class="corner tl"></span>
+            <span class="corner tr"></span>
+            <span class="corner bl"></span>
+            <span class="corner br"></span>
+            <span class="font-display text-[16px] font-semibold text-text">{{ decision.title }}</span>
+            <p class="text-[14px] text-dim leading-relaxed">{{ decision.text }}</p>
+          </div>
+        </div>
+      </div>
+
       <div class="flex flex-col">
         <p class="section-label mb-4">// Stack</p>
         <div class="flex flex-row flex-wrap gap-2">
@@ -56,6 +80,7 @@
 
 <script setup>
 import { computed } from 'vue'
+import PipelineFlow from '../components/PipelineFlow.vue'
 
 const props = defineProps({
   project: { type: Object, required: true },
@@ -84,5 +109,6 @@ const isVideo = computed(() => {
 
 <style scoped>
 .project-description :deep(strong) { color: var(--color-text); font-weight: 600; }
+.project-description :deep(code) { font-family: var(--font-mono); font-size: 0.9em; color: var(--color-teal); }
 .project-description :deep(ul) { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
 </style>

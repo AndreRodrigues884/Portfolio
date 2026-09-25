@@ -111,7 +111,7 @@ import nextjsIcon from '../assets/img/nextjsIcon.svg'
 import supabaseIcon from '../assets/img/supabaseIcon.svg'
 import dockerIcon from '../assets/img/docker.svg'
 
-const featuredProjects = computed(() => projects.filter(p => p.id === 1 || p.id === 2 || p.id === 3))
+const featuredProjects = computed(() => projects.slice(0, 3))
 
 const icons = [
   { src: vueIcon, alt: 'Vue' },

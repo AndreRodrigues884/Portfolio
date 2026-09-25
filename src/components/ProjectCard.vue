@@ -34,7 +34,7 @@
       <img
         :src="project.image"
         :alt="project.title"
-        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        :class="['w-full h-full group-hover:scale-105 transition-transform duration-500', project.imageFit === 'contain' ? 'object-contain p-2' : 'object-cover']"
       />
     </div>
 

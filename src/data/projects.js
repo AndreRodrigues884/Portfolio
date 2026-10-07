@@ -5,6 +5,12 @@ import cvbuilderVideo from '../assets/video/CVBuilder.mp4'
 import cvbuilder_img from '../assets/img/cvbuilder_img.png'
 import learnlyVideo from '../assets/video/video_learnly.mp4'
 import learnly_img from '../assets/img/background_learnly.svg'
+import saldo_img from '../assets/img/saldo1.png'
+import saldoInvoices from '../assets/img/saldo2.png'
+import saldoExpenses from '../assets/img/saldo3.png'
+import saldoVideo from '../assets/video/saldo.mp4'
+import dataStructures_img from '../assets/img/code1.png'
+import dataStructuresVideo from '../assets/video/code.mp4'
 
 import reactNativeIcon from '../assets/img/react.png'
 import expressIcon from '../assets/img/express.png'
@@ -28,6 +34,9 @@ import groqLogo from '../assets/img/groq.png'
 import ollamaIcon from '../assets/img/ollama.png'
 import dexieIcon from '../assets/img/dexie.png'
 import vitestIcon from '../assets/img/vitest.png'
+import postgreIcon from '../assets/img/postgre.svg'
+import pythonIcon from '../assets/img/python.svg'
+import viteIcon from '../assets/img/vite.svg'
 
 // Order matters: the first three are featured on the home page
 export const projects = [
@@ -140,6 +149,153 @@ export const projects = [
       { name: 'Dexie.js', icon: dexieIcon },
       { name: 'Vitest', icon: vitestIcon },
       { name: 'Docker', icon: dockerIcon },
+    ]
+  },
+  {
+    id: 5,
+    slug: 'saldo',
+    title: 'Saldo',
+    subtitle: 'Invoicing & Expense Management',
+    summary: 'An invoicing and expense management system for small businesses, with a Spring Boot API, an Angular frontend and PostgreSQL. The whole system starts with a single Docker command.',
+    tags: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Docker'],
+    link: '/projects/5',
+    image: saldo_img,
+    background_image: saldoVideo,
+    description: `
+  <p><strong>Saldo</strong> is an invoicing and expense management system built for a service company with 5 to 20 people that wants to track what it bills and what it spends in one place, and see month by month whether it is making money.</p>
+  <br>
+  <p>It follows Portuguese invoicing rules (VAT per rate, invoice series, gapless sequential numbering). It is a <strong>demo project</strong>: it is not certified by the Portuguese Tax Authority (AT) and must not be used for real invoicing.</p>
+  <br>
+  <p><strong>Main features include:</strong></p>
+  <ul>
+    <li> - <strong>Invoices:</strong> drafts with dynamic lines, issuing with a sequential number per series and year (<code>FT 2026/0001</code>), payment, cancellation with a reason and overdue detection.</li>
+    <li> - <strong>Expenses:</strong> recorded from the supplier's document, by category and payment method, with supplier VAT number validation.</li>
+    <li> - <strong>Catalogue:</strong> clients with Portuguese VAT number check-digit validation, products and services with VAT rates (23%, 13%, 6%) and categories.</li>
+    <li> - <strong>Dashboard:</strong> yearly revenue, expenses and result, receivables, a monthly chart, expenses by category and the most overdue invoices.</li>
+    <li> - <strong>Users:</strong> JWT authentication, Admin and User roles, account management, password change and reset.</li>
+  </ul>
+  <br>
+`,
+    gallery: [
+      { src: saldoInvoices, alt: 'Saldo invoices list with filters and status' },
+      { src: saldoExpenses, alt: 'Saldo expenses list with categories and deductible VAT' },
+    ],
+    architecture: {
+      title: 'Architecture',
+      intro: 'Three containers orchestrated by Docker Compose. Click any box to see what it does.',
+      frame: 'Docker Compose',
+      selected: 2,
+      nodes: [
+        {
+          id: 'browser',
+          label: 'Browser',
+          sub: 'user',
+          detail: 'The user opens the app on port 4000. Every request goes through the frontend container.',
+        },
+        {
+          id: 'frontend',
+          label: 'frontend',
+          sub: 'nginx + Angular',
+          detail: 'nginx serves the Angular 22 app (standalone components, signals, httpResource, lazy-loaded pages) and forwards every /api call to the backend. An interceptor attaches the JWT to each request and ends the session on a 401.',
+        },
+        {
+          id: 'backend',
+          label: 'backend',
+          sub: 'Spring Boot',
+          detail: 'A Java 21 + Spring Boot 4 REST API, organised by feature (invoice, expense, client…), where every feature follows the same layers. Spring Security with signed JWTs, Bean Validation, and every error returned in the same ProblemDetail format (RFC 9457).',
+        },
+        {
+          id: 'db',
+          label: 'db',
+          sub: 'PostgreSQL 17',
+          detail: 'The schema is versioned with Flyway migrations. Rules are also enforced by UNIQUE, CHECK and foreign-key constraints, and dashboard aggregations (SUM, COUNT, GROUP BY) run in the database, backed by indexes.',
+        },
+      ],
+      links: ['HTTP :4000', '/api → :8080', 'JDBC :5432'],
+      note: '// multi-stage Docker builds · the whole system starts with a single Docker command',
+    },
+    pipelineTitle: 'A request through the backend',
+    pipelineIntro: 'What happens when a user issues an invoice: the request crosses the same layers as every other feature.',
+    pipeline: [
+      {
+        title: 'Security',
+        tech: 'SecurityFilterChain · JWT (HS256)',
+        detail: 'The signed token is checked and the access rules are applied in one central place. Destructive and tax-relevant operations are restricted to admins. 401 and 403 responses use the same ProblemDetail format as every other error.',
+        artifact: 'authenticated request',
+      },
+      {
+        title: 'Controller',
+        tech: 'REST · Bean Validation',
+        detail: 'Input is validated before reaching the business logic. Validation errors point to the exact field, such as lines[0].quantity, so the Angular form can show them in the right place.',
+        artifact: 'validated request',
+      },
+      {
+        title: 'Service',
+        tech: 'Spring transactions',
+        detail: 'Numbering and issuing run in the same transaction (Propagation.MANDATORY). If issuing fails, the rollback returns the number to the counter, so the series never has gaps.',
+        artifact: 'one transaction',
+      },
+      {
+        title: 'Domain',
+        tech: 'Rich entities · @Version',
+        detail: 'Business rules live in the entities: the lifecycle DRAFT → ISSUED → PAID / CANCELLED only moves forward through intention-revealing methods, never a setStatus. An optimistic lock rejects a double click on Issue instead of consuming two numbers.',
+        artifact: 'DRAFT → ISSUED',
+      },
+      {
+        title: 'Repository',
+        tech: 'Spring Data JPA · Hibernate 7',
+        detail: 'A pessimistic lock (SELECT ... FOR UPDATE) on the series counter queues concurrent requests. Specifications build dynamic filters, and @EntityGraph avoids the N+1 problem.',
+        artifact: 'FT 2026/0001',
+      },
+      {
+        title: 'PostgreSQL',
+        tech: 'Flyway · constraints',
+        detail: 'Invoice lines keep a snapshot of the product (price, VAT rate, description) and the client details at issue time, so later changes never alter past invoices. Amounts are NUMERIC(12,2), calculated with BigDecimal and HALF_UP rounding.',
+        artifact: 'committed',
+      },
+    ],
+    decisionsTitle: 'Technical highlights',
+    decisions: [
+      {
+        title: 'Gapless numbering under concurrency',
+        text: 'Two simultaneous issue requests never get the same number, and a failed issue never leaves a gap. Proven by an integration test that fires 20 simultaneous issue requests against a real PostgreSQL database.',
+      },
+      {
+        title: 'Money handled with care',
+        text: 'BigDecimal and NUMERIC(12,2) across the backend with explicit HALF_UP rounding, VAT calculated per line as in real documents, and integer cents for the totals preview in the frontend to avoid floating-point errors.',
+      },
+      {
+        title: 'Rich domain model',
+        text: 'An issued invoice cannot be changed or deleted, regardless of where the request comes from, because the rule lives in the entity and not in the controller.',
+      },
+      {
+        title: 'Layered security',
+        text: 'BCrypt password hashing, secrets in environment variables, admin-only rules centralised in the SecurityFilterChain, and one login error message so the API never reveals which accounts exist.',
+      },
+      {
+        title: 'Performance and integrity',
+        text: 'Pagination with a maximum page size, sorting restricted to an allow-list, open-in-view disabled, and aggregations computed by the database with indexes on the queried columns.',
+      },
+      {
+        title: 'Tested against real infrastructure',
+        text: 'JUnit 5, AssertJ, MockMvc and Spring Security Test, with Testcontainers running the integration tests against a real PostgreSQL database.',
+      },
+    ],
+    technologies: [
+      { name: 'Java 21' },
+      { name: 'Spring Boot 4' },
+      { name: 'Spring Security' },
+      { name: 'Hibernate 7' },
+      { name: 'Angular 22' },
+      { name: 'Angular Material' },
+      { name: 'RxJS' },
+      { name: 'Chart.js' },
+      { name: 'PostgreSQL 17', icon: postgreIcon },
+      { name: 'Flyway' },
+      { name: 'JUnit 5' },
+      { name: 'Testcontainers' },
+      { name: 'Docker', icon: dockerIcon },
+      { name: 'nginx' },
     ]
   },
   {
@@ -267,6 +423,69 @@ export const projects = [
       { name: 'Vercel', icon: vercelIcon },
     ]
 
+  },
+  {
+    id: 6,
+    slug: 'data_structures',
+    title: 'Data Structures',
+    subtitle: 'Interactive Visualizer',
+    summary: 'An interactive platform to see, understand and play with 14 fundamental data structures, each with an explanation, a diagram, a step-by-step animation and a tested reference implementation.',
+    tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Vitest'],
+    demoLink: 'https://data-structures-tau.vercel.app/',
+    link: '/projects/6',
+    image: dataStructures_img,
+    background_image: dataStructuresVideo,
+    description: `
+  <p><strong>Data Structures</strong> is an interactive platform to see, understand and play with 14 fundamental data structures. The interface is in Portuguese.</p>
+  <br>
+  <p><strong>Every structure has four views:</strong></p>
+  <ul>
+    <li> - <strong>Explanation:</strong> how it works, when to use it and the time complexity of each operation.</li>
+    <li> - <strong>Diagram:</strong> a static visual of the internal layout.</li>
+    <li> - <strong>Animation:</strong> an interactive playground to run operations and watch each step.</li>
+    <li> - <strong>Code:</strong> the tested TypeScript implementation, its unit tests and a Python version.</li>
+  </ul>
+  <br>
+  <p><strong>Structures covered:</strong></p>
+  <ul>
+    <li> - <strong>Linear:</strong> Array, Linked List, Stack, Queue, Deque.</li>
+    <li> - <strong>Hashing:</strong> HashMap, Bloom Filter.</li>
+    <li> - <strong>Trees:</strong> Tree, Binary Search Tree, Heap (min / max), Trie.</li>
+    <li> - <strong>Graphs & Sets:</strong> Graph, Disjoint Set (Union-Find).</li>
+    <li> - <strong>Composite:</strong> LRU Cache.</li>
+  </ul>
+  <br>
+`,
+    decisionsTitle: 'Technical highlights',
+    decisions: [
+      {
+        title: 'What you read is what is tested',
+        text: 'The Code tab renders the real source files (TypeScript, tests and Python) with highlight.js, so the code on screen is exactly the code under test.',
+      },
+      {
+        title: 'Animations without libraries',
+        text: 'Every animation is built with plain SVG and reactive state, without any animation library.',
+      },
+      {
+        title: 'Tested in two languages',
+        text: 'Vitest unit tests cover every data structure, and the Python versions are checked in CI through assert-based examples.',
+      },
+      {
+        title: 'One chunk per structure',
+        text: 'Vue Router lazy-loads each structure as its own chunk, so visitors only download the structure they open.',
+      },
+    ],
+    technologies: [
+      { name: 'Vue 3', icon: vueIcon },
+      { name: 'TypeScript', icon: typescriptIcon },
+      { name: 'Vite', icon: viteIcon },
+      { name: 'Tailwind CSS 4', icon: tailwindIcon },
+      { name: 'Vue Router' },
+      { name: 'highlight.js' },
+      { name: 'Vitest', icon: vitestIcon },
+      { name: 'Python', icon: pythonIcon },
+      { name: 'Vercel', icon: vercelIcon },
+    ]
   },
   {
     id: 2,

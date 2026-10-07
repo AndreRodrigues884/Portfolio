@@ -38,6 +38,24 @@
         <div class="project-description text-[15px] sm:text-[16px] text-dim leading-relaxed" v-html="project.description"></div>
       </div>
 
+      <div v-if="project.gallery" class="flex flex-col">
+        <p class="section-label mb-4">// Screenshots</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a v-for="shot in project.gallery" :key="shot.src" :href="shot.src" target="_blank" rel="noopener noreferrer"
+            class="group block overflow-hidden border border-line hover:border-line-strong bg-raised transition-colors duration-150">
+            <img :src="shot.src" :alt="shot.alt" loading="lazy"
+              class="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500" />
+          </a>
+        </div>
+      </div>
+
+      <div v-if="project.architecture" class="flex flex-col">
+        <p class="section-label mb-2.5">// System design</p>
+        <h2 class="font-display text-[24px] sm:text-[28px] font-semibold text-text mb-2">{{ project.architecture.title }}</h2>
+        <p class="text-[14px] sm:text-[15px] text-dim leading-relaxed mb-6">{{ project.architecture.intro }}</p>
+        <ArchitectureDiagram :architecture="project.architecture" />
+      </div>
+
       <div v-if="project.pipeline" class="flex flex-col">
         <p class="section-label mb-2.5">// How it works</p>
         <h2 class="font-display text-[24px] sm:text-[28px] font-semibold text-text mb-2">{{ project.pipelineTitle }}</h2>
@@ -48,7 +66,7 @@
       </div>
 
       <div v-if="project.decisions" class="flex flex-col">
-        <p class="section-label mb-4">// Technical decisions</p>
+        <p class="section-label mb-4">// {{ project.decisionsTitle || 'Technical decisions' }}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div v-for="decision in project.decisions" :key="decision.title"
             class="card-hover relative flex flex-col gap-2 p-5 bg-surface border border-line hover:border-line-strong transition-colors duration-150">
@@ -81,6 +99,7 @@
 <script setup>
 import { computed } from 'vue'
 import PipelineFlow from '../components/PipelineFlow.vue'
+import ArchitectureDiagram from '../components/ArchitectureDiagram.vue'
 
 const props = defineProps({
   project: { type: Object, required: true },

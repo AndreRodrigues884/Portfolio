@@ -158,6 +158,8 @@ export const projects = [
     subtitle: 'Invoicing & Expense Management',
     summary: 'An invoicing and expense management system for small businesses, with a Spring Boot API, an Angular frontend and PostgreSQL. The whole system starts with a single Docker command.',
     tags: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Docker'],
+    externalLink: 'https://github.com/AndreRodrigues884/faturacao',
+    externalType: 'github',
     link: '/projects/5',
     image: saldo_img,
     background_image: saldoVideo,

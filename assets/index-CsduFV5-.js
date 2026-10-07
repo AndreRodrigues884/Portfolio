@@ -85,7 +85,7 @@
         <li> - Google Sign-In alongside email/password authentication.</li>
       </ul>
     <br>
-    `,technologies:[{name:"Next.js",icon:Fn},{name:"TypeScript",icon:It},{name:"Supabase",icon:Nn},{name:"Tailwind CSS",icon:As},{name:"Vercel",icon:_s}]},{id:6,slug:"data_structures",title:"Data Structures",subtitle:"Interactive Visualizer",summary:"An interactive platform to see, understand and play with 14 fundamental data structures, each with an explanation, a diagram, a step-by-step animation and a tested reference implementation.",tags:["Vue 3","TypeScript","Tailwind CSS","Vitest"],demoLink:"https://data-structures-tau.vercel.app/",link:"/projects/6",image:cc,background_image:uc,description:`
+    `,technologies:[{name:"Next.js",icon:Fn},{name:"TypeScript",icon:It},{name:"Supabase",icon:Nn},{name:"Tailwind CSS",icon:As},{name:"Vercel",icon:_s}]},{id:6,slug:"data_structures",title:"Data Structures",subtitle:"Interactive Visualizer",summary:"An interactive platform to see, understand and play with 14 fundamental data structures, each with an explanation, a diagram, a step-by-step animation and a tested reference implementation.",tags:["Vue 3","TypeScript","Tailwind CSS","Vitest"],demoLink:"https://data-structures-tau.vercel.app/",externalType:"github",externalLink:"https://github.com/AndreRodrigues884/data-structures",link:"/projects/6",image:cc,background_image:uc,description:`
   <p><strong>Data Structures</strong> is an interactive platform to see, understand and play with 14 fundamental data structures. The interface is in Portuguese.</p>
   <br>
   <p><strong>Every structure has four views:</strong></p>

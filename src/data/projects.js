@@ -434,6 +434,8 @@ export const projects = [
     summary: 'An interactive platform to see, understand and play with 14 fundamental data structures, each with an explanation, a diagram, a step-by-step animation and a tested reference implementation.',
     tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Vitest'],
     demoLink: 'https://data-structures-tau.vercel.app/',
+    externalType: 'github',
+    externalLink: 'https://github.com/AndreRodrigues884/data-structures',
     link: '/projects/6',
     image: dataStructures_img,
     background_image: dataStructuresVideo,

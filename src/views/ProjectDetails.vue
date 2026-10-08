@@ -49,20 +49,11 @@
         </div>
       </div>
 
-      <div v-if="project.architecture" class="flex flex-col">
+      <div v-if="project.architectureMap" class="flex flex-col">
         <p class="section-label mb-2.5">// System design</p>
-        <h2 class="font-display text-[24px] sm:text-[28px] font-semibold text-text mb-2">{{ project.architecture.title }}</h2>
-        <p class="text-[14px] sm:text-[15px] text-dim leading-relaxed mb-6">{{ project.architecture.intro }}</p>
-        <ArchitectureDiagram :architecture="project.architecture" />
-      </div>
-
-      <div v-if="project.pipeline" class="flex flex-col">
-        <p class="section-label mb-2.5">// How it works</p>
-        <h2 class="font-display text-[24px] sm:text-[28px] font-semibold text-text mb-2">{{ project.pipelineTitle }}</h2>
-        <p class="text-[14px] sm:text-[15px] text-dim leading-relaxed mb-6">
-          {{ project.pipelineIntro }} Click any step to explore it.
-        </p>
-        <PipelineFlow :steps="project.pipeline" />
+        <h2 class="font-display text-[24px] sm:text-[28px] font-semibold text-text mb-2">{{ project.architectureMap.title }}</h2>
+        <p class="text-[14px] sm:text-[15px] text-dim leading-relaxed mb-6">{{ project.architectureMap.intro }}</p>
+        <ArchitectureMap :key="project.slug" :map="project.architectureMap.data" :aria-label="`Architecture map of ${project.title}`" />
       </div>
 
       <div v-if="project.decisions" class="flex flex-col">
@@ -98,8 +89,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import PipelineFlow from '../components/PipelineFlow.vue'
-import ArchitectureDiagram from '../components/ArchitectureDiagram.vue'
+import ArchitectureMap from '../components/ArchitectureMap.vue'
 
 const props = defineProps({
   project: { type: Object, required: true },

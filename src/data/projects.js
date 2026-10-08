@@ -34,6 +34,9 @@ import groqLogo from '../assets/img/groq.png'
 import ollamaIcon from '../assets/img/ollama.png'
 import dexieIcon from '../assets/img/dexie.png'
 import vitestIcon from '../assets/img/vitest.png'
+import * as saldoMap from './saldoArchitecture.js'
+import * as learnlyMap from './learnlyArchitecture.js'
+import * as cvbuilderMap from './cvbuilderArchitecture.js'
 import postgreIcon from '../assets/img/postgre.svg'
 import pythonIcon from '../assets/img/python.svg'
 import viteIcon from '../assets/img/vite.svg'
@@ -72,52 +75,11 @@ export const projects = [
   </ul>
   <br>
 `,
-    pipelineTitle: 'The RAG pipeline',
-    pipelineIntro: "From an uploaded PDF to a flashcard in a student's review queue.",
-    pipeline: [
-      {
-        title: 'PDF upload',
-        tech: 'Nuxt 3 PWA',
-        detail: 'A teacher uploads the course material (slides, notes or handouts) as a PDF from the mobile-first interface.',
-        artifact: 'lecture-03.pdf',
-      },
-      {
-        title: 'Text extraction',
-        tech: 'unpdf · custom Directus extension',
-        detail: 'A custom Directus extension extracts the text with unpdf, chosen after testing alternatives that gave lower extraction fidelity.',
-        artifact: 'raw text',
-      },
-      {
-        title: 'Orchestration',
-        tech: 'Directus Flows',
-        detail: 'Directus Flows react to the new document and drive each stage of the pipeline, so every step runs in order and stays traceable.',
-        artifact: 'flow triggered',
-      },
-      {
-        title: 'Embedding & indexing',
-        tech: 'nomic-embed-text · Qdrant',
-        detail: 'The text is split into chunks, turned into vectors with nomic-embed-text and stored in Qdrant, tagged with the parent_id of the deck they belong to.',
-        artifact: 'chunks → vectors',
-      },
-      {
-        title: 'Retrieval & generation',
-        tech: 'Langflow · Groq llama-3.3-70b · Ollama',
-        detail: 'A Langflow webhook retrieves the relevant chunks, filtered by parent_id so content from different decks never mixes, and the LLM generates the flashcards. Groq runs in production; Ollama runs local models for offline or private generation.',
-        artifact: 'flashcards.json',
-      },
-      {
-        title: 'Teacher approval',
-        tech: 'Directus RBAC',
-        detail: 'Generated flashcards go through a review workflow. A teacher approves or edits them before students can see them.',
-        artifact: 'status: approved',
-      },
-      {
-        title: 'Spaced repetition',
-        tech: 'SM-2 · Dexie.js',
-        detail: 'Students review the flashcards. SM-2 schedules each card based on how well it was remembered, and progress is kept offline and synced later.',
-        artifact: 'next review: +3 days',
-      },
-    ],
+    architectureMap: {
+      data: learnlyMap,
+      title: 'How Learnly works, end to end',
+      intro: "From a PDF uploaded by a teacher to a flashcard on a student's phone. Click any box for its role and real code, or pick a scenario and follow it step by step.",
+    },
     decisions: [
       {
         title: 'Deck isolation with parent_id',
@@ -182,80 +144,11 @@ export const projects = [
       { src: saldoInvoices, alt: 'Saldo invoices list with filters and status' },
       { src: saldoExpenses, alt: 'Saldo expenses list with categories and deductible VAT' },
     ],
-    architecture: {
-      title: 'Architecture',
-      intro: 'Three containers orchestrated by Docker Compose. Click any box to see what it does.',
-      frame: 'Docker Compose',
-      selected: 2,
-      nodes: [
-        {
-          id: 'browser',
-          label: 'Browser',
-          sub: 'user',
-          detail: 'The user opens the app on port 4000. Every request goes through the frontend container.',
-        },
-        {
-          id: 'frontend',
-          label: 'frontend',
-          sub: 'nginx + Angular',
-          detail: 'nginx serves the Angular 22 app (standalone components, signals, httpResource, lazy-loaded pages) and forwards every /api call to the backend. An interceptor attaches the JWT to each request and ends the session on a 401.',
-        },
-        {
-          id: 'backend',
-          label: 'backend',
-          sub: 'Spring Boot',
-          detail: 'A Java 21 + Spring Boot 4 REST API, organised by feature (invoice, expense, client…), where every feature follows the same layers. Spring Security with signed JWTs, Bean Validation, and every error returned in the same ProblemDetail format (RFC 9457).',
-        },
-        {
-          id: 'db',
-          label: 'db',
-          sub: 'PostgreSQL 17',
-          detail: 'The schema is versioned with Flyway migrations. Rules are also enforced by UNIQUE, CHECK and foreign-key constraints, and dashboard aggregations (SUM, COUNT, GROUP BY) run in the database, backed by indexes.',
-        },
-      ],
-      links: ['HTTP :4000', '/api → :8080', 'JDBC :5432'],
-      note: '// multi-stage Docker builds · the whole system starts with a single Docker command',
+    architectureMap: {
+      data: saldoMap,
+      title: 'How Saldo works, end to end',
+      intro: 'Two applications that only meet over HTTP. Angular runs in the browser and owns the screen. Spring Boot runs on the server, owns the rules, and is the only thing that talks to PostgreSQL. Click any box for its role and real code, or pick a request and follow its journey step by step.',
     },
-    pipelineTitle: 'A request through the backend',
-    pipelineIntro: 'What happens when a user issues an invoice: the request crosses the same layers as every other feature.',
-    pipeline: [
-      {
-        title: 'Security',
-        tech: 'SecurityFilterChain · JWT (HS256)',
-        detail: 'The signed token is checked and the access rules are applied in one central place. Destructive and tax-relevant operations are restricted to admins. 401 and 403 responses use the same ProblemDetail format as every other error.',
-        artifact: 'authenticated request',
-      },
-      {
-        title: 'Controller',
-        tech: 'REST · Bean Validation',
-        detail: 'Input is validated before reaching the business logic. Validation errors point to the exact field, such as lines[0].quantity, so the Angular form can show them in the right place.',
-        artifact: 'validated request',
-      },
-      {
-        title: 'Service',
-        tech: 'Spring transactions',
-        detail: 'Numbering and issuing run in the same transaction (Propagation.MANDATORY). If issuing fails, the rollback returns the number to the counter, so the series never has gaps.',
-        artifact: 'one transaction',
-      },
-      {
-        title: 'Domain',
-        tech: 'Rich entities · @Version',
-        detail: 'Business rules live in the entities: the lifecycle DRAFT → ISSUED → PAID / CANCELLED only moves forward through intention-revealing methods, never a setStatus. An optimistic lock rejects a double click on Issue instead of consuming two numbers.',
-        artifact: 'DRAFT → ISSUED',
-      },
-      {
-        title: 'Repository',
-        tech: 'Spring Data JPA · Hibernate 7',
-        detail: 'A pessimistic lock (SELECT ... FOR UPDATE) on the series counter queues concurrent requests. Specifications build dynamic filters, and @EntityGraph avoids the N+1 problem.',
-        artifact: 'FT 2026/0001',
-      },
-      {
-        title: 'PostgreSQL',
-        tech: 'Flyway · constraints',
-        detail: 'Invoice lines keep a snapshot of the product (price, VAT rate, description) and the client details at issue time, so later changes never alter past invoices. Amounts are NUMERIC(12,2), calculated with BigDecimal and HALF_UP rounding.',
-        artifact: 'committed',
-      },
-    ],
     decisionsTitle: 'Technical highlights',
     decisions: [
       {
@@ -336,52 +229,11 @@ export const projects = [
   <p>The goal of CVBuilder is to be the all-in-one assistant for job seekers — helping them stand out, prepare confidently, and land their next role.</p>
   <br>
 `,
-    pipelineTitle: 'How the AI works',
-    pipelineIntro: 'One CV, several AI tools: from an uploaded PDF to a job-ready CV, a career plan and interview practice.',
-    pipeline: [
-      {
-        title: 'Your CV',
-        tech: 'Next.js 15 · step-by-step wizard',
-        detail: 'Users either build a CV from scratch with the step-by-step wizard or upload an existing one as a PDF.',
-        artifact: 'cv.pdf',
-      },
-      {
-        title: 'Text extraction',
-        tech: 'Mistral OCR',
-        detail: 'Uploaded PDFs go through Mistral OCR, which turns the document into text the language model can work with.',
-        artifact: 'cv text',
-      },
-      {
-        title: 'Storage & auth',
-        tech: 'Next.js API Routes · Supabase (PostgreSQL)',
-        detail: 'Next.js API Routes handle every request. Supabase stores the CVs and application data in PostgreSQL and manages authentication.',
-        artifact: 'saved to Supabase',
-      },
-      {
-        title: 'AI Review',
-        tech: 'Groq · LLaMA 3.3 70B',
-        detail: 'The CV is analysed by LLaMA 3.3 70B on Groq, returning an ATS score, a keyword analysis, strengths, weaknesses and concrete improvement suggestions.',
-        artifact: 'ATS score + suggestions',
-      },
-      {
-        title: 'Job Match',
-        tech: 'Groq · LLaMA 3.3 70B',
-        detail: 'Given a job description, the model adapts the CV to that role. It only rewords and reorders what the user actually has, without fabricating experience or skills.',
-        artifact: 'tailored CV',
-      },
-      {
-        title: 'Career Copilot & Interview Prep',
-        tech: 'Groq · LLaMA 3.3 70B',
-        detail: 'The same model generates a personalized career plan (skills to learn, certifications and action phases) and role-specific interview questions, with feedback and a score for each answer.',
-        artifact: 'plan + interview feedback',
-      },
-      {
-        title: 'Export & track',
-        tech: 'PDF export · Application Tracker',
-        detail: 'The final CV is exported as a PDF, and every job application is tracked with its status in one place.',
-        artifact: 'cv-final.pdf',
-      },
-    ],
+    architectureMap: {
+      data: cvbuilderMap,
+      title: 'How CV Builder works, end to end',
+      intro: "Follow an AI Review from a PDF upload to the result on screen: authentication, rate limiting, OCR, a hash-based cache and the LLM call. Click any box for its role and real code.",
+    },
     technologies: [
       { name: 'Next Js', icon: nextjsIcon },
       { name: 'TypeScript', icon: typescriptIcon },
@@ -389,6 +241,8 @@ export const projects = [
       { name: 'Supabase', icon: supabaseIcon },
       { name: 'Groq API', icon: groqIcon },
       { name: 'Mistral OCR', icon: mistralIcon },
+      { name: 'Zustand' },
+      { name: 'Puppeteer' },
       { name: 'Vercel', icon: vercelIcon },
     ]
   },

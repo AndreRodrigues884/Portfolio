@@ -37,6 +37,7 @@ import vitestIcon from '../assets/img/vitest.png'
 import * as saldoMap from './saldoArchitecture.js'
 import * as learnlyMap from './learnlyArchitecture.js'
 import * as cvbuilderMap from './cvbuilderArchitecture.js'
+import * as habtrackerMap from './habtrackerArchitecture.js'
 import postgreIcon from '../assets/img/postgre.svg'
 import pythonIcon from '../assets/img/python.svg'
 import viteIcon from '../assets/img/vite.svg'
@@ -372,6 +373,11 @@ export const projects = [
   </ul>
   <br>
 `,
+    architectureMap: {
+      data: habtrackerMap,
+      title: 'How HabTracker works, end to end',
+      intro: 'How the React Native app, the Express API and MongoDB talk to each other, layer by layer. Click any box to see what that part of the code does, or pick a scenario and follow it step by step.',
+    },
     technologies: [
       { name: 'React', icon: reactNativeIcon },
       { name: 'Express', icon: expressIcon },

@@ -38,6 +38,7 @@ import * as saldoMap from './saldoArchitecture.js'
 import * as learnlyMap from './learnlyArchitecture.js'
 import * as cvbuilderMap from './cvbuilderArchitecture.js'
 import * as habtrackerMap from './habtrackerArchitecture.js'
+import * as trekerMap from './trekerArchitecture.js'
 import postgreIcon from '../assets/img/postgre.svg'
 import pythonIcon from '../assets/img/python.svg'
 import viteIcon from '../assets/img/vite.svg'
@@ -272,6 +273,11 @@ export const projects = [
       </ul>
     <br>
     `,
+    architectureMap: {
+      data: trekerMap,
+      title: 'How Treker works, end to end',
+      intro: 'Next.js 16 Server Components and Server Actions talking straight to Supabase (Postgres + RLS), with no REST API of its own. Follow a gym session from the first confirmed set to a new personal record, file by file, or see how the same action fails safely. Click any box for its role and real code.',
+    },
     technologies: [
       { name: 'Next.js', icon: nextjsIcon },
       { name: 'TypeScript', icon: typescriptIcon },

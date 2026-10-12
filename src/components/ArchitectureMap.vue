@@ -135,11 +135,11 @@
 
     <!-- Who decides what -->
     <div v-if="RULES" class="bg-surface border border-line p-5">
-      <h4 class="font-display text-[17px] font-semibold text-text mb-1">Who decides what</h4>
+      <h4 class="font-display text-[17px] font-semibold text-text mb-1">{{ RULES.title || 'Who decides what' }}</h4>
       <p class="text-[13px] text-dim mb-4">{{ RULES.intro }}</p>
       <div class="overflow-x-auto">
         <table class="rules">
-          <thead><tr><th>Example</th><th>Angular (helps the user)</th><th>Spring Boot (decides)</th></tr></thead>
+          <thead><tr><th v-for="h in ruleHeaders" :key="h">{{ h }}</th></tr></thead>
           <tbody>
             <tr v-for="row in RULES.rows" :key="row[0]">
               <td>{{ row[0] }}</td>
@@ -166,6 +166,8 @@ const props = defineProps({
 const { LAYER, N, H, EDGES, S, LANES, EDGE_LABELS, CYCLES, RULES, LEGEND, CHIPS, VIEWBOX, COLORS } = props.map
 
 // Layer colours become CSS variables (--ng, --sp, …) used by nodes, legend and rails
+const ruleHeaders = RULES?.headers || ['Example', 'Angular (helps the user)', 'Spring Boot (decides)']
+
 const colorVars = Object.fromEntries(Object.entries(COLORS).map(([k, v]) => [`--${k}`, v]))
 
 const rootRef = ref(null)

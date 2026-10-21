@@ -6,7 +6,9 @@
         <h1 class="font-display text-[32px] sm:text-[44px] font-bold tracking-[-0.01em] text-text">{{ project.title }}</h1>
       </div>
 
-      <div class="relative w-full h-86 border border-line bg-surface p-2 flex items-center justify-center">
+      <DeviceFrame v-if="project.device" :device="project.device" :src="project.background_image" :alt="`${project.title} preview`" />
+
+      <div v-else class="relative w-full h-86 border border-line bg-surface p-2 flex items-center justify-center">
         <span class="corner tl"></span>
         <span class="corner tr"></span>
         <span class="corner bl"></span>
@@ -90,6 +92,7 @@
 <script setup>
 import { computed } from 'vue'
 import ArchitectureMap from '../components/ArchitectureMap.vue'
+import DeviceFrame from '../components/DeviceFrame.vue'
 
 const props = defineProps({
   project: { type: Object, required: true },

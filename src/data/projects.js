@@ -58,6 +58,7 @@ export const projects = [
     image: learnly_img,
     imageFit: 'contain',
     background_image: learnlyVideo,
+    device: { type: 'phone', size: [1440, 2560], status: 'PWA · mobile-first' },
     description: `
   <p><strong>Learnly</strong> is an AI-powered micro-learning platform focused on long-term memory retention. It generates study material automatically from PDFs and organizes review sessions with spaced repetition.</p>
   <br>
@@ -127,6 +128,7 @@ export const projects = [
     link: '/projects/5',
     image: saldo_img,
     background_image: saldoVideo,
+    device: { type: 'browser', url: 'localhost:4000', status: 'local demo', size: [1898, 910] },
     description: `
   <p><strong>Saldo</strong> is an invoicing and expense management system built for a service company with 5 to 20 people that wants to track what it bills and what it spends in one place, and see month by month whether it is making money.</p>
   <br>
@@ -208,6 +210,8 @@ export const projects = [
     link: '/projects/3',
     image: cvbuilder_img,
     background_image: cvbuilderVideo,
+    // the recording includes Chrome's own tab and address bar: cropTop hides it
+    device: { type: 'browser', url: 'cvbuilder-ten-lime.vercel.app', status: 'live', size: [1920, 1020], cropTop: 110 },
     description: `
   <p><strong>CVBuilder</strong> is a full-stack AI-powered platform designed to help people throughout the entire job search process — from creating and optimizing CVs to preparing for interviews and planning career growth.</p>
   <br>
@@ -258,6 +262,7 @@ export const projects = [
     demoLink: 'https://treker-beta.vercel.app/',
     image: background_project1,
     background_image: background_project1,
+    device: { type: 'browser', url: 'treker-beta.vercel.app', status: 'live', size: [1917, 906] },
     link: '/projects/1',
     description: `
       <p><strong>TREKER</strong> is a multi-sport training tracker built for autonomous athletes who train across gym, swimming, and running without a coach dictating every session. It logs workouts and swim times, turns them into progress charts, and detects real personal records and milestones as they happen.</p>
@@ -300,6 +305,7 @@ export const projects = [
     link: '/projects/6',
     image: dataStructures_img,
     background_image: dataStructuresVideo,
+    device: { type: 'browser', url: 'data-structures-tau.vercel.app', status: 'live', size: [1900, 908] },
     description: `
   <p><strong>Data Structures</strong> is an interactive platform to see, understand and play with 14 fundamental data structures. The interface is in Portuguese.</p>
   <br>
@@ -364,6 +370,7 @@ export const projects = [
     link: '/projects/2',
     image: background_project2,
     background_image: habtrackerVideo,
+    device: { type: 'phone', size: [382, 850], status: 'React Native · Expo' },
     description: `
   <p><strong>HabTracker</strong> is a mobile application designed to help users build and maintain consistent habits through gamification. Users can create recurring habits, mark them as completed, and track their progress over time.</p>
   <br>

@@ -44,48 +44,61 @@
     </div>
   </section>
 
+  <!-- Toolbox -->
+  <section class="flex flex-col px-4 py-16">
+    <div class="mb-10">
+      <p class="section-label mb-2.5">// 02 — Toolbox</p>
+      <h2 class="font-display text-[28px] sm:text-[36px] font-semibold text-text">Tech stack</h2>
+    </div>
+
+    <ul class="flex flex-col">
+      <li v-for="group in toolbox" :key="group.title"
+        class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 py-4 border-b border-line">
+        <span class="font-mono text-[12px] tracking-[0.04em] text-faint sm:w-[130px] shrink-0">{{ group.title }}</span>
+        <div class="flex flex-wrap gap-2">
+          <span v-for="skill in group.skills" :key="skill.name"
+            class="inline-flex items-center gap-2 px-2.5 py-1.5 bg-surface border border-line">
+            <img :src="skill.icon" alt="" :class="['w-4 h-4 object-contain', { 'invert': skill.invert }]" />
+            <span class="font-mono text-[12px] text-dim">{{ skill.name }}</span>
+          </span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="flex justify-end mt-6">
+      <router-link to="/aboutme" class="mono-link">Full toolbox &rarr;</router-link>
+    </div>
+  </section>
+
   <!-- About Me -->
   <section class="flex flex-col px-4 py-16">
-    <div class="mb-12">
-      <p class="section-label mb-2.5">// 02 — Background</p>
+    <div class="mb-10">
+      <p class="section-label mb-2.5">// 03 — Background</p>
       <h2 class="font-display text-[28px] sm:text-[36px] font-semibold text-text">About</h2>
     </div>
 
-    <div class="flex flex-col lg:flex-row gap-12 items-center max-w-5xl mx-auto w-full">
-      <!-- Profile photo with spinning icons -->
-      <div class="relative flex-shrink-0 w-56 h-56 flex items-center justify-center">
-        <img src="../assets/img/cadu.png" alt="André Rodrigues" class="w-full h-full rounded-full object-cover" />
-        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center animate-spin-slow">
-          <div v-for="(icon, index) in icons" :key="icon.src"
-            :style="{ transform: `rotate(${(360 / icons.length) * index}deg) translate(110px) rotate(-${(360 / icons.length) * index}deg)` }"
-            class="absolute">
-            <div class="icon-tile w-8 h-8 p-1 animate-spin-reverse-slow">
-              <img :src="icon.src" :alt="icon.alt" class="w-full h-full object-contain" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bio -->
-      <div class="flex flex-col gap-6 w-full">
-        <p class="text-[15px] sm:text-[16px] text-dim leading-relaxed">
-          Hi, my name is André Rodrigues, I'm 22 years old. I recently graduated with a Bachelor's Degree
-          in Technologies and Information Systems for the Web from P.Porto. During my studies and
-          curricular internship, I built full-stack web and mobile projects.
-          I'm now looking for opportunities as a Software Engineer, where I can go deep on backend
-          and system architecture, keep growing into AI-integrated products, and work alongside
-          people who take their craft seriously.
+    <div class="flex flex-col gap-6 w-full">
+      <p class="text-[15px] sm:text-[16px] text-dim leading-relaxed">
+        Hi, my name is André Rodrigues, I'm 22 years old. I recently graduated with a Bachelor's Degree
+        in Technologies and Information Systems for the Web from P.Porto. During my studies and
+        curricular internship, I built full-stack web and mobile projects.
+        I'm now looking for opportunities as a Software Engineer, where I can go deep on backend
+        and system architecture, keep growing into AI-integrated products, and work alongside
+        people who take their craft seriously.
+      </p>
+      <ul class="flex flex-col">
+        <li v-for="fact in facts" :key="fact.label"
+          class="flex justify-between gap-4 py-3 border-b border-line text-[14px] text-text">
+          <span class="font-mono text-[12px] tracking-[0.04em] text-faint">{{ fact.label }}</span>
+          <span class="text-right">{{ fact.value }}</span>
+        </li>
+      </ul>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <p class="text-[14px] text-dim">
+          <span class="font-mono text-[12px] text-teal mr-1.5">// off duty</span>
+          running, swimming, films &amp; series, travel and padel.
         </p>
-        <ul class="flex flex-col">
-          <li v-for="fact in facts" :key="fact.label"
-            class="flex justify-between gap-4 py-3 border-b border-line text-[14px] text-text">
-            <span class="font-mono text-[12px] tracking-[0.04em] text-faint">{{ fact.label }}</span>
-            <span class="text-right">{{ fact.value }}</span>
-          </li>
-        </ul>
-        <div class="flex justify-end">
-          <router-link to="/aboutme" class="mono-link">More about me &rarr;</router-link>
-        </div>
+        <router-link to="/aboutme" class="mono-link shrink-0">More about me &rarr;</router-link>
       </div>
     </div>
   </section>
@@ -99,32 +112,12 @@ import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 import ProjectCard from '../components/ProjectCard.vue'
 import { projects } from '../data/projects.js'
-
-import reactNativeIcon from '../assets/img/react.png'
-import nodeIcon from '../assets/img/node.jpg'
-import mongoIcon from '../assets/img/mongo.png'
-import typescriptIcon from '../assets/img/typescript.svg'
-import javascriptIcon from '../assets/img/js.svg'
-import vueIcon from '../assets/img/vue.svg'
-import postgreIcon from '../assets/img/postgre.svg'
-import nextjsIcon from '../assets/img/nextjsIcon.svg'
-import supabaseIcon from '../assets/img/supabaseIcon.svg'
-import dockerIcon from '../assets/img/docker.svg'
+import { skillGroups } from '../data/skills.js'
 
 const featuredProjects = computed(() => projects.slice(0, 3))
 
-const icons = [
-  { src: vueIcon, alt: 'Vue' },
-  { src: dockerIcon, alt: 'Docker' },
-  { src: nodeIcon, alt: 'Node' },
-  { src: supabaseIcon, alt: 'Supabase' },
-  { src: reactNativeIcon, alt: 'React' },
-  { src: mongoIcon, alt: 'Mongo' },
-  { src: javascriptIcon, alt: 'JavaScript' },
-  { src: typescriptIcon, alt: 'TypeScript' },
-  { src: postgreIcon, alt: 'PostgreSQL' },
-  { src: nextjsIcon, alt: 'Next.js' },
-]
+// Compact version of the About page's skills: only the ones marked for the home page
+const toolbox = skillGroups.map(group => ({ ...group, skills: group.skills.filter(skill => skill.home) }))
 
 const facts = [
   { label: 'Location', value: 'Portugal' },

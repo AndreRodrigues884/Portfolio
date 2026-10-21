@@ -54,6 +54,9 @@
             class="font-mono text-[11px] text-dim bg-raised border border-line px-2 py-[3px]"
           >{{ tag }}</span>
         </div>
+        <span v-if="project.architectureMap" class="inline-flex items-center gap-1.5 font-mono text-[11px] text-amber">
+          <span aria-hidden="true">&#9670;</span> interactive architecture map inside
+        </span>
         <div class="flex items-center justify-end gap-5">
           <a
             v-if="project.demoLink"

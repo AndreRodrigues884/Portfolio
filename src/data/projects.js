@@ -1,6 +1,4 @@
-import background_project2 from '../assets/img/project2.png'
 import background_project1 from '../assets/img/project6.png'
-import habtrackerVideo from '../assets/video/Habtracker.mp4'
 import cvbuilderVideo from '../assets/video/CVBuilder.mp4'
 import cvbuilder_img from '../assets/img/cvbuilder_img.png'
 import learnlyVideo from '../assets/video/video_learnly.mp4'
@@ -37,13 +35,28 @@ import vitestIcon from '../assets/img/vitest.png'
 import * as saldoMap from './saldoArchitecture.js'
 import * as learnlyMap from './learnlyArchitecture.js'
 import * as cvbuilderMap from './cvbuilderArchitecture.js'
-import * as habtrackerMap from './habtrackerArchitecture.js'
 import * as trekerMap from './trekerArchitecture.js'
 import postgreIcon from '../assets/img/postgre.svg'
 import pythonIcon from '../assets/img/python.svg'
 import viteIcon from '../assets/img/vite.svg'
+import threejsIcon from '../assets/img/si_threedotjs.svg'
+import pitViewer_img from '../assets/img/pit-viewer1.png'
+import pitViewerOre from '../assets/img/pit-viewer2.png'
+import pitViewerOrtho from '../assets/img/pit-viewer3.png'
+import pitViewerMeasure from '../assets/img/pit-viewer4.png'
+import pitViewerSelect from '../assets/img/pit-viewer5.png'
+import trekerApp_img from '../assets/img/treker-app-cover.jpg'
+import trekerAppProfile from '../assets/img/treker-app1.jpeg'
+import trekerAppStats from '../assets/img/treker-app2.jpeg'
+import trekerAppWorkouts from '../assets/img/treker-app3.jpeg'
+import trekerAppToday from '../assets/img/treker-app4.jpeg'
+import trekerAppMenu from '../assets/img/treker-app5.jpeg'
+import expoIcon from '../assets/img/si_expo.svg'
+import reactQueryIcon from '../assets/img/si_reactquery.svg'
+import jestIcon from '../assets/img/si_jest.svg'
+import githubActionsIcon from '../assets/img/si_githubactions.svg'
 
-// Order matters: the first three are featured on the home page
+// Order of the Projects page (the home page picks its featured projects by slug)
 export const projects = [
   {
     id: 4,
@@ -259,6 +272,8 @@ export const projects = [
     subtitle: 'FullStack Fitness App',
     summary: 'Treker is a full-stack training tracker that lets autonomous athletes log and visualize their progress across gym, swimming, and running from one app.',
     tags: ['NextJS', 'Typescript', 'Supabase', 'Tailwind CSS'],
+    externalLink: 'https://github.com/AndreRodrigues884/treker',
+    externalType: 'github',
     demoLink: 'https://treker-beta.vercel.app/',
     image: background_project1,
     background_image: background_project1,
@@ -293,19 +308,178 @@ export const projects = [
 
   },
   {
+    id: 8,
+    slug: 'treker_app',
+    title: 'Treker App',
+    subtitle: 'React Native Training Log',
+    summary: 'The mobile version of Treker, rebuilt in React Native with a new design: gym and swimming in one training log for self-coached athletes, with records detected as they happen.',
+    tags: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'TanStack Query'],
+    link: '/projects/8',
+    image: trekerApp_img,
+    background_image: trekerAppToday,
+    device: { type: 'phone', size: [1080, 2400], status: 'React Native · Expo' },
+    description: `
+  <p><strong>Treker App</strong> is the React Native version of Treker, with a new design. Gym and swimming live in one training log for self-coached athletes: log a gym session or a swim time, see records as they happen, and follow your progress across both sports in a single history.</p>
+  <br>
+  <p><strong>Gym</strong></p>
+  <ul>
+    <li> - <strong>Sessions from saved workouts</strong>, grouped into folders and reordered by dragging.</li>
+    <li> - <strong>Progress on every set:</strong> each exercise is compared with the last time you did it ("4 of 6 exercises progressed").</li>
+    <li> - <strong>Records:</strong> a personal record when the estimated one-rep max (1RM) goes up, highlighted as it happens.</li>
+    <li> - <strong>Exercise library</strong> of 68 common exercises in English and Portuguese, plus your own.</li>
+    <li> - <strong>Safe on bad connections:</strong> the session in progress is kept as a draft on the phone until the server confirms it.</li>
+  </ul>
+  <br>
+  <p><strong>Swimming</strong></p>
+  <ul>
+    <li> - <strong>Race and training times</strong> for short course (25 m), long course (50 m) and yards, never mixed.</li>
+    <li> - <strong>Fast time entry,</strong> digits only, like a stopwatch (<code>10245</code> → <code>1:02.45</code>).</li>
+    <li> - <strong>Sanity checks:</strong> a time faster than the world record is refused (limits from World Aquatics), and a time over 3× the record asks for confirmation.</li>
+    <li> - <strong>One screen per event</strong> with your record, your last time and a chart where faster is higher.</li>
+  </ul>
+  <br>
+  <p><strong>Everywhere</strong></p>
+  <ul>
+    <li> - <strong>One history for both sports:</strong> Today (weekly goal), Calendar, Records, Statistics and Profile.</li>
+    <li> - <strong>Statistics:</strong> workouts per week against your goal, the strength trend of up to 5 exercises, volume per muscle group and your most used workouts.</li>
+    <li> - <strong>Passwordless sign-in</strong> with a 6-digit email code, English and Portuguese, metric or imperial units.</li>
+    <li> - <strong>Accessible:</strong> every chart has a spoken summary, and every control has a label.</li>
+  </ul>
+  <br>
+`,
+    galleryLayout: 'phone',
+    gallery: [
+      { src: trekerAppMenu, alt: 'Side menu with the weekly goal and every section' },
+      { src: trekerAppWorkouts, alt: 'Saved workouts and folders, reordered by dragging' },
+      { src: trekerAppStats, alt: 'Statistics: workouts per week and strength trend' },
+      { src: trekerAppProfile, alt: 'Profile with the sports and recent workouts' },
+    ],
+    decisionsTitle: 'Technical highlights',
+    decisions: [
+      {
+        title: 'The database is the source of truth',
+        text: 'Personal records are computed by Postgres triggers, and screens read ready-made results from SQL functions instead of loading every set or time.',
+      },
+      {
+        title: 'Security in the database',
+        text: 'Every table has Row Level Security, and write functions run as the caller (security invoker), so a user can never reach another user\'s data.',
+      },
+      {
+        title: 'Idempotent writes',
+        text: 'Ids are created on the phone, so retrying after a network failure never duplicates a workout, and the session in progress stays as a local draft until the server confirms it.',
+      },
+      {
+        title: 'Shared rules, tested twice',
+        text: 'Rules that exist both in the app and in Postgres, like swim events and progress, are tested against the same JSON fixtures by Jest and by pgTAP.',
+      },
+      {
+        title: 'Thin screens, pure core',
+        text: 'Screens are routes only (Expo Router). Business logic lives in a pure, unit-tested core, and each feature has one repository that is the only caller of Supabase, wrapped in TanStack Query hooks for cache, retries and pagination.',
+      },
+      {
+        title: 'CI and builds',
+        text: 'GitHub Actions runs the checks, and EAS Build produces the app builds.',
+      },
+    ],
+    technologies: [
+      { name: 'Expo SDK 58', icon: expoIcon },
+      { name: 'React Native 0.88', icon: reactNativeIcon },
+      { name: 'TypeScript', icon: typescriptIcon },
+      { name: 'Expo Router' },
+      { name: 'TanStack Query', icon: reactQueryIcon },
+      { name: 'Supabase', icon: supabaseIcon },
+      { name: 'Jest', icon: jestIcon },
+      { name: 'pgTAP' },
+      { name: 'GitHub Actions', icon: githubActionsIcon },
+    ]
+  },
+  {
+    id: 7,
+    slug: 'pit_viewer',
+    title: 'Pit Viewer',
+    subtitle: '3D Open-Pit Mine Viewer',
+    summary: 'An interactive 3D viewer for an open-pit mine block model: inspect blocks, measure distances, slice through the model and play a mining challenge that uses the same precedence rule real pit-optimisation tools rely on.',
+    tags: ['three.js', 'React', 'TypeScript', 'Vitest', 'Playwright'],
+    externalLink: 'https://github.com/AndreRodrigues884/Pit-Viewer',
+    externalType: 'github',
+    demoLink: 'https://pitviewer.vercel.app/',
+    link: '/projects/7',
+    image: pitViewer_img,
+    background_image: pitViewer_img,
+    device: { type: 'browser', url: 'pitviewer.vercel.app', status: 'live', size: [1917, 807] },
+    description: `
+  <p><strong>Pit Viewer</strong> is an interactive 3D viewer for an open-pit mine block model, built with three.js, React and TypeScript. A benched pit made of around 10,000 blocks can be inspected, measured, sliced and mined.</p>
+  <br>
+  <p><strong>Main features include:</strong></p>
+  <ul>
+    <li> - <strong>Instanced terrain:</strong> one <code>InstancedMesh</code> per block type, so the whole pit takes 3 draw calls.</li>
+    <li> - <strong>Two cameras:</strong> perspective and orthographic with orbit controls; switching keeps the same framing.</li>
+    <li> - <strong>Lighting and shadows:</strong> ambient and directional light with a shadow map that can be turned off.</li>
+    <li> - <strong>Block selection:</strong> raycasting shows the type, position, grade, tonnage and economic value of the clicked block.</li>
+    <li> - <strong>Distance measurement</strong> between two points on the terrain, with markers and a connecting line.</li>
+    <li> - <strong>Extraction challenge:</strong> mine blocks to reach an ore target within a block budget and stay profitable. A block can only be mined once the 3 × 3 blocks above it are gone, a 45° slope.</li>
+    <li> - <strong>Settings panel:</strong> hide block types to reveal the ore body, cut a live cross-section and regenerate the model with different pit and ore-body parameters.</li>
+  </ul>
+  <br>
+  <p>Blocks are 10 m cubes with a density of 2.7 t/m³. The ore body is a synthetic ellipsoid with grades from 0.3 % to 2 % Cu, and prices and costs are illustrative.</p>
+  <br>
+`,
+    gallery: [
+      { src: pitViewerOre, alt: 'Settings panel open, with the ore body revealed inside the pit' },
+      { src: pitViewerOrtho, alt: 'Orthographic camera in the middle of the extraction challenge' },
+      { src: pitViewerMeasure, alt: 'Distance measured between two points on the terrain' },
+      { src: pitViewerSelect, alt: 'An ore block selected, with its grade, tonnage and value' },
+    ],
+    decisionsTitle: 'Technical highlights',
+    decisions: [
+      {
+        title: 'React for state, three.js for the scene',
+        text: 'three.js lives in a plain TypeScript module with a small imperative API (setCameraMode, loadModel, resetGame…). The React wrapper creates it once, forwards each prop change to the matching method, keeps callbacks in a ref and disposes every GPU resource on unmount, so the scene is never rebuilt on a re-render.',
+      },
+      {
+        title: 'O(1) block removal',
+        text: 'A raycast against an InstancedMesh returns an instanceId that maps back to the block\'s data. Mining a block swaps it with the last instance and decreases mesh.count: no buffer reallocation.',
+      },
+      {
+        title: 'Precedence by induction',
+        text: 'A block is mineable only when the 3 × 3 blocks on the level above are gone. Checking one level is enough, because those blocks had to satisfy the same rule, so the full 45° cone follows by induction.',
+      },
+      {
+        title: 'A cross-section that respects picking',
+        text: 'A THREE.Plane is passed to the materials as a clipping plane and the slider only updates its constant. The cut snaps to block boundaries, clipShadows hides the shadows of clipped blocks, and picking skips anything you cannot see.',
+      },
+      {
+        title: 'Rendering-free domain logic',
+        text: 'Economy, precedence, excavation and the win/loss rules have no dependency on rendering, so they are covered by fast Vitest unit tests.',
+      },
+      {
+        title: 'WebGL tested end to end',
+        text: 'A Playwright test opens the app, clicks a block and checks the panel. It runs Chromium with SwiftShader, so WebGL works without a GPU.',
+      },
+    ],
+    technologies: [
+      { name: 'three.js', icon: threejsIcon },
+      { name: 'React', icon: reactNativeIcon },
+      { name: 'TypeScript', icon: typescriptIcon },
+      { name: 'Vite', icon: viteIcon },
+      { name: 'Vitest', icon: vitestIcon },
+      { name: 'Playwright' },
+      { name: 'Vercel', icon: vercelIcon },
+    ]
+  },
+  {
     id: 6,
     slug: 'data_structures',
     title: 'Data Structures',
     subtitle: 'Interactive Visualizer',
     summary: 'An interactive platform to see, understand and play with 14 fundamental data structures, each with an explanation, a diagram, a step-by-step animation and a tested reference implementation.',
     tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Vitest'],
-    demoLink: 'https://data-structures-tau.vercel.app/',
     externalType: 'github',
     externalLink: 'https://github.com/AndreRodrigues884/data-structures',
     link: '/projects/6',
     image: dataStructures_img,
     background_image: dataStructuresVideo,
-    device: { type: 'browser', url: 'data-structures-tau.vercel.app', status: 'live', size: [1900, 908] },
+    device: { type: 'browser', url: 'localhost:5173', status: 'local demo', size: [1900, 908] },
     description: `
   <p><strong>Data Structures</strong> is an interactive platform to see, understand and play with 14 fundamental data structures. The interface is in Portuguese.</p>
   <br>
@@ -356,48 +530,6 @@ export const projects = [
       { name: 'Vitest', icon: vitestIcon },
       { name: 'Python', icon: pythonIcon },
       { name: 'Vercel', icon: vercelIcon },
-    ]
-  },
-  {
-    id: 2,
-    slug: 'habtracker',
-    title: 'HabTracker',
-    subtitle: 'Gamified Habit Tracking App',
-    summary: 'A mobile app that helps users build and maintain consistent habits through gamification, XP, streaks, and achievement badges.',
-    tags: ['React Native', 'Node.js', 'MongoDB', 'TypeScript'],
-    externalLink: 'https://github.com/AndreRodrigues884/Habtracker',
-    externalType: 'github',
-    link: '/projects/2',
-    image: background_project2,
-    background_image: habtrackerVideo,
-    device: { type: 'phone', size: [382, 850], status: 'React Native · Expo' },
-    description: `
-  <p><strong>HabTracker</strong> is a mobile application designed to help users build and maintain consistent habits through gamification. Users can create recurring habits, mark them as completed, and track their progress over time.</p>
-  <br>
-  <p>The app offers features such as:</p>
-  <ul>
-    <li> - <strong>Habit creation</strong> with customizable frequency (daily, weekly, etc.) and optional end dates.</li>
-    <li> - <strong>Streak tracking</strong> to visualize consistency for each habit.</li>
-    <li> - <strong>Experience points (XP)</strong> and level system to reward progress and motivate users.</li>
-    <li> - <strong>Achievements and badges unlocked</strong> when specific milestones are reached (e.g., completing a habit 3 days in a row).</li>
-    <li> - <strong>User profile with statistics</strong>, achievements overview, and XP/level display.</li>
-    <li> - <strong>Calendar view</strong> to monitor habits over time and plan ahead.</li>
-    <li> - <strong>Notifications and visual feedback</strong> for completed habits, level-ups, and unlocked achievements.</li>
-  </ul>
-  <br>
-`,
-    architectureMap: {
-      data: habtrackerMap,
-      title: 'How HabTracker works, end to end',
-      intro: 'How the React Native app, the Express API and MongoDB talk to each other, layer by layer. Click any box to see what that part of the code does, or pick a scenario and follow it step by step.',
-    },
-    technologies: [
-      { name: 'React', icon: reactNativeIcon },
-      { name: 'Express', icon: expressIcon },
-      { name: 'Node', icon: nodeIcon },
-      { name: 'Mongo', icon: mongoIcon },
-      { name: 'TypeScript', icon: typescriptIcon },
-      { name: 'JavaScript', icon: javascriptIcon },
     ]
   },
 ]

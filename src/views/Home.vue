@@ -114,7 +114,9 @@ import ProjectCard from '../components/ProjectCard.vue'
 import { projects } from '../data/projects.js'
 import { skillGroups } from '../data/skills.js'
 
-const featuredProjects = computed(() => projects.slice(0, 3))
+// Projects featured on the home page, in this order
+const FEATURED = ['treker', 'saldo', 'cv_builder']
+const featuredProjects = computed(() => FEATURED.map(slug => projects.find(p => p.slug === slug)).filter(Boolean))
 
 // Compact version of the About page's skills: only the ones marked for the home page
 const toolbox = skillGroups.map(group => ({ ...group, skills: group.skills.filter(skill => skill.home) }))

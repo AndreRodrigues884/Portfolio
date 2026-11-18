@@ -42,7 +42,7 @@
 
       <div v-if="project.gallery" class="flex flex-col">
         <p class="section-label mb-4">// Screenshots</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div :class="['grid gap-3', project.galleryLayout === 'phone' ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-1 sm:grid-cols-2']">
           <a v-for="shot in project.gallery" :key="shot.src" :href="shot.src" target="_blank" rel="noopener noreferrer"
             class="group block overflow-hidden border border-line hover:border-line-strong bg-raised transition-colors duration-150">
             <img :src="shot.src" :alt="shot.alt" loading="lazy"

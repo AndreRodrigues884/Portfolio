@@ -1,4 +1,3 @@
-import background_project1 from '../assets/img/project6.png'
 import cvbuilderVideo from '../assets/video/CVBuilder.mp4'
 import cvbuilder_img from '../assets/img/cvbuilder_img.png'
 import learnlyVideo from '../assets/video/video_learnly.mp4'
@@ -35,7 +34,6 @@ import vitestIcon from '../assets/img/vitest.png'
 import * as saldoMap from './saldoArchitecture.js'
 import * as learnlyMap from './learnlyArchitecture.js'
 import * as cvbuilderMap from './cvbuilderArchitecture.js'
-import * as trekerMap from './trekerArchitecture.js'
 import postgreIcon from '../assets/img/postgre.svg'
 import pythonIcon from '../assets/img/python.svg'
 import viteIcon from '../assets/img/vite.svg'
@@ -266,60 +264,18 @@ export const projects = [
     ]
   },
   {
-    id: 1,
-    slug: 'treker',
-    title: 'Treker',
-    subtitle: 'FullStack Fitness App',
-    summary: 'Treker is a full-stack training tracker that lets autonomous athletes log and visualize their progress across gym, swimming, and running from one app.',
-    tags: ['NextJS', 'Typescript', 'Supabase', 'Tailwind CSS'],
-    externalLink: 'https://github.com/AndreRodrigues884/treker',
-    externalType: 'github',
-    demoLink: 'https://treker-beta.vercel.app/',
-    image: background_project1,
-    background_image: background_project1,
-    device: { type: 'browser', url: 'treker-beta.vercel.app', status: 'live', size: [1917, 906] },
-    link: '/projects/1',
-    description: `
-      <p><strong>TREKER</strong> is a multi-sport training tracker built for autonomous athletes who train across gym, swimming, and running without a coach dictating every session. It logs workouts and swim times, turns them into progress charts, and detects real personal records and milestones as they happen.</p>
-      <br>
-      <p>The app offers features such as:</p>
-      <ul>
-        <li> - Progress Tracking with charts for volume, estimated 1RM, and swim times per event.</li>
-        <li> - Personal Records & Achievements, detected automatically the moment they happen.</li>
-        <li> - Goal-Based Projections for swimming, estimating when you'll hit a target time from your own pace trend.</li>
-        <li> - Bodyweight Tracking with daily logging and progress history.</li>
-        <li> - Statistics Dashboard covering Total Strength, Deload Analysis, and Volume per Muscle Group.</li>
-        <li> - Google Sign-In alongside email/password authentication.</li>
-      </ul>
-    <br>
-    `,
-    architectureMap: {
-      data: trekerMap,
-      title: 'How Treker works, end to end',
-      intro: 'Next.js 16 Server Components and Server Actions talking straight to Supabase (Postgres + RLS), with no REST API of its own. Follow a gym session from the first confirmed set to a new personal record, file by file, or see how the same action fails safely. Click any box for its role and real code.',
-    },
-    technologies: [
-      { name: 'Next.js', icon: nextjsIcon },
-      { name: 'TypeScript', icon: typescriptIcon },
-      { name: 'Supabase', icon: supabaseIcon },
-      { name: 'Tailwind CSS', icon: tailwindIcon },
-      { name: 'Vercel', icon: vercelIcon },
-    ]
-
-  },
-  {
     id: 8,
     slug: 'treker_app',
     title: 'Treker App',
     subtitle: 'React Native Training Log',
-    summary: 'The mobile version of Treker, rebuilt in React Native with a new design: gym and swimming in one training log for self-coached athletes, with records detected as they happen.',
+    summary: 'Gym and swimming in one training log for self-coached athletes, built with React Native and Expo. Log a session or a swim time, see personal records as they happen and follow your progress in a single history.',
     tags: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'TanStack Query'],
     link: '/projects/8',
     image: trekerApp_img,
     background_image: trekerAppToday,
     device: { type: 'phone', size: [1080, 2400], status: 'React Native · Expo' },
     description: `
-  <p><strong>Treker App</strong> is the React Native version of Treker, with a new design. Gym and swimming live in one training log for self-coached athletes: log a gym session or a swim time, see records as they happen, and follow your progress across both sports in a single history.</p>
+  <p><strong>Treker App</strong> is a mobile training log for self-coached athletes, built with React Native and Expo on top of Supabase. Gym and swimming live in one place: log a gym session or a swim time, see records as they happen, and follow your progress across both sports in a single history.</p>
   <br>
   <p><strong>Gym</strong></p>
   <ul>

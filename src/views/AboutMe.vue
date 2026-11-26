@@ -163,8 +163,8 @@ const hobbies = [
     imagePosition: 'center 15%',
     imageAlt: 'André running the São Silvestre race in Famalicão',
     caption: 'S. Silvestre · Famalicão',
-    to: '/projects/treker',
-    linkLabel: 'See Treker',
+    to: '/projects/treker_app',
+    linkLabel: 'See Treker App',
   },
   {
     title: 'Movies & TV Shows',

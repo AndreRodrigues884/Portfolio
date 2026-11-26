@@ -115,7 +115,7 @@ import { projects } from '../data/projects.js'
 import { skillGroups } from '../data/skills.js'
 
 // Projects featured on the home page, in this order
-const FEATURED = ['treker', 'saldo', 'cv_builder']
+const FEATURED = ['cv_builder', 'saldo', 'treker_app']
 const featuredProjects = computed(() => FEATURED.map(slug => projects.find(p => p.slug === slug)).filter(Boolean))
 
 // Compact version of the About page's skills: only the ones marked for the home page
